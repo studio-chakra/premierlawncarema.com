@@ -29,8 +29,8 @@ return array(
         'cooldownDuration' => 0,
 
         'environmentVariables' => array(
-            'siteUrl'        => 'http://staging.studiochakra.com/premierlawncare/',
-            'fileSystemPath' => '/home/ryanbeli/public_html/studiochakra-staging/premierlawncare/public/images/',
+            'siteUrl'        => 'http://staging.studiochakra.com/premierlawncarema/',
+            'fileSystemPath' => '/home/ryanbeli/public_html/studiochakra-staging/premierlawncarema/public/images/',
         ),
     ),
 
