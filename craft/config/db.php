@@ -23,7 +23,7 @@ return array(
   ),
 
   // Staging database info
-	'staging.studiochakra.com' => array(
+	'premierlawncarema-staging.studiochakra.com' => array(
     'server' => 'localhost',
 		'user' => 'ryanbeli_dbadmin',
 		'password' => '@436StaffordSt',

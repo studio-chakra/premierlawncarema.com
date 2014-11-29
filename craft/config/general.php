@@ -25,12 +25,12 @@ return array(
     ),
 
     // Staging site config
-    'corben-staging.studiochakra.com' => array(
+    'premierlawncarema-staging.studiochakra.com' => array(
         'cooldownDuration' => 0,
 
         'environmentVariables' => array(
-            'siteUrl'        => 'http://corben-staging.studiochakra.com/',
-            'fileSystemPath' => '/home/ryanbeli/corben-staging/images/',
+            'siteUrl'        => 'http://premierlawncarema-staging.studiochakra.com/',
+            'fileSystemPath' => '/home/ryanbeli/studiochakra-staging/premierlawncarema/images/',
         ),
     ),
 
@@ -40,7 +40,7 @@ return array(
 
         'environmentVariables' => array(
             'siteUrl'        => 'http://premierlawncarema.com/',
-            'fileSystemPath' => '/home/ryanbeli/public_html/images/',
+            'fileSystemPath' => '/home/ryanbeli/public_html/premierlawncarema/images/',
         ),
     ),
 
