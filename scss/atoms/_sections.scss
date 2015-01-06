@@ -1,0 +1,99 @@
+//
+// SECTIONS
+// --------------------------------------------------
+
+
+.section {
+	padding-top: vs(6);
+	padding-bottom: vs(6);
+
+	text-align: center;
+}
+
+
+.section-bg {
+	background: #F5F5F5;
+}
+
+
+.section__hd {
+	margin-top: 0;
+	margin-bottom: vs(3);
+
+	font-size: 36px;
+	line-height: 1.1;
+	font-weight: 700;
+	color: #626262;
+
+	&.mrg-bot-sm {
+		margin-bottom: vs(2);
+	}
+}
+
+
+.section__subhd {
+	margin-top: 0;
+	margin-bottom: vs(.5);
+
+	font-size: 24px;
+	line-height: 1.1;
+	font-weight: 600;
+	color: #A3A3A3;
+}
+
+
+.section__emphd {
+	margin-top: 0;
+	margin-bottom: vs(2);
+
+	font-size: 24px;
+	line-height: 1.1;
+	font-weight: 300;
+	font-style: italic;
+	color: #BCBCBC;
+}
+
+
+.section__intro {
+	margin-bottom: vs(3);
+}
+
+
+.section__btn {
+	margin-top: vs(1);
+	margin-bottom: 0;
+}
+
+
+.section__grid {
+	> .columns {
+		margin-bottom: vs(3);
+	}
+}
+
+
+
+
+
+// Sidebar
+// --------------------------------------------------
+
+.mol {
+	p {
+		font-size: rem-calc(16);
+		line-height: 1.6;
+	}
+}
+
+
+
+// Divider
+// --------------------------------------------------
+
+hr.divider {
+	margin: 0;
+}
+
+
+
+

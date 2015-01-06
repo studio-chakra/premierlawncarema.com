@@ -149,24 +149,42 @@ class AssetsService extends BaseApplicationComponent
 			return false;
 		}
 
+		if ($isNewFile && !$file->getContent()->title)
+		{
+			// Give it a default title based on the file name
+			$file->getContent()->title = str_replace('_', ' ', IOHelper::getFileName($file->filename, false));
+		}
+
 		$transaction = craft()->db->getCurrentTransaction() === null ? craft()->db->beginTransaction() : null;
+
 		try
 		{
-			if ($isNewFile && !$file->getContent()->title)
-			{
-				// Give it a default title based on the file name
-				$file->getContent()->title = str_replace('_', ' ', IOHelper::getFileName($file->filename, false));
-			}
-
 			// Fire an 'onBeforeSaveAsset' event
-			$this->onBeforeSaveAsset(new Event($this, array(
+			$event = new Event($this, array(
 				'asset'      => $file,
 				'isNewAsset' => $isNewFile
-			)));
+			));
 
-			// Save the element
-			if (craft()->elements->saveElement($file, false))
+			$this->onBeforeSaveAsset($event);
+
+			// Is the event giving us the go-ahead?
+			if ($event->performAction)
 			{
+
+				// Save the element
+				$success = craft()->elements->saveElement($file, false);
+
+				// If it didn't work, rollback the transaction in case something changed in onBeforeSaveAsset
+				if (!$success)
+				{
+					if ($transaction !== null)
+					{
+						$transaction->rollback();
+					}
+
+					return false;
+				}
+
 				// Now that we have an element ID, save it on the other stuff
 				if ($isNewFile)
 				{
@@ -175,15 +193,17 @@ class AssetsService extends BaseApplicationComponent
 
 				// Save the file row
 				$fileRecord->save(false);
-
-				if ($transaction !== null)
-				{
-					$transaction->commit();
-				}
 			}
 			else
 			{
-				return false;
+				$success = false;
+			}
+
+			// Commit the transaction regardless of whether we saved the asset, in case something changed
+			// in onBeforeSaveAsset
+			if ($transaction !== null)
+			{
+				$transaction->commit();
 			}
 		}
 		catch (\Exception $e)
@@ -196,22 +216,24 @@ class AssetsService extends BaseApplicationComponent
 			throw $e;
 		}
 
-		// If we've made it here, everything has been successful so far.
-
-		// Fire an 'onSaveAsset' event
-		$this->onSaveAsset(new Event($this, array(
-			'asset'      => $file
-		)));
-
-		if ($this->hasEventHandler('onSaveFileContent'))
+		if ($success)
 		{
-			// Fire an 'onSaveFileContent' event (deprecated)
-			$this->onSaveFileContent(new Event($this, array(
-				'file' => $file
+			// Fire an 'onSaveAsset' event
+			$this->onSaveAsset(new Event($this, array(
+				'asset'      => $file,
+				'isNewAsset' => $isNewFile
 			)));
+
+			if ($this->hasEventHandler('onSaveFileContent'))
+			{
+				// Fire an 'onSaveFileContent' event (deprecated)
+				$this->onSaveFileContent(new Event($this, array(
+					'file' => $file
+				)));
+			}
 		}
 
-		return true;
+		return $success;
 	}
 
 	/**
@@ -224,6 +246,18 @@ class AssetsService extends BaseApplicationComponent
 	public function onBeforeSaveAsset(Event $event)
 	{
 		$this->raiseEvent('onBeforeSaveAsset', $event);
+	}
+
+	/**
+	 * Fires an 'onBeforeUploadAsset' event.
+	 *
+	 * @param Event $event
+	 *
+	 * @return null
+	 */
+	public function onBeforeUploadAsset(Event $event)
+	{
+		$this->raiseEvent('onBeforeUploadAsset', $event);
 	}
 
 	/**
@@ -425,7 +459,7 @@ class AssetsService extends BaseApplicationComponent
 			}
 
 			$source = craft()->assetSources->getSourceTypeById($folder->sourceId);
-			$response = $source->renameFolder($folder, AssetsHelper::cleanAssetName($newName));
+			$response = $source->renameFolder($folder, AssetsHelper::cleanAssetName($newName, false));
 		}
 		catch (Exception $exception)
 		{
@@ -780,9 +814,21 @@ class AssetsService extends BaseApplicationComponent
 			{
 				$file = $this->getFileById($fileId);
 				$source = craft()->assetSources->getSourceTypeById($file->sourceId);
+
+				// Fire an 'onBeforeDeleteAsset' event
+				$this->onBeforeDeleteAsset(new Event($this, array(
+					'asset' => $file
+				)));
+
 				$source->deleteFile($file);
 				craft()->elements->deleteElementById($fileId);
+
+				// Fire an 'onDeleteAsset' event
+				$this->onDeleteAsset(new Event($this, array(
+					'asset' => $file
+				)));
 			}
+
 			$response->setSuccess();
 		}
 		catch (Exception $exception)
@@ -1055,6 +1101,30 @@ class AssetsService extends BaseApplicationComponent
 		}
 	}
 
+	/**
+	 * Fires an 'onBeforeDeleteAsset' event.
+	 *
+	 * @param Event $event
+	 *
+	 * @return null
+	 */
+	public function onBeforeDeleteAsset(Event $event)
+	{
+		$this->raiseEvent('onBeforeDeleteAsset', $event);
+	}
+
+	/**
+	 * Fires an 'onDeleteAsset' event.
+	 *
+	 * @param Event $event
+	 *
+	 * @return null
+	 */
+	public function onDeleteAsset(Event $event)
+	{
+		$this->raiseEvent('onDeleteAsset', $event);
+	}
+
 	// Private Methods
 	// =========================================================================
 
@@ -1284,9 +1354,9 @@ class AssetsService extends BaseApplicationComponent
 			// Use the previous data to clean up
 			craft()->assetTransforms->deleteAllTransformData($oldFileModel);
 			$originatingSource->finalizeTransfer($oldFileModel);
-
-			IOHelper::deleteFile($localCopy);
 		}
+
+		IOHelper::deleteFile($localCopy);
 
 		return $response;
 	}

@@ -103,42 +103,6 @@ var CP = Garnish.Base.extend(
 		$errorNotifications.delay(CP.notificationDuration * 2).velocity('fadeOut');
 		$otherNotifications.delay(CP.notificationDuration).velocity('fadeOut');
 
-		// Secondary form submit buttons
-		this.addListener($('.formsubmit'), 'activate', function(ev)
-		{
-			var $btn = $(ev.currentTarget);
-
-			if ($btn.attr('data-confirm'))
-			{
-				if (!confirm($btn.attr('data-confirm')))
-				{
-					return;
-				}
-			}
-
-			// Is this a menu item?
-			if ($btn.data('menu'))
-			{
-				var $form = $btn.data('menu').$trigger.closest('form');
-			}
-			else
-			{
-				var $form = $btn.closest('form');
-			}
-
-			if ($btn.attr('data-action'))
-			{
-				$('<input type="hidden" name="action" value="'+$btn.attr('data-action')+'"/>').appendTo($form);
-			}
-
-			if ($btn.attr('data-redirect'))
-			{
-				$('<input type="hidden" name="redirect" value="'+$btn.attr('data-redirect')+'"/>').appendTo($form);
-			}
-
-			$form.submit();
-		});
-
 		// Alerts
 		if (this.$alerts.length)
 		{
@@ -189,7 +153,7 @@ var CP = Garnish.Base.extend(
 					});
 				}
 
-				this.addListener(Garnish.$win, 'beforeunload', function()
+				this.addListener(Garnish.$win, 'beforeunload', function(ev)
 				{
 					for (var i = 0; i < this.$confirmUnloadForms.length; i++)
 					{
@@ -197,7 +161,18 @@ var CP = Garnish.Base.extend(
 
 						if (this.initialFormValues[i] != newFormValue)
 						{
-							return Craft.t('Any changes will be lost if you leave this page.');
+							var message = Craft.t('Any changes will be lost if you leave this page.');
+
+							if (ev)
+							{
+								ev.originalEvent.returnValue = message;
+							}
+							else
+							{
+								window.event.returnValue = message;
+							}
+
+							return message;
 						}
 					}
 				});

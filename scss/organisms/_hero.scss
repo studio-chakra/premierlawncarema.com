@@ -1,0 +1,48 @@
+//
+// Hero
+// --------------------------------------------------
+
+.hero {
+	padding-top: vs(10);
+	padding-bottom: vs(10);
+
+	text-align: center;
+
+	background-image: url(/images/hero-img.jpg);
+	background-size: cover;
+}
+
+
+.hero__hd {
+	margin-top: 0;
+	margin-bottom: vs(1.5);
+
+	font-size: rem-calc(48);
+	line-height: 1.2;
+	font-weight: 700;
+	color: #fff;
+
+	@media #{$medium-up} {
+		font-size: rem-calc(72);
+	}
+}
+
+
+.hero__subhd {
+	margin-top: 0;
+	margin-bottom: vs(3);
+
+	font-size: rem-calc(36);
+	line-height: 1.2;
+	font-weight: 400;
+	color: #BCBCBC;
+
+	@media #{$medium-up} {
+		font-size: rem-calc(28);
+	}
+}
+
+
+.hero__btn {
+	margin-bottom: 0;
+}

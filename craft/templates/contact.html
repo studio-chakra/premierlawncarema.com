@@ -1,0 +1,36 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-contact" %}
+
+{% block content %}
+	{% include '_organisms/page-header.html' %}
+	<div class="row main-pad-top main-pad-bot">
+		<div class="large-7 columns">
+			<article>
+				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+				<section class="section-contactform panel greybox__panel" style="height: 1000px;">
+					<h4 class="greybox__hd">Contact Form</h4>
+				</section>
+				<p class="text-small text-italic mrg-bot-0">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+			</article>
+		</div>
+		<div class="large-4 large-offset-1 columns">
+			<section class="sidebar">
+				<aside class="mol mol-contact">
+					<div class="contact">
+						<img class="contact__img" src="http://placehold.it/370x312" alt="Mike Bouffard" />
+						<h3 class="contact__name">Mike Bouffard <small>(Owner)</small></h3>
+						<p class="contact__bio">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.”</p>
+					</div>
+					<div class="contact-info">
+						<h4 class="contact-info__hd">Contact Information</h4>
+						<p class="contact-info__addy">Premier Lawn Care <br>PO Box 9 <br>Charlton, MA 01507 <br>Phone: (508) 446-7504 <br>Email: mike@premierlawncarema.com</p>
+					</div>
+					<div class="contact-social">
+						<a href="#" class="button tiny contact-social__btn"><i class="fa fa-facebook"></i> Facebook</a><a href="#" class="button tiny contact-social__btn"><i class="fa fa-twitter"></i> Twitter</a>
+					</div>
+				</aside>
+			</section>
+		</div>
+	</div>
+	{% include '_organisms/contact-gmap.html' %}
+{% endblock %}

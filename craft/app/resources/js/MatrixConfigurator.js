@@ -471,7 +471,7 @@ var BlockType = Garnish.Base.extend(
 
 		var $item = $(
 			'<div class="matrixconfigitem mci-field" data-id="'+id+'">' +
-				'<div class="name">&nbsp;</div>' +
+				'<div class="name"><em class="light">'+Craft.t('(blank)')+'</em>&nbsp;</div>' +
 				'<div class="handle code">&nbsp;</div>' +
 				'<div class="actions">' +
 					'<a class="move icon" title="'+Craft.t('Reorder')+'"></a>' +
@@ -615,7 +615,8 @@ Field = Garnish.Base.extend(
 
 	updateNameLabel: function()
 	{
-		this.$nameLabel.html(Craft.escapeHtml(this.$nameInput.val())+'&nbsp;');
+		var val = this.$nameInput.val();
+		this.$nameLabel.html((val ? Craft.escapeHtml(val) : '<em class="light">'+Craft.t('(blank)')+'</em>')+'&nbsp;');
 	},
 
 	updateHandleLabel: function()
@@ -710,7 +711,15 @@ Field = Garnish.Base.extend(
 						'<input class="text fullwidth code" type="text" id="'+this.inputIdPrefix+'-handle" name="'+this.inputNamePrefix+'[handle]" autofocus="" autocomplete="off"/>' +
 					'</div>' +
 				'</div>' +
-				'<div class="field checkbox">' +
+				'<div class="field" id="'+this.inputIdPrefix+'-instructions-field">' +
+					'<div class="heading">' +
+						'<label class="required" for="'+this.inputIdPrefix+'-instructions">'+Craft.t('Instructions')+'</label>' +
+					'</div>' +
+					'<div class="input">' +
+						'<textarea class="text nicetext fullwidth" rows="2" cols="50" id="'+this.inputIdPrefix+'-instructions" name="'+this.inputNamePrefix+'[instructions]"></textarea>' +
+					'</div>' +
+				'</div>' +
+				'<div class="field checkboxfield">' +
 					'<label>' +
 						'<input type="hidden" name="'+this.inputNamePrefix+'[required]" value=""/>' +
 						'<input type="checkbox" value="1" name="'+this.inputNamePrefix+'[required]"/> ' +
@@ -721,7 +730,7 @@ Field = Garnish.Base.extend(
 		if (Craft.isLocalized)
 		{
 			html +=
-				'<div class="field checkbox">' +
+				'<div class="field checkboxfield">' +
 					'<label>' +
 						'<input type="hidden" name="'+this.inputNamePrefix+'[translatable]" value=""/>' +
 						'<input type="checkbox" value="1" name="'+this.inputNamePrefix+'[translatable]"/> ' +

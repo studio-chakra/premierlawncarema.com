@@ -40,6 +40,7 @@ class CraftTwigExtension extends \Twig_Extension
 			new Nav_TokenParser(),
 			new Paginate_TokenParser(),
 			new Redirect_TokenParser(),
+			new RequireAdmin_TokenParser(),
 			new RequireEdition_TokenParser(),
 			new RequireLogin_TokenParser(),
 			new RequirePermission_TokenParser(),
@@ -68,6 +69,7 @@ class CraftTwigExtension extends \Twig_Extension
 			'indexOf'            => new \Twig_Filter_Method($this, 'indexOfFilter'),
 			'intersect'          => new \Twig_Filter_Function('array_intersect'),
 			'lcfirst'            => new \Twig_Filter_Function('lcfirst'),
+			'literal'            => new \Twig_Filter_Method($this, 'literalFilter'),
 			'markdown'           => $markdownFilter,
 			'md'                 => $markdownFilter,
 			'namespace'          => $namespaceFilter,
@@ -252,6 +254,19 @@ class CraftTwigExtension extends \Twig_Extension
 		{
 			return -1;
 		}
+	}
+
+	/**
+	 * Escapes commas and asterisks in a string so they are not treated as special characters in
+	 * {@link DbHelper::parseParam()}.
+	 *
+	 * @param string $value The param value.
+	 *
+	 * @return string The escaped param value.
+	 */
+	public function literalFilter($value)
+	{
+		return DbHelper::escapeParam($value);
 	}
 
 	/**

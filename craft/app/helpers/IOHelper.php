@@ -183,12 +183,19 @@ class IOHelper
 	 * @param string $path           The path to test.
 	 * @param bool   $suppressErrors Whether to suppress any PHP Notices/Warnings/Errors (usually permissions related).
 	 *
-	 * @return string The real file or folder path.
+	 * @return string|false The real file or folder path, or `false `if the file doesn’t exist.
 	 */
 	public static function getRealPath($path, $suppressErrors = false)
 	{
 		$path = static::normalizePathSeparators($path);
 		$path = $suppressErrors ? @realpath($path) : realpath($path);
+
+		// realpath() should just return false if the file doesn't exist, but seeing one case where
+		// it's returning an empty string instead
+		if (!$path)
+		{
+			return false;
+		}
 
 		if ($suppressErrors ? @is_dir($path) : is_dir($path))
 		{

@@ -17,24 +17,6 @@ return array(
 	'actionTrigger' => 'actions',
 
 	/**
-	 * The URI Craft should redirect to when user account activation fails.  Note that this only affects front-end site
-	 * requests.
-	 *
-	 * This can be set to a string or an array with locale IDs used as the keys, if you want to set it on a per-locale
-	 * basis.
-	 */
-	'activateAccountFailurePath' => '',
-
-	/**
-	 * The URI Craft should redirect to when account activation is successful. Note that this only affects front-end
-	 * site requests.
-	 *
-	 * This can be set to a string or an array with locale IDs used as the keys, if you want to set it on a per-locale
-	 * basis.
-	 */
-	'activateAccountSuccessPath' => '',
-
-	/**
 	 * Determines whether auto-generated URLs should have trailing slashes.
 	 */
 	'addTrailingSlashesToUrls' => false,
@@ -55,9 +37,9 @@ return array(
 	'allowUppercaseInSlug' => false,
 
 	/**
-	 * If this is set, Craft will call Yii’s CApplication->setId method (http://www.yiiframework.com/doc/api/1.1/CApplication#setId-detail) to explicitly
+	 * If this is set, Craft will call Yii’s CApplication::setId() method (http://www.yiiframework.com/doc/api/1.1/CApplication#setId-detail) to explicitly
 	 * set an application ID for Craft instead of using it’s own method of generating an ID based on a hash of
-	 * CApplication->getBasePath(). Yii’s default method causes issues with deployment services like Capistrano
+	 * CApplication::getBasePath(). Yii’s default method causes issues with deployment services like Capistrano
 	 * where deploying will destroy any active user sessions.
 	 *
 	 * The value is itself is not important as long as it is very hard to guess and is NOT based on the the absolute path
@@ -196,14 +178,8 @@ return array(
 
 	/**
 	 * Any environment-specific variables that should be swapped out in URL and Path settings.
-	 *
-	 * For example if you set it to:
-	 *
-	 *     array(
-	 *         'siteUrl' => 'http://example.com/'
-	 *     )
-	 *
-	 * ...then you would be able to use "{siteUrl}" in your Site URL setting or the URL settings for your Asset sources.
+	 * See http://buildwithcraft.com/docs/multi-environment-configs#environment-specific-variables for a full explanation
+	 * of this setting.
 	 */
 	'environmentVariables' => array(),
 
@@ -250,18 +226,34 @@ return array(
 	'invalidLoginWindowDuration' => 'PT1H',
 
 	/**
-	 * Whether the site is currently online or not. If set to false or true, will take precedence over what is set in
-	 * Settings->General->System Status in the CP.
+	 * The URI Craft should redirect to when user token validation fails. A token is used on things like setting and
+	 * resetting user account passwords.  Note that this only affects front-end site requests.
+	 *
+	 * This can be set to a string or an array with locale IDs used as the keys, if you want to set it on a per-locale
+	 * basis.
 	 */
-	'isSystemOn' => '',
+	'invalidUserTokenPath' => '',
+
+	/**
+	 * Whether the site is currently online or not. If set to `true` or `false`, it will take precedence over the
+	 * System Status setting in Settings → General.
+	 */
+	'isSystemOn' => null,
 
 	/**
 	 * If set to true, the auto-generated slugs for an entry will strip any multi-byte characters (Chinese, Japanese, etc.)
-	 * and attempt to convert any high-ASCII to their low ASCII counterparts (i.e. ñ => n).
+	 * and attempt to convert any high-ASCII to their low ASCII counterparts (i.e. ñ → n).
 	 *
 	 * Note that this only affects the JavaScript auto-generated slugs and they still can be manually entered in the slug.
 	 */
 	'limitAutoSlugsToAscii' => false,
+
+	/**
+	 * The method that is used to dump logging context information. Defaults to `var_export`. If you experience circular
+	 * reference errors, you can change it to `print_r`. Any kind of callable method (static, user defined lambda, etc.)
+	 * could also be used.
+	 */
+	'logDumpMethod' => 'var_export',
 
 	/**
 	 * The URI Craft should use for user login.  Note that this only affects front-end site requests.
@@ -328,7 +320,7 @@ return array(
 	 * might be stored with memcache or the like. If it does, Craft will leave it alone; otherwise Craft will override
 	 * it.
 	 */
-	'overridePhpSessionLocation' => 'auto',
+	'overridePhpSessionLocation' => false,
 
 	/**
 	 * The string preceding a number which Craft will look for when determining if the current request is for a
@@ -414,6 +406,11 @@ return array(
 	'restoreDbOnUpdateFailure' => true,
 
 	/**
+	 * Whether Craft should rotate images according to their EXIF data on upload.
+	 */
+	'rotateImagesOnUploadByExifData' => true,
+
+	/**
 	 * Words that should be ignored when indexing search keywords and preparing search terms to be matched against the
 	 * keyword index.
 	 */
@@ -437,7 +434,15 @@ return array(
 	'setPasswordSuccessPath' => '',
 
 	/**
-	 * The base URL to the site. If this is set, Craft will use it instead of the site URL defined in Settings->General.
+	 * The name of the site. If set, it will take precedence over the Site Name setting in Settings → General.
+	 *
+	 * This can be set to a string or an array with locale IDs used as the keys, if you want to set it on a per-locale
+	 * basis.
+	 */
+	'siteName' => null,
+
+	/**
+	 * The base URL to the site. If set, it will take precedence over the Site URL setting in Settings → General.
 	 *
 	 * This can be set to a string or an array with locale IDs used as the keys, if you want to set it on a per-locale
 	 * basis.
@@ -450,9 +455,17 @@ return array(
 	'slugWordSeparator' => '-',
 
 	/**
-	 * Configures Craft to send all system emails to a single email address, for testing purposes.
+	 * Configures Craft to send all system emails to a single email address, or an array of email addresses for testing
+	 * purposes.
 	 */
 	'testToEmailAddress' => '',
+
+	/**
+	 * The timezone of the site. If set, it will take precedence over the Timezone setting in Settings → General.
+	 *
+	 * This can be set to one of PHP’s supported timezones (http://php.net/manual/en/timezones.php).
+	 */
+	'timezone' => null,
 
 	/**
 	 * Tells Craft whether to surround all translatable strings with “@” symbols, to help find any strings that are not

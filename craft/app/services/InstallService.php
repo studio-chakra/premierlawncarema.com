@@ -672,7 +672,8 @@ class InstallService extends BaseApplicationComponent
 		$bodyField->translatable = true;
 		$bodyField->type         = 'RichText';
 		$bodyField->settings = array(
-			'configFile' => 'Standard.json'
+			'configFile' => 'Standard.json',
+			'columnType' => ColumnType::Text,
 		);
 
 		if (craft()->fields->saveField($bodyField))
@@ -714,8 +715,7 @@ class InstallService extends BaseApplicationComponent
 			array(
 				Craft::t('Content') => array($headingField->id, $bodyField->id)
 			),
-			array($headingField->id, $bodyField->id),
-			true
+			array($headingField->id, $bodyField->id)
 		);
 
 		$homepageLayout->type = ElementType::Entry;
@@ -820,8 +820,7 @@ class InstallService extends BaseApplicationComponent
 			array(
 				Craft::t('Content') => array($bodyField->id, $tagsField->id),
 			),
-			array($bodyField->id),
-			true
+			array($bodyField->id)
 		);
 
 		$newsLayout->type = ElementType::Entry;

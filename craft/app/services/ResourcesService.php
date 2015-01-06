@@ -110,14 +110,14 @@ class ResourcesService extends BaseApplicationComponent
 							return false;
 						}
 
-						$size = AssetsHelper::cleanAssetName($segs[2]);
+						$size = AssetsHelper::cleanAssetName($segs[2], false);
 						// Looking for either a numeric size or "original" keyword
 						if (!is_numeric($size) && $size != "original")
 						{
 							return false;
 						}
 
-						$username = AssetsHelper::cleanAssetName($segs[1]);
+						$username = AssetsHelper::cleanAssetName($segs[1], false);
 						$filename = AssetsHelper::cleanAssetName($segs[3]);
 
 						$userPhotosPath = craft()->path->getUserPhotosPath().$username.'/';
@@ -279,14 +279,11 @@ class ResourcesService extends BaseApplicationComponent
 		// Maybe a plugin wants to do something custom with this URL
 		craft()->plugins->loadPlugins();
 
-		$pluginPaths = craft()->plugins->call('getResourcePath', array($path));
+		$pluginPath = craft()->plugins->callFirst('getResourcePath', array($path), true);
 
-		foreach ($pluginPaths as $path)
+		if ($pluginPath && IOHelper::fileExists($pluginPath))
 		{
-			if ($path && IOHelper::fileExists($path))
-			{
-				return $path;
-			}
+			return $pluginPath;
 		}
 
 		// Couldn't find the file

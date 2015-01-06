@@ -126,8 +126,7 @@ class ConfigService extends BaseApplicationComponent
 	 * This function is used for Craft’s “localizable” config settings:
 	 *
 	 * - [siteUrl](http://buildwithcraft.com/docs/config-settings#siteUrl)
-	 * - [activateAccountFailurePath](http://buildwithcraft.com/docs/config-settings#activateAccountFailurePath)
-	 * - [activateAccountSuccessPath](http://buildwithcraft.com/docs/config-settings#activateAccountSuccessPath)
+	 * - [invalidUserTokenPath](http://buildwithcraft.com/docs/config-settings#invalidUserTokenPath)
 	 * - [loginPath](http://buildwithcraft.com/docs/config-settings#loginPath)
 	 * - [logoutPath](http://buildwithcraft.com/docs/config-settings#logoutPath)
 	 * - [setPasswordPath](http://buildwithcraft.com/docs/config-settings#setPasswordPath)
@@ -547,7 +546,7 @@ class ConfigService extends BaseApplicationComponent
 	 */
 	public function getActivateAccountPath($code, $uid, $full = true)
 	{
-		$url = $this->get('actionTrigger').'/users/validate';
+		$url = $this->get('actionTrigger').'/users/setPassword';
 
 		if (!$full)
 		{

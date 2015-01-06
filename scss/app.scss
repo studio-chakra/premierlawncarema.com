@@ -1,6 +1,11 @@
+//
+// App
+// --------------------------------------------------
+
+
+// Vendor
 @import "settings";
 @import "foundation";
-
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
@@ -38,3 +43,44 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+
+// Core
+@import "vars";
+@import "mixins";
+@import "utils";
+@import "typography";
+@import "layout";
+
+
+// Atoms
+@import "atoms/buttons";
+@import "atoms/sections";
+
+
+// Molecules
+@import "molecules/testimonial";
+@import "molecules/service";
+
+
+// Organisms
+@import "organisms/header";
+@import "organisms/footer";
+@import "organisms/cta";
+@import "organisms/hero";
+@import "organisms/page-header";
+
+
+// Templates
+@import "templates/contact";
+
+
+// Pages
+
+
+// Utilities
+
+
+
+
+

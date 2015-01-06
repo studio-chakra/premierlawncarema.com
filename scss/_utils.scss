@@ -1,0 +1,35 @@
+//
+// Utils
+// --------------------------------------------------
+
+
+.img-rwd {
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+.google-map {
+  position: relative;
+  //padding-bottom: 30%; // This is the aspect ratio
+  height: 360px;
+  overflow: hidden;
+  max-width: 100%;
+
+	iframe,
+	embed,
+	object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+	}
+}
+
+
+
+.mrg-bot-0 {
+	margin-bottom: 0;
+}
