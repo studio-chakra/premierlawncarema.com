@@ -78,6 +78,15 @@
 // Sidebar
 // --------------------------------------------------
 
+.sidebar {
+	margin-top: vs(5);
+
+	@media #{$medium-up} {
+		margin-top: 0;
+	}
+}
+
+
 .mol {
 	p {
 		font-size: rem-calc(16);

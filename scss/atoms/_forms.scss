@@ -1,0 +1,115 @@
+//
+// Forms
+// --------------------------------------------------
+
+label {
+	margin-bottom: vs(.7);
+}
+
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+input[type="color"], 
+textarea,
+select {
+	margin-bottom: 0;
+}
+
+
+input[type="checkbox"], 
+input[type="radio"] {
+	margin-bottom: 0; 
+}
+
+
+.alert-box {
+	font-size: rem-calc(14);
+	line-height: 1.5;
+
+	p {
+		margin-bottom: vs(1);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		font-size: rem-calc(16);
+		line-height: 1.5;
+	}
+
+	&.alert p a {
+		color: $white;
+		text-decoration: underline;
+	}
+
+}
+
+
+
+
+
+
+// Sprout Forms
+// --------------------------------------------------
+
+.field {
+	margin-bottom: vs(2.5);
+}
+
+
+.checkbox-select {
+	> div {
+		margin-bottom: vs(.5);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	label {
+		margin-bottom: 0;
+		font-weight: 400;
+	}
+}
+
+
+.submit {
+	margin-top: vs(4);
+}
+
+
+.submit > input {
+	@include button($button-med, $primary-color, false, false, false);
+
+	margin-bottom: 0;
+
+	text-transform: uppercase;
+}
+
+
+// Errors
+
+.errors {
+	@include no-bullet();
+	margin-bottom: 0;	
+
+	font-size: $input-error-message-font-size;
+	font-weight: $input-error-message-font-weight;
+	font-style: $input-error-message-font-style;
+	color: $input-error-message-font-color;
+
+	background-color: $alert-color;
+
+	> li {
+		padding: $input-error-message-padding;
+	}
+}

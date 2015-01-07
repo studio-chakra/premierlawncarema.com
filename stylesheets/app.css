@@ -44,7 +44,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -1592,7 +1592,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -1724,7 +1724,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -1786,11 +1786,11 @@ select {
   border-style: solid;
   border-width: 1px;
   display: block;
-  font-weight: normal;
-  margin-bottom: 1.11111rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
   position: relative;
-  padding: 0.77778rem 1.33333rem 0.77778rem 0.77778rem;
-  font-size: 0.72222rem;
+  padding: 1.33333rem 1.88889rem 1.33333rem 1.33333rem;
+  font-size: 0.77778rem;
   transition: opacity 300ms ease-out;
   background-color: #FF9900;
   border-color: #db8400;
@@ -1881,7 +1881,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -2288,7 +2288,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -2445,7 +2445,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -2549,7 +2549,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -3194,7 +3194,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -3483,7 +3483,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -3757,7 +3757,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -4095,7 +4095,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -4245,7 +4245,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -4370,7 +4370,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -4474,7 +4474,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -4719,14 +4719,14 @@ button::-moz-focus-inner {
     display: inline-block; } }
 /* Standard Forms */
 form {
-  margin: 0 0 0.88889rem; }
+  margin: 0 0 1.22222rem; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-  margin: 0 -0.44444rem; }
+  margin: 0 -0.61111rem; }
   form .row .row .column,
   form .row .row .columns {
-    padding: 0 0.44444rem; }
+    padding: 0 0.61111rem; }
   form .row .row.collapse {
     margin: 0; }
     form .row .row.collapse .column,
@@ -4741,24 +4741,24 @@ form .row input.column,
 form .row input.columns,
 form .row textarea.column,
 form .row textarea.columns {
-  padding-left: 0.44444rem; }
+  padding-left: 0.61111rem; }
 
 /* Label Styles */
 label {
-  font-size: 0.77778rem;
+  font-size: 1rem;
   color: #4d4d4d;
   cursor: pointer;
   display: block;
-  font-weight: normal;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 0;
   /* Styles for required inputs */ }
   label.right {
     float: none !important;
     text-align: right; }
   label.inline {
-    margin: 0 0 0.88889rem 0;
-    padding: 0.5rem 0; }
+    margin: 0 0 1.22222rem 0;
+    padding: 0.66667rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -4776,9 +4776,9 @@ label {
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
-  font-size: 0.77778rem;
-  height: 2.05556rem;
-  line-height: 2.05556rem; }
+  font-size: 1rem;
+  height: 2.66667rem;
+  line-height: 2.66667rem; }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 .postfix.button {
@@ -4866,10 +4866,10 @@ textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-size: 0.77778rem;
-  margin: 0 0 0.88889rem 0;
-  padding: 0.44444rem;
-  height: 2.05556rem;
+  font-size: 0.88889rem;
+  margin: 0 0 1.22222rem 0;
+  padding: 0.61111rem;
+  height: 2.66667rem;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5069,13 +5069,13 @@ select {
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
-  padding: 0.44444rem;
-  font-size: 0.77778rem;
+  padding: 0.61111rem;
+  font-size: 0.88889rem;
   font-family: "proxima-nova", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
-  height: 2.05556rem; }
+  height: 2.66667rem; }
   select::-ms-expand {
     display: none; }
   select.radius {
@@ -5092,13 +5092,13 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 0.88889rem 0; }
+  margin: 0 0 1.22222rem 0; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.44444rem;
-  margin-right: 0.88889rem;
+  margin-left: 0.61111rem;
+  margin-right: 1.22222rem;
   margin-bottom: 0;
   vertical-align: baseline; }
 
@@ -5113,7 +5113,7 @@ fieldset {
   padding: 1.11111rem;
   margin: 1rem 0; }
   fieldset legend {
-    font-weight: bold;
+    font-weight: 700;
     background: #FFFFFF;
     padding: 0 0.16667rem;
     margin: 0;
@@ -5122,11 +5122,11 @@ fieldset {
 /* Error Handling */
 [data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -5135,11 +5135,11 @@ fieldset {
 
 span.error, small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -5150,17 +5150,17 @@ span.error, small.error {
   margin-bottom: 0; }
 .error input[type="checkbox"],
 .error input[type="radio"] {
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 1.22222rem; }
 .error label,
 .error label.error {
   color: #f04124; }
 .error small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -5230,7 +5230,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -5458,7 +5458,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -5577,7 +5577,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -5649,7 +5649,7 @@ select {
   top: 0;
   left: 2.5%;
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 400;
   width: 95%; }
 
 .lt-ie9 .joyride-tip-guide {
@@ -5701,7 +5701,7 @@ select {
 .joyride-tip-guide h6 {
   line-height: 1.25;
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
   color: #FFFFFF; }
 
 .joyride-tip-guide p {
@@ -5730,7 +5730,7 @@ select {
   color: #777777 !important;
   text-decoration: none;
   font-size: 24px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: .5 !important; }
   .joyride-close-tip:hover, .joyride-close-tip:focus {
     color: #EEEEEE !important; }
@@ -5835,7 +5835,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -5952,7 +5952,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6011,7 +6011,7 @@ select {
   width: 100%; }
 
 .label {
-  font-weight: normal;
+  font-weight: 400;
   font-family: "proxima-nova", Arial, sans-serif;
   text-align: center;
   text-decoration: none;
@@ -6090,7 +6090,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6206,7 +6206,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6542,7 +6542,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6631,7 +6631,7 @@ ul.pagination {
     ul.pagination li.current a, ul.pagination li.current button {
       background: #FF9900;
       color: #FFFFFF;
-      font-weight: bold;
+      font-weight: 700;
       cursor: default; }
       ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
         background: #FF9900; }
@@ -6692,7 +6692,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6840,7 +6840,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -6911,7 +6911,7 @@ select {
     padding: 0.83333rem 1.11111rem;
     text-align: center;
     color: #EEEEEE;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 0.88889rem;
     font-family: "proxima-nova", Arial, sans-serif; }
   .pricing-table .price {
@@ -6919,7 +6919,7 @@ select {
     padding: 0.83333rem 1.11111rem;
     text-align: center;
     color: #333333;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 1.77778rem;
     font-family: "proxima-nova", Arial, sans-serif; }
   .pricing-table .description {
@@ -6928,7 +6928,7 @@ select {
     text-align: center;
     color: #777777;
     font-size: 0.66667rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.4;
     border-bottom: dotted 1px #DDDDDD; }
   .pricing-table .bullet-item {
@@ -6937,7 +6937,7 @@ select {
     text-align: center;
     color: #333333;
     font-size: 0.77778rem;
-    font-weight: normal;
+    font-weight: 400;
     border-bottom: dotted 1px #DDDDDD; }
   .pricing-table .cta-button {
     background-color: #FFFFFF;
@@ -6990,7 +6990,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -7126,7 +7126,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -7309,7 +7309,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -7413,7 +7413,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9023,7 +9023,7 @@ select {
     top: 0.44444rem;
     right: 0.61111rem;
     color: #AAAAAA;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer; }
 
 dialog {
@@ -9092,7 +9092,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9160,7 +9160,7 @@ select {
   .side-nav li {
     margin: 0 0 0.38889rem 0;
     font-size: 0.77778rem;
-    font-weight: normal; }
+    font-weight: 400; }
     .side-nav li a:not(.button) {
       display: block;
       color: #FF9900;
@@ -9171,7 +9171,7 @@ select {
         color: #ffb84d; }
     .side-nav li.active > a:first-child:not(.button) {
       color: #ffb84d;
-      font-weight: normal;
+      font-weight: 400;
       font-family: "proxima-nova", Arial, sans-serif; }
     .side-nav li.divider {
       border-top: 1px solid;
@@ -9231,7 +9231,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9335,7 +9335,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9624,7 +9624,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9856,7 +9856,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -9930,7 +9930,7 @@ select {
     margin-left: 0.88889rem;
     margin-bottom: 0;
     font-family: "proxima-nova", Arial, sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 0.77778rem;
     color: #999999; }
     .sub-nav dt a,
@@ -9947,7 +9947,7 @@ select {
     .sub-nav dd.active a,
     .sub-nav li.active a {
       border-radius: 3px;
-      font-weight: normal;
+      font-weight: 400;
       background: #FF9900;
       padding: 0.16667rem 0.88889rem;
       cursor: default;
@@ -10003,7 +10003,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -10204,7 +10204,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -10278,7 +10278,7 @@ table {
     table thead tr td {
       padding: 0.44444rem 0.55556rem 0.55556rem;
       font-size: 0.77778rem;
-      font-weight: bold;
+      font-weight: 700;
       color: #222222; }
   table tfoot {
     background: #F5F5F5; }
@@ -10286,7 +10286,7 @@ table {
     table tfoot tr td {
       padding: 0.44444rem 0.55556rem 0.55556rem;
       font-size: 0.77778rem;
-      font-weight: bold;
+      font-weight: 700;
       color: #222222; }
   table tr th,
   table tr td {
@@ -10351,7 +10351,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -10455,7 +10455,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -12085,7 +12085,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -12202,7 +12202,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -12264,7 +12264,7 @@ select {
 .has-tip {
   border-bottom: dotted 1px #CCCCCC;
   cursor: help;
-  font-weight: bold;
+  font-weight: 700;
   color: #333333; }
   .has-tip:hover, .has-tip:focus {
     border-bottom: dotted 1px #734500;
@@ -12276,7 +12276,7 @@ select {
   display: none;
   position: absolute;
   z-index: 1006;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 0.77778rem;
   line-height: 1.3;
   padding: 0.66667rem;
@@ -12312,7 +12312,7 @@ select {
   display: block;
   font-size: 0.55556rem;
   color: #777777;
-  font-weight: normal; }
+  font-weight: 400; }
 
 @media only screen and (min-width: 641px) {
   .tooltip > .nub {
@@ -12382,7 +12382,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -12486,7 +12486,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -14034,7 +14034,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -14323,7 +14323,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -14427,7 +14427,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -14672,14 +14672,14 @@ button::-moz-focus-inner {
     display: inline-block; } }
 /* Standard Forms */
 form {
-  margin: 0 0 0.88889rem; }
+  margin: 0 0 1.22222rem; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-  margin: 0 -0.44444rem; }
+  margin: 0 -0.61111rem; }
   form .row .row .column,
   form .row .row .columns {
-    padding: 0 0.44444rem; }
+    padding: 0 0.61111rem; }
   form .row .row.collapse {
     margin: 0; }
     form .row .row.collapse .column,
@@ -14694,24 +14694,24 @@ form .row input.column,
 form .row input.columns,
 form .row textarea.column,
 form .row textarea.columns {
-  padding-left: 0.44444rem; }
+  padding-left: 0.61111rem; }
 
 /* Label Styles */
 label {
-  font-size: 0.77778rem;
+  font-size: 1rem;
   color: #4d4d4d;
   cursor: pointer;
   display: block;
-  font-weight: normal;
-  line-height: 1.5;
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 0;
   /* Styles for required inputs */ }
   label.right {
     float: none !important;
     text-align: right; }
   label.inline {
-    margin: 0 0 0.88889rem 0;
-    padding: 0.5rem 0; }
+    margin: 0 0 1.22222rem 0;
+    padding: 0.66667rem 0; }
   label small {
     text-transform: capitalize;
     color: #676767; }
@@ -14729,9 +14729,9 @@ label {
   border-style: solid;
   border-width: 1px;
   overflow: hidden;
-  font-size: 0.77778rem;
-  height: 2.05556rem;
-  line-height: 2.05556rem; }
+  font-size: 1rem;
+  height: 2.66667rem;
+  line-height: 2.66667rem; }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 .postfix.button {
@@ -14819,10 +14819,10 @@ textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  font-size: 0.77778rem;
-  margin: 0 0 0.88889rem 0;
-  padding: 0.44444rem;
-  height: 2.05556rem;
+  font-size: 0.88889rem;
+  margin: 0 0 1.22222rem 0;
+  padding: 0.61111rem;
+  height: 2.66667rem;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15022,13 +15022,13 @@ select {
   border-style: solid;
   border-width: 1px;
   border-color: #cccccc;
-  padding: 0.44444rem;
-  font-size: 0.77778rem;
+  padding: 0.61111rem;
+  font-size: 0.88889rem;
   font-family: "proxima-nova", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
-  height: 2.05556rem; }
+  height: 2.66667rem; }
   select::-ms-expand {
     display: none; }
   select.radius {
@@ -15045,13 +15045,13 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 0.88889rem 0; }
+  margin: 0 0 1.22222rem 0; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.44444rem;
-  margin-right: 0.88889rem;
+  margin-left: 0.61111rem;
+  margin-right: 1.22222rem;
   margin-bottom: 0;
   vertical-align: baseline; }
 
@@ -15066,7 +15066,7 @@ fieldset {
   padding: 1.11111rem;
   margin: 1rem 0; }
   fieldset legend {
-    font-weight: bold;
+    font-weight: 700;
     background: #FFFFFF;
     padding: 0 0.16667rem;
     margin: 0;
@@ -15075,11 +15075,11 @@ fieldset {
 /* Error Handling */
 [data-abide] .error small.error, [data-abide] .error span.error, [data-abide] span.error, [data-abide] small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -15088,11 +15088,11 @@ fieldset {
 
 span.error, small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -15103,17 +15103,17 @@ span.error, small.error {
   margin-bottom: 0; }
 .error input[type="checkbox"],
 .error input[type="radio"] {
-  margin-bottom: 0.88889rem; }
+  margin-bottom: 1.22222rem; }
 .error label,
 .error label.error {
   color: #f04124; }
 .error small.error {
   display: block;
-  padding: 0.33333rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.44444rem;
   margin-top: -1px;
-  margin-bottom: 0.88889rem;
-  font-size: 0.66667rem;
-  font-weight: normal;
+  margin-bottom: 1.22222rem;
+  font-size: 0.77778rem;
+  font-weight: 400;
   font-style: italic;
   background: #f04124;
   color: #FFFFFF; }
@@ -15208,7 +15208,7 @@ meta.foundation-mq-topbar {
       font-size: 0.94444rem;
       margin: 0; }
       .top-bar .name h1 a {
-        font-weight: normal;
+        font-weight: 400;
         color: #FFFFFF;
         width: 75%;
         display: block;
@@ -15221,7 +15221,7 @@ meta.foundation-mq-topbar {
       color: #FFFFFF;
       text-transform: uppercase;
       font-size: 0.72222rem;
-      font-weight: bold;
+      font-weight: 700;
       position: relative;
       display: block;
       padding: 0 15px;
@@ -15286,7 +15286,7 @@ meta.foundation-mq-topbar {
       padding-left: 15px;
       font-family: "proxima-nova", Arial, sans-serif;
       font-size: 0.72222rem;
-      font-weight: normal;
+      font-weight: 400;
       text-transform: none; }
       .top-bar-section ul li > a.button {
         font-size: 0.72222rem;
@@ -15430,10 +15430,10 @@ meta.foundation-mq-topbar {
       width: 100%;
       height: auto; }
       .top-bar-section .dropdown li a {
-        font-weight: normal;
+        font-weight: 400;
         padding: 8px 15px; }
         .top-bar-section .dropdown li a.parent-link {
-          font-weight: normal; }
+          font-weight: 400; }
       .top-bar-section .dropdown li.title h5, .top-bar-section .dropdown li.parent-link {
         margin-bottom: 0;
         margin-top: 0;
@@ -15452,7 +15452,7 @@ meta.foundation-mq-topbar {
       margin-bottom: 0;
       text-transform: uppercase;
       color: #777777;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 0.55556rem; }
 
 .js-generated {
@@ -15676,7 +15676,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -15902,7 +15902,7 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 2.66667rem;
@@ -15918,8 +15918,8 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+  font-style: 400;
   color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0;
@@ -15931,10 +15931,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 1.88889rem; }
+  font-size: 1.77778rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.44444rem; }
 
 h3 {
   font-size: 1.22222rem; }
@@ -15951,7 +15951,7 @@ h6 {
 .subheader {
   line-height: 1.4;
   color: #6f6f6f;
-  font-weight: normal;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -15970,7 +15970,7 @@ i {
 
 strong,
 b {
-  font-weight: bold;
+  font-weight: 700;
   line-height: inherit; }
 
 small {
@@ -15979,7 +15979,7 @@ small {
 
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: normal;
+  font-weight: 400;
   color: #333333;
   background-color: #bbdff5;
   border-width: 1px;
@@ -16037,7 +16037,7 @@ ol {
 /* Definition Lists */
 dl dt {
   margin-bottom: 0.3rem;
-  font-weight: bold; }
+  font-weight: 700; }
 dl dd {
   margin-bottom: 0.66667rem; }
 
@@ -16084,15 +16084,15 @@ blockquote p {
     margin: 0;
     display: block; }
   .vcard .fn {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.83333rem; }
 
 .vevent .summary {
-  font-weight: bold; }
+  font-weight: 700; }
 .vevent abbr {
   cursor: default;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
   padding: 0 0.05556rem; }
 
@@ -16101,10 +16101,10 @@ blockquote p {
     line-height: 1.2; }
 
   h1 {
-    font-size: 2.44444rem; }
+    font-size: 2.33333rem; }
 
   h2 {
-    font-size: 2.05556rem; }
+    font-size: 2rem; }
 
   h3 {
     font-size: 1.5rem; }
@@ -16234,7 +16234,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -16338,7 +16338,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -16564,7 +16564,7 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 2.66667rem;
@@ -16580,8 +16580,8 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+  font-style: 400;
   color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0;
@@ -16593,10 +16593,10 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 1.88889rem; }
+  font-size: 1.77778rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.44444rem; }
 
 h3 {
   font-size: 1.22222rem; }
@@ -16613,7 +16613,7 @@ h6 {
 .subheader {
   line-height: 1.4;
   color: #6f6f6f;
-  font-weight: normal;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -16632,7 +16632,7 @@ i {
 
 strong,
 b {
-  font-weight: bold;
+  font-weight: 700;
   line-height: inherit; }
 
 small {
@@ -16641,7 +16641,7 @@ small {
 
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: normal;
+  font-weight: 400;
   color: #333333;
   background-color: #bbdff5;
   border-width: 1px;
@@ -16699,7 +16699,7 @@ ol {
 /* Definition Lists */
 dl dt {
   margin-bottom: 0.3rem;
-  font-weight: bold; }
+  font-weight: 700; }
 dl dd {
   margin-bottom: 0.66667rem; }
 
@@ -16746,15 +16746,15 @@ blockquote p {
     margin: 0;
     display: block; }
   .vcard .fn {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 0.83333rem; }
 
 .vevent .summary {
-  font-weight: bold; }
+  font-weight: 700; }
 .vevent abbr {
   cursor: default;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
   padding: 0 0.05556rem; }
 
@@ -16763,10 +16763,10 @@ blockquote p {
     line-height: 1.2; }
 
   h1 {
-    font-size: 2.44444rem; }
+    font-size: 2.33333rem; }
 
   h2 {
-    font-size: 2.05556rem; }
+    font-size: 2rem; }
 
   h3 {
     font-size: 1.5rem; }
@@ -16883,7 +16883,7 @@ blockquote p {
   position: relative; }
   .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
     color: #FFFFFF;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 2.5rem;
     margin: 0; }
   .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
@@ -17004,7 +17004,7 @@ ul.off-canvas-list {
     color: #999999;
     text-transform: uppercase;
     font-size: 0.66667rem;
-    font-weight: bold;
+    font-weight: 700;
     background: #444444;
     border-top: 1px solid #5e5e5e;
     border-bottom: none;
@@ -17183,7 +17183,7 @@ ul.off-canvas-list {
     padding: 0.3rem 0.83333rem;
     color: #999999;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     background: #444;
     border-top: 1px solid #5e5e5e;
     border-bottom: none;
@@ -17235,7 +17235,7 @@ ul.off-canvas-list {
     padding: 0.3rem 0.83333rem;
     color: #999999;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 700;
     background: #444;
     border-top: 1px solid #5e5e5e;
     border-bottom: none;
@@ -17312,7 +17312,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "proxima-nova", Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   position: relative;
@@ -17742,6 +17742,101 @@ button,
 .button {
   text-transform: uppercase; }
 
+label {
+  margin-bottom: 0.46667rem; }
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea,
+select {
+  margin-bottom: 0; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-bottom: 0; }
+
+.alert-box {
+  font-size: 0.77778rem;
+  line-height: 1.5; }
+  .alert-box p {
+    margin-bottom: 0.66667rem;
+    font-size: 0.88889rem;
+    line-height: 1.5; }
+    .alert-box p:last-of-type {
+      margin-bottom: 0; }
+  .alert-box.alert p a {
+    color: #FFFFFF;
+    text-decoration: underline; }
+
+.field {
+  margin-bottom: 1.66667rem; }
+
+.checkbox-select > div {
+  margin-bottom: 0.33333rem; }
+  .checkbox-select > div:last-child {
+    margin-bottom: 0; }
+.checkbox-select label {
+  margin-bottom: 0;
+  font-weight: 400; }
+
+.submit {
+  margin-top: 2.66667rem; }
+
+.submit > input {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "proxima-nova", Arial, sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 0 1.33333rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  display: inline-block;
+  padding-top: 0.83333rem;
+  padding-right: 1.66667rem;
+  padding-bottom: 0.88889rem;
+  padding-left: 1.66667rem;
+  font-size: 1.33333rem;
+  background-color: #FF9900;
+  border-color: #cc7a00;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+  .submit > input:hover, .submit > input:focus {
+    background-color: #cc7a00; }
+  .submit > input:hover, .submit > input:focus {
+    color: #FFFFFF; }
+
+.errors {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 0.77778rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #FFFFFF;
+  background-color: #f04124; }
+  .errors > li {
+    padding: 0.5rem 0.44444rem; }
+
 .section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -17786,6 +17881,12 @@ button,
 
 .section__grid > .columns {
   margin-bottom: 2rem; }
+
+.sidebar {
+  margin-top: 3.33333rem; }
+  @media only screen and (min-width: 641px) {
+    .sidebar {
+      margin-top: 0; } }
 
 .mol p {
   font-size: 0.88889rem;
@@ -18127,10 +18228,13 @@ footer {
   background: #535353; }
 
 .page-title {
-  font-size: 48px;
+  font-size: 2.66667rem;
   line-height: 1.2;
   font-weight: 400;
   color: #fff; }
+
+.section-contactform {
+  margin-bottom: 2.66667rem; }
 
 .contact__name {
   margin-top: 1rem;

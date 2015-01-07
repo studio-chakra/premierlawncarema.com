@@ -6,11 +6,41 @@
 	<div class="row main-pad-top main-pad-bot">
 		<div class="large-7 columns">
 			<article>
-				<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
-				<section class="section-contactform panel greybox__panel" style="height: 1000px;">
-					<h4 class="greybox__hd">Contact Form</h4>
-				</section>
-				<p class="text-small text-italic mrg-bot-0">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+
+				{# Check if we should display or form or thank you message #}
+				{% if craft.request.getParam('message') == 'thank-you' %}
+
+					{# Display our thank you message #}
+					<h1>Thank you for contacting Premier Lawn Care</h1>
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+
+				{% else %}
+
+					{# ERROR MSG Doesn't work right now, I guess it has to be custom HTML form #}
+					{# Prepare our error macro #}
+					{% macro errorList(errors) %}
+						{# To display errors, you want to make sure errors exist, 
+							 and then you can loop through and display them #}
+						{% if errors %}
+							<div data-alert class="alert-box alert">
+							  <p>Unfortunately there are error(s) sending your inquiry to us. Please make sure you've filled out all the required fields as indicated in red. Please double-check any formatting as well. When you are done, click the 'Send' button again.</p>
+							  <p>If you still run into problems, feel free to contact us via <a href="mailto: contact@premierlawncarema.com" subject="Contact Form Send Issues">contact@premierlawncarema.com</a> or give us a call at (508) 446-7504.</p>
+							  <a href="#" class="close">&times;</a>
+							</div>
+						{% endif %}
+					{% endmacro %}
+
+					{% from _self import errorList %}
+
+					{# Display our Contact Form #}
+					<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+					<section class="section-contactform">
+						{{ craft.sproutForms.displayForm('contact') }}
+					</section>
+					<p class="text-small text-italic mrg-bot-0">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.</p>
+
+				{% endif %}
+
 			</article>
 		</div>
 		<div class="large-4 large-offset-1 columns">

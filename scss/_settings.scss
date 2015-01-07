@@ -94,10 +94,10 @@ $font-family-sans-serif: "proxima-nova", Arial, sans-serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-// $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -113,9 +113,9 @@ $font-family-sans-serif: "proxima-nova", Arial, sans-serif;
 // $steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
-// $oil         : #333333;
-// $jet         : #222222;
-// $black       : #000000;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
 
 // We use these as default colors throughout
 $primary-color: #FF9900;
@@ -213,12 +213,12 @@ $header-top-margin: 0;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(42);
+$h2-font-size: rem-calc(36);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
 // $h1-font-reduction: rem-calc(10) !default;
@@ -342,14 +342,14 @@ $hr-border-color: #E9E9E9;
 // $include-html-alert-classes: $include-html-classes;
 
 // We use this to control alert padding.
-// $alert-padding-top: rem-calc(14);
-// $alert-padding-default-float: $alert-padding-top;
-// $alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
-// $alert-padding-bottom: $alert-padding-top;
+$alert-padding-top: rem-calc(24);
+$alert-padding-default-float: $alert-padding-top;
+$alert-padding-opposite-direction: $alert-padding-top + rem-calc(10);
+$alert-padding-bottom: $alert-padding-top;
 
 // We use these to control text style.
 // $alert-font-weight: $font-weight-normal;
-// $alert-font-size: rem-calc(13);
+$alert-font-size: rem-calc(14);
 // $alert-font-color: $white;
 // $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
 
@@ -360,10 +360,10 @@ $hr-border-color: #E9E9E9;
 // $alert-border-style: solid;
 // $alert-border-width: 1px;
 // $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
-// $alert-bottom-margin: rem-calc(20);
+$alert-bottom-margin: rem-calc(36);
 
 // We use these to style the close buttons
-// $alert-close-color: $oil;
+$alert-close-color: $oil;
 // $alert-close-top: 50%;
 // $alert-close-position: rem-calc(4);
 // $alert-close-font-size: rem-calc(22);
@@ -620,19 +620,19 @@ $button-font-weight: 700;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-// $form-spacing: rem-calc(16);
+$form-spacing: rem-calc(22);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
-// $form-label-font-weight: $font-weight-normal;
-// $form-label-line-height: 1.5;
+$form-label-font-size: rem-calc(18);
+$form-label-font-weight: 700;
+$form-label-line-height: 1.2;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
-// $input-font-size: rem-calc(14);
+$input-font-size: rem-calc(16);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
@@ -669,13 +669,13 @@ $button-font-weight: 700;
 // $input-number-spinners: true;
 
 // We use these to style the error states for inputs and labels
-// $input-error-message-padding: rem-calc(6 9 9);
-// $input-error-message-top: -1px;
-// $input-error-message-font-size: rem-calc(12);
-// $input-error-message-font-weight: $font-weight-normal;
-// $input-error-message-font-style: italic;
-// $input-error-message-font-color: $white;
-// $input-error-message-font-color-alt: $oil;
+$input-error-message-padding: rem-calc(9 8);
+$input-error-message-top: -1px;
+$input-error-message-font-size: rem-calc(14);
+$input-error-message-font-weight: $font-weight-normal;
+$input-error-message-font-style: italic;
+$input-error-message-font-color: $white;
+$input-error-message-font-color-alt: $white;
 
 // We use this to style the glowing effect of inputs when focused
 // $input-include-glowing-effect: true;
