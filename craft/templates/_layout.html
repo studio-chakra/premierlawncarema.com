@@ -4,20 +4,24 @@
 {% set seoAuthor = globalSeo.seoAuthor %}
 {% set seoGoogleSiteVerificationCode = globalSeo.seoGoogleSiteVerificationCode %}
 
+{% set canvasRootPath = "/canvas-html/" %}
+{% set canvasImagesPath = "/canvas-html/images/" %}
+
 <!DOCTYPE html>
 <!--[if IE 9 ]><html class="no-js lt-ie10" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" dir="ltr" lang="en">
 <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
-    <title>{% if title is defined %}{{ title }}{% else %}{{ seoTitle }} - {% endif %}{{ siteName }}</title>
+    <title>{% if title is defined %}{{ title }}{% else %}{{ seoTitle }}{% endif %} - {{ siteName }}</title>
     <link rel="home" href="{{ siteUrl }}" />
 		
 		<!-- HEAD: Meta -->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="{% if description is defined %}{{ description }}{% else %}{{ seoTitle }}{% endif %}">
 		<meta name="keywords" content="{{ seoKeywords }}">
 		<meta name="author" content="{{ seoAuthor }}">
@@ -28,17 +32,26 @@
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
 
-		<!-- HEAD: Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/app.css" />
+		<!-- HEAD: Stylesheets -->    
     <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.carousel.css">
+		{#<link rel="stylesheet" href="/bower_components/owlcarousel/owl-carousel/owl.carousel.css">#}	
+    <link rel="stylesheet" href="{{canvasRootPath}}css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}style.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="{{canvasRootPath}}css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
     
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-
-    <!-- HEAD: Scripts -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- HEAD: Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 
     <!-- HEAD: Typekit -->
+		{#    
     <script>
 		  (function(d) {
 		    var config = {
@@ -48,156 +61,54 @@
 		    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 		  })(document);
 		</script>
+ 		#}
+
+ 		<!-- HEAD: Scripts -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="{{canvasRootPath}}js/jquery.js"></script>
+    <script src="{{canvasRootPath}}js/plugins.js"></script>
 
     <!-- HEAD: GOOGLE ANALYTICS -->
     
   </head>
   
-  <body>
-	
-		<!-- /* Off Canvas Container -->
-		<div class="off-canvas-wrap" data-offcanvas>
-  		<div class="inner-wrap">
-				<div class="inner-wrap-forarrows">
-					<div class="row">
-						<div class="xlarge-12 columns">		  		  
-			  		  <!-- /* Nav(s) -->	
-			    		<nav class="tab-bar hide-for-large-up">
-								<h1 class="logo-mobile"><a href="{{ siteUrl }}"><span class="hidden">Corben Architects</span></a></h1>
-								<a class="right-off-canvas-toggle" href="#"><i class="fa fa-bars"></i> Menu</a>
-			    		</nav>
-			    		<nav class="top-bar show-for-large-up" data-topbar>
-							  <h1 class="logo"><a href="{{ siteUrl }}"><span class="hidden">Corben Architects</span></a></h1>
+  <body class="stretched{% if pageClass is defined %} {{ pageClass }}{% endif %}">
 
-							  <section class="top-bar-section">
-							    <ul class="right">
-							      <li class="has-dropdown">
-							      	<a href="{{ siteUrl }}projects" {{ activeClass('projects',1,'is-active') }}>Projects</a>
-							      	<ul class="dropdown {{ active('projects',1,'is-active') }}">
-							          {% nav category in craft.categories %}
-   											<li><a href="{{ category.url }}" {{ activeClass(category.slug,2,'is-active') }}>{{ category.title }}</a></li>
-												{% endnav %}
-							        </ul>
-							      </li>
-							      <li class="has-dropdown">
-							        <a href="{{ siteUrl }}practice/about" {{ activeClass('practice|about|architecture|service|fees|awards',1,'is-active') }}>Practice</a>
-							        <ul class="dropdown {{ active('practice|about|architecture|service|fees|awards',1,'is-active') }}">
-							          <li><a href="{{ siteUrl }}practice/awards" {{ activeClass('awards',2,'is-active') }}>Awards</a></li>
-							          <li><a href="{{ siteUrl }}practice/fees" {{ activeClass('fees',2,'is-active') }}>Fees</a></li>
-							          <li><a href="{{ siteUrl }}practice/service" {{ activeClass('service',2,'is-active') }}>Service</a></li>
-							          <li><a href="{{ siteUrl }}practice/architecture" {{ activeClass('architecture',2,'is-active') }}>Architecture</a></li>
-							          <li><a href="{{ siteUrl }}practice/about" {{ activeClass('about',2,'is-active') }}>About</a></li>
-							        </ul>
-							      </li>
-										<li class="has-dropdown">
-											<a href="{{ siteUrl }}directors" {{ activeClass('people|directors|staff',1,'is-active') }}>People</a>
-											<ul class="dropdown {{ active('people|directors|staff',1,'is-active') }}">				          
-							          <li><a href="{{ siteUrl }}staff" {{ activeClass('staff',1,'is-active') }}>Staff</a></li>
-							          <li><a href="{{ siteUrl }}directors" {{ activeClass('directors',1,'is-active') }}>Directors</a></li>
-							        </ul>
-										</li>
-							      <li><a href="{{ siteUrl }}place" {{ activeClass('place',1,'is-active') }}>Place</a></li>
-							    </ul>
-							  </section>
-							</nav><!-- Nav(s) */ -->	
-						</div>
-					</div><!-- Row */ -->	
+    <div id="wrapper" class="clearfix">
 
-	    		<!-- /* Off Canvas Menu -->
-	    		<aside class="right-off-canvas-menu">
-	        	<ul class="off-canvas-menu">
-	          	<li class="has-dropdown">
-	          		<a href="{{ siteUrl }}projects" {{ activeClass('projects',1,'is-active') }}>Projects</a>
-								<ul class="dropdown {{ active('projects',1,'is-active') }}">
-							    {% nav category in craft.categories %}
-   								<li><a href="{{ category.url }}" {{ activeClass(category.slug,2,'is-active') }}>{{ category.title }}</a></li>
-									{% endnav %}
-								</ul>
-	          	</li>
-	          	<li>
-	          		<a href="{{ siteUrl }}practice/about" {{ activeClass('practice|about|architecture|service|fees|awards',1,'is-active') }}>Practice</a>
-	          		<ul class="dropdown {{ active('practice|about|architecture|service|fees|awards',1,'is-active') }}">
-							    <li><a href="{{ siteUrl }}practice/awards" {{ activeClass('awards',2,'is-active') }}>Awards</a></li>
-							    <li><a href="{{ siteUrl }}practice/fees" {{ activeClass('fees',2,'is-active') }}>Fees</a></li>
-							    <li><a href="{{ siteUrl }}practice/service" {{ activeClass('service',2,'is-active') }}>Service</a></li>
-							    <li><a href="{{ siteUrl }}practice/architecture" {{ activeClass('architecture',2,'is-active') }}>Architecture</a></li>
-							    <li><a href="{{ siteUrl }}practice/about" {{ activeClass('about',2,'is-active') }}>About</a></li>
-							  </ul>	
-	          	</li>
-	          	<li><a href="{{ siteUrl }}people" {{ activeClass('people',1,'is-active') }}>People</a></li>
-	          	<li>
-								<a href="{{ siteUrl }}directors" {{ activeClass('people|directors|staff',1,'is-active') }}>People</a>
-								<ul class="dropdown {{ active('people|directors|staff',1,'is-active') }}">				          
-				          <li><a href="{{ siteUrl }}staff" {{ activeClass('staff',1,'is-active') }}>Staff</a></li>
-				          <li><a href="{{ siteUrl }}directors" {{ activeClass('directors',1,'is-active') }}>Directors</a></li>
-				        </ul>
-							</li>
-	          	<li><a href="{{ siteUrl }}place" {{ activeClass('place',1,'is-active') }}>Place</a></li>
-	          	<li><a href="{{ siteUrl }}news" {{ activeClass('news',1,'is-active') }}>News</a></li>
-	        	</ul>
-	    		</aside><!-- Off Canvas Menu */ -->
+			{% include '_organisms/header.html' %}
 
-					<!-- /* Main Content Block -->
-			    <main class="main main-content {{ pageClass }}" role="main">{% block content %}{% endblock %}</main>
-					<!-- Main Block */ -->		
-								
-				</div><!-- Inner Wrap for Arrows */ -->	
+			{% block pageMenu %}{% endblock %}
 
+			{% block hero %}{% endblock %}
 
-				<!-- /* Footer -->  
-			  <footer class="footer">
-					<div class="row footer-top">
-						<div class="medium-3 xlarge-3 xxlarge-4 columns footer-info">
-							<a href="{{ siteUrl }}" class="footer-logo"><img src="http://placehold.it/170x60" alt="Premier Lawn Care MA"></a>
-							<h6 class="footer-hd"><a href="{{ siteUrl }}">Premier Lawn Care</a></h6>
-							<p>PO Box 9 <br>Charlton, MA 01507</p>
-						</div>
-						<div class="medium-9 xlarge-6 xxlarge-5 columns footer-questions">
-							<h6 class="footer-hd">Have Questions? Call us @</h6>
-							<div class="footer-callus">								
-								<h5 class="footer-callus__hd">(508) 446-7504</h5>
-								<span class="footer-callus__to">to</span>
-								<a href="#" class="button small footer-callus__gs">Get Started</a>
-							</div>
-							<em class="footer-tagline">We are the Lawn Care experts of Massachusetts</em>
-						</div>
-						<div class="xlarge-3 xxlarge-3 columns footer-navsocial">
-							<ul class="footer-nav" role="navigation">
-				        <li><a href="{{ siteUrl }}">Why Premier?</a></li>
-				        <li><a href="{{ siteUrl }}">Services</a></li>
-				        <li><a href="{{ siteUrl }}">Our Work</a></li>
-				        <li><a href="{{ siteUrl }}">Learn</a></li>
-				        <li><a href="{{ siteUrl }}">Contact Us</a></li>
-				      </ul>
-				      <ul class="footer-social">
-				        <li><a href="{{ siteUrl }}"><i class="fa fa-facebook"></i></a></li>
-				        <li><a href="{{ siteUrl }}"><i class="fa fa-twitter"></i></a></li>
-				        <li><a href="{{ siteUrl }}"><i class="fa fa-envelope-o"></i></a></li>
-				      </ul>
-						</div>
-					</div>
-					<div class="row footer-bot">
-						<div class="footer-line"></div>
-						<p class="medium-6 columns footer-copy">Premier Lawn Care &copy; 2015. All rights reserved.</p>
-						<p class="medium-6 columns footer-by">Website designed & built by <a href="http://ryanbelisle.com">Ryan Belisle</a></p>
-						<p class="small-12 columns footer-devnav"><a href="{{siteUrl}}">Home</a> / <a href="{{siteUrl}}contact.html">Contact</a> / <a href="{{siteUrl}}patternlab.html">Patterns</a> / </p>
-					</div>
-			  </footer>
+			{% block pageTitle %}{% endblock %}
 
-  		<!-- close the off-canvas menu -->
-  		<a class="exit-off-canvas"></a>
+			{% block pageMenuUnder %}{% endblock %}
 
-			</div><!-- Inner Wrap */ -->
-		</div><!-- Off Canvas Container */ -->
+      <section id="content" class="main main-content">
+    		<div class="content-wrap{% if contentWrapClass is defined %} {{ contentWrapClass }}{% endif %}">
+					{% block content %}{% endblock %}
+				</div>
+      </section>
 
-    
+      {% block bottom %}{% endblock %}
+
+			{% include '_organisms/footer.html' %}
+
+		</div>
+
+		<!-- /BODY: Go To Top -->
+  	<div id="gotoTop" class="icon-angle-up"></div>
 
 		<!-- /BODY: Scripts -->
+		{#
 		<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="/bower_components/foundation/js/foundation.min.js"></script>
 		<script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
-		<script src="/js/app.js"></script>		
-
+		#}
+		<script src="{{canvasRootPath}}js/functions.js"></script>
+		{#<script src="/js/app.js"></script>#}
 
   </body>
 </html>

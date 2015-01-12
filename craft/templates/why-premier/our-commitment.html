@@ -1,0 +1,25 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set title = "Our Commitment" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-why-premier.html' %}
+{% endblock %}
+
+{% block content %}
+	{% include '_matrix/block-heading-full.html' %}
+	{% include '_placeholders/grid.html' %}
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

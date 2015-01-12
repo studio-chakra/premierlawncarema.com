@@ -1,0 +1,46 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-blocks" %}
+
+{% block content %}
+	{% include '_organisms/page-header.html' %}
+	<article class="main-pad-top main-pad-bot">
+		
+		{% include '_matrix/block-text-centered.html' %}
+		{% include '_matrix/block-2col-img-text.html' %}
+		{% include '_matrix/block-text.html' %}		
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-2col-text-img.html' %}
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-heading.html' %}
+		{% include '_matrix/block-2col-text.html' %}
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-img.html' %}
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-3col-featuredbox.html' %}
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-blockquote.html' %}
+		{% include '_matrix/block-divider.html' %}
+		{% include '_matrix/block-4col-featuredbox.html' %}
+		{% include '_matrix/block-divider.html' %}
+
+		<div class="row">
+			<div class="large-8 large-offset-2 columns">
+				<h3 class="hd-mrg-bot-sm">Heading</h3>
+				<h4>Optional Sub Heading</h4>
+				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+				<section class="section-block section-block--mrg-remove clearfix">
+					<img class="img-left-medium img-mrg-bot" src="http://placehold.it/270x180" alt="Placeholder Image" />
+					<h3>Heading</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.</p>
+				</section>
+				<section class="section-block section-block--mrg-remove clearfix">
+					<h3>Heading</h3>
+					<img class="img-right-medium img-mrg-bot" src="http://placehold.it/270x180" alt="Placeholder Image" />
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+				</section>
+			</div>
+		</div>
+
+	</article>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-home" %}
+
+{% block content %}
+	{% include '_organisms/hero-home.html' %}
+	{% include '_organisms/why-choose.html' %}
+	{% include '_atoms/divider-mrg-none.html' %}
+	{% include '_organisms/services-grid-6x.html' %}
+	{% include '_atoms/divider-mrg-none.html' %}
+	{% include '_organisms/testimonials-grid-3x.html' %}
+	{% include '_organisms/cta-home.html' %}
+{% endblock %}

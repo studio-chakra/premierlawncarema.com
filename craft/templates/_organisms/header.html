@@ -1,0 +1,57 @@
+<header id="header" class="full-header" data-sticky-class="not-dark">
+
+    <div id="header-wrap">
+
+        <div class="container clearfix">
+
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+            <div id="logo">
+                <a href="{{siteUrl}}" class="standard-logo" data-dark-logo="{{canvasImagesPath}}logo-dark.png"><img src="{{canvasImagesPath}}logo.png" alt="Canvas Logo"></a>
+                <a href="{{siteUrl}}" class="retina-logo" data-dark-logo="{{canvasImagesPath}}logo-dark@2x.png"><img src="{{canvasImagesPath}}logo@2x.png" alt="Canvas Logo"></a>
+            </div>
+
+            <nav id="primary-menu">
+
+                <ul>
+                    <li {{ activeClass('why-premier|about-us|we-are-experts|why-use-a-professional|our-commitment|testimonials|faqs',1,'current') }}><a href="{{siteUrl}}why-premier/about-us"><div>Why Premier?</div></a>
+                        <ul>
+                            <li {{ activeClass('about-us',2,'current') }}><a href="{{siteUrl}}why-premier/about-us"><div>About Us</div></a></li>
+                            <li {{ activeClass('we-are-experts',2,'current') }}><a href="{{siteUrl}}why-premier/we-are-experts"><div>We are Experts</div></a></li>
+                            <li {{ activeClass('why-use-a-professional',2,'current') }}><a href="{{siteUrl}}why-premier/why-use-a-professional"><div>Why use a Professional?</div></a></li>
+                            <li {{ activeClass('our-commitment',2,'current') }}><a href="{{siteUrl}}why-premier/our-commitment"><div>Our Commitment</div></a></li>
+                            <li {{ activeClass('testimonials',2,'current') }}><a href="{{siteUrl}}why-premier/testimonials"><div>Testimonials</div></a></li>
+                            <li {{ activeClass('faqs',2,'current') }}><a href="{{siteUrl}}why-premier/faqs"><div>FAQs</div></a></li>
+                        </ul>
+                    </li>
+                    <li {{ activeClass('services|our-services|lawn-tree-care-program|seasonal-walkthrough|special-offers',1,'current') }}><a href="{{siteUrl}}services/our-services"><div>Services</div></a>
+                        <ul>
+                            <li {{ activeClass('our-services',2,'current') }}><a href="{{siteUrl}}services/our-services"><div>Our Services</div></a></li>
+                            <li {{ activeClass('lawn-tree-care-program',2,'current') }}><a href="{{siteUrl}}services/lawn-tree-care-program"><div>Lawn & Tree Care Program</div></a></li>
+                            <li {{ activeClass('seasonal-walkthrough',2,'current') }}><a href="{{siteUrl}}services/seasonal-walkthrough"><div>Seasonal Walkthrough</div></a></li>
+                            <li {{ activeClass('special-offers',2,'current') }}><a href="{{siteUrl}}services/special-offers"><div>Special Offers</div></a></li>
+                        </ul>
+                    </li>
+                    <li {{ activeClass('work|featured-worok|projects|galleries',1,'current') }}><a href="{{siteUrl}}work/featured-work"><div>Our Work</div></a>
+                        <ul>
+                            <li {{ activeClass('our-work',2,'current') }}><a href="{{siteUrl}}work/featured-work"><div>Featured Work</div></a></li>
+                            <li {{ activeClass('projects',2,'current') }}><a href="{{siteUrl}}work/projects"><div>Customer Projects</div></a></li>
+                            <li {{ activeClass('galleries',2,'current') }}><a href="{{siteUrl}}work/galleries"><div>Galleries</div></a></li>
+                        </ul>
+                    </li>  
+                    <li {{ activeClass('learn',1,'current') }}><a href="{{siteUrl}}learn/"><div>Learn</div></a></li> 
+                    <li {{ activeClass('contact-us','current') }}><a href="{{siteUrl}}contact-us"><div>Contact Us</div></a></li>
+                    <li class="item-getstarted visible-xs visible-sm"><a href="{{siteUrl}}get-started"><div>Get Started</div></a></li>               
+                </ul>
+
+                <div id="top-cta" class="hidden-xs hidden-sm">
+                    <a href="{{siteUrl}}get-started" class="button top-cta-button">Get Started</a>
+                </div>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>

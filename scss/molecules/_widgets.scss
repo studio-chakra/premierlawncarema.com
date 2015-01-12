@@ -1,0 +1,22 @@
+//
+// Widgets
+// --------------------------------------------------
+
+.sidebar-widgets-wrap .widget {
+	padding-top: 0;
+	border-top: none;
+
+	> h4 {
+		margin-bottom: 20px;
+	}
+}
+
+
+.widget_button,
+.widget_social {
+	a.button:first-of-type {
+		margin-top: 0;
+	}
+}
+
+

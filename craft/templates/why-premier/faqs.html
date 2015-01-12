@@ -1,0 +1,62 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set title = "Frequently Asked Questions" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-why-premier.html' %}
+{% endblock %}
+
+{% block content %}
+
+  {% include '_matrix/block-heading-full.html' %}
+  {% include '_atoms/line.html' %}
+
+	<div class="section nobg notopmargin notoppadding nobottommargin nobottompadding">
+	  <div class="container clearfix">
+
+        <div id="faqs" class="faqs">
+					<div class="row">
+						<div class="col-md-6">
+			          <ul class="iconlist faqlist">
+			          	{% for i in 0..4 %}
+	                <li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-{{ i + 1 }}">The Frequently Asked Question Title</a></strong></li>
+	                {% endfor %}  
+	            </ul>		
+          	</div>
+          	<div class="col-md-6">
+          		<ul class="iconlist faqlist">
+                {% for i in 0..4 %}
+	                <li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-{{ i + 6 }}">The Frequently Asked Question Title</a></strong></li>
+	              {% endfor %}  
+            </ul>
+          	</div>
+					</div>     
+					
+          <div class="divider"><i class="icon-circle"></i></div>
+
+					{% for i in 0..9 %}
+          <h3 id="faq-{{ i + 1 }}"><strong>Q.</strong> The Frequently Asked Question Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+
+	          {% if not loop.last %}
+		         <div class="divider divider-right"><a href="#" data-scrollto="#faqs"><i class="icon-chevron-up"></i></a></div>
+		        {% endif %}  
+          {% endfor %}            
+				</div> 
+
+	  </div>
+	</div>
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

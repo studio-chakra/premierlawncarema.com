@@ -1,0 +1,87 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set title = "Our Services" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-services.html' %}
+{% endblock %}
+
+{% block content %}
+	
+	{% include '_matrix/block-heading-full.html' %}
+	
+	<div class="section nobg notopmargin notoppadding nobottommargin">		
+		<div class="container">
+			<div class="row">
+				{% for i in 0..8 %}
+				<div class="col-md-4 col-sm-6 bottommargin-lg">
+					<div class="feature-box media-box center">
+	            <div class="fbox-media">
+	                <img src="{{canvasImagesPath}}services/2.jpg" alt="Service Image">
+	            </div>
+	            <div class="fbox-desc">
+	                <h3>Service Title<span class="subtitle">Optional Service Subtitle</span></h3>
+	                <p>Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum molestias quo.</p>
+	            </div>
+	        </div>
+				</div>
+				{% endfor %}
+			</div>	
+
+			{# <div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div id="posts" class="small-thumbs">
+						{% for i in 0..3 %}
+						<div class="promo promo-service promo-border bottommargin">
+				      <div class="entry clearfix">
+			          <div class="entry-image">
+			            <a href="#"><img class="image_fade" src="{{canvasImagesPath}}blog/small/17.jpg" alt="Service Image"></a>
+			          </div>
+			          <div class="entry-c">
+		              <div class="entry-title">
+		                <h2><a href="#">Service</a></h2>
+		                <h4 class="hd-sub">Optional service title</h4>
+		              </div>
+		              <div class="entry-content">
+		                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in. Eligendi, deserunt, blanditiis est quisquam doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque vitae voluptatem libero at eveniet veritatis ab facere.</p>
+		                <a href="#" class="button button-small">View related work</a> <a href="#" class="button button-small">View related articles</a>
+		              </div>
+			          </div>
+				      </div>
+				     </div>
+						{% endfor %}
+			    </div>				
+				</div>
+			</div> #}
+
+		</div>
+	</div>
+
+	<div class="section nobg notopmargin notoppadding nobottommargin nobottompadding">		
+		<div class="container">
+			<div class="fancy-title title-dotted-border title-center bottommargin">
+        <h3>More <span>Programs & Offers</span></h3>
+      </div>
+			{% include '_molecules/promo-xlarge-lawntreecareprogram.html' %}
+			<div class="row">
+				<div class="col-sm-6">{% include '_molecules/promo-large-seasonalwalkthrough.html' %}</div>
+				<div class="col-sm-6">{% include '_molecules/promo-large-specialoffers.html' %}</div>
+			</div>
+		</div>
+	</div>	
+
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/service-area-gmap.html' %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

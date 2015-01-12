@@ -1,0 +1,55 @@
+//
+// Google Maps
+// --------------------------------------------------
+
+.google-map {
+  position: relative;
+  //padding-bottom: 30%; // This is the aspect ratio
+  height: 450px;
+  overflow: hidden;
+  max-width: 100%;
+
+	iframe,
+	embed,
+	object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+	}
+}
+
+
+
+
+
+// Contact Gmap
+// --------------------------------------------------
+
+.section-gmap {
+	overflow: hidden;
+	height: 450px;
+	background-color: #E9E9E9;
+}
+
+
+
+
+
+// Services Area Gmap
+// --------------------------------------------------
+
+.section-gmap-service {
+	background-color: #E9E9E9;
+
+	.gmap-body {		
+
+		text-align: center;
+
+		@media (min-width: 991px) {
+			text-align: left; 
+		}
+	}
+
+}

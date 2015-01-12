@@ -1,13 +1,20 @@
 {% extends "_layout" %}
 {% set pageClass = "tmpl-home" %}
+{% set contentWrapClass = "notoppadding nobottompadding" %}
+{% set title = "Home" %}
+
+{% block hero %}
+	{% include '_organisms/home-hero.html' %}
+{% endblock %}
 
 {% block content %}
-	{% include '_organisms/hero-home.html' %}
-	{% include '_organisms/why-choose.html' %}
-	{% include '_atoms/divider.html' %}
-	{% include '_organisms/services-grid-6x.html' %}
-	{% include '_atoms/divider.html' %}
-	{% include '_organisms/testimonials-grid-3x.html' %}
-	{% include '_atoms/divider.html' %}
-	{% include '_organisms/cta-home.html' %}
+	{% include '_organisms/home-intro.html' %}
+	{% include '_organisms/home-services.html' %}
+	{% include '_organisms/home-testimonials.html' %}
+	{% include '_organisms/home-projects.html' %}
+	{% include '_organisms/home-blog.html' %}
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/home-cta.html' %}
 {% endblock %}

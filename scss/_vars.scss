@@ -6,19 +6,27 @@ $lay-lh: 12px;	// gutter height from design
 
 
 
+
+
+// Functions
+// --------------------------------------------------
+
+// Consistent baseline vertical spacing
+@function vs($value) {
+	@return rem-calc($lay-lh * $value);
+}
+
+
+
 // MQ
 // --------------------------------------------------
 
-$xsmall-range: (0, 480px);
-$xsmall-up: "#{$screen} and (min-width:#{upper-bound($xsmall-range)})";
-$xsmall-only: "#{$screen} and (min-width:#{lower-bound($xsmall-range)}) and (max-width:#{upper-bound($xsmall-range)})";
 
 
 
 // Spacing
 // --------------------------------------------------
 
-// Consistent baseline vertical spacing
-@function vs($value) {
-	@return rem-calc($lay-lh * $value);
+%type-mrg-bot {
+	margin-bottom: vs(4);
 }

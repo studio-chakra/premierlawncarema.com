@@ -1,0 +1,27 @@
+<div class="section notopmargin nobottommargin pt-lg pb-lg">
+    <div class="container clearfix">
+
+        <div class="row">
+
+            <div class="heading-block center">
+                <h3>The Proof is in the Lawn!</h3>
+            </div>
+
+            <div id="portfolio" class="clearfix">
+               {% for i in 0..3 %}
+                <div class="col-md-3 col-sm-6 bottommargin">
+                    {% include '_molecules/project.html' %}   
+                </div>
+               {% endfor %}                
+            </div>
+
+        </div> 
+
+        <div class="row center">
+            <a href="{{siteUrl}}work/projects" class="button">View more projects</a>
+        </div>
+
+    </div>
+</div>
+
+

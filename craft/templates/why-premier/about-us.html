@@ -1,0 +1,31 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set contentWrapClass = "nobottompadding" %}
+{% set title = "About Us" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-why-premier.html' %}
+{% endblock %}
+
+{% block content %}
+	{% include '_matrix/block-heading-full.html' %}
+	{% include '_organisms/home-services.html' %}
+	{% include '_organisms/home-testimonials.html' %}
+	{% include '_organisms/client-grid.html' %}
+	{% include '_organisms/home-projects.html' %}
+	{% include '_organisms/posts-mini.html' %}
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/service-area-gmap.html' %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

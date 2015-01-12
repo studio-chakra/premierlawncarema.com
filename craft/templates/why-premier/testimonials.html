@@ -1,0 +1,50 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set title = "Testimonials" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-why-premier.html' %}
+{% endblock %}
+
+{% block content %}
+	{% include '_matrix/block-heading-full.html' %}
+
+	<div class="section nobg notoppadding nobottompadding nobottommargin">
+		<div class="container clearfix">
+
+			<ul class="testimonials-grid grid-2 clearfix">
+          {% for i in 0..9 %}
+          <li>
+              {% include '_molecules/testimonial.html' %}
+          </li>
+          {% endfor %}  
+      </ul> 
+
+      <div class="row">
+      	<div class="col-md-8 col-md-offset-2">
+      		<div class="promo promo-border promo-center topmargin-sm">
+		          <h3>Having something great to say about Premier?</h3>
+		          <a href="#" class="button button-xlarge button-rounded">Submit a review</a>
+		      </div>
+      	</div>
+      </div>      
+
+		</div>
+	</div>
+
+	{% include '_organisms/client-grid.html' %}
+
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

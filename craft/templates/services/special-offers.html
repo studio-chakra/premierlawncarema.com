@@ -1,0 +1,61 @@
+{% extends "_layout" %}
+{% set pageClass = "tmpl-single" %}
+{% set title = "Special Offers" %}
+{% set titleTagline = "Optional page title tagline" %}
+
+{% block pageMenu %}
+
+{% endblock %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
+
+{% block pageMenuUnder %}
+	{% include '_molecules/subnav-services.html' %}
+{% endblock %}
+
+{% block content %}
+	
+	{% include '_matrix/block-heading-full.html' %}
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+
+				<div id="posts" class="small-thumbs">
+					{% for i in 0..2 %}
+					<div class="promo promo-entry promo-border bottommargin">
+			      <div class="entry clearfix">
+		          <div class="entry-image">
+		            <a href="#"><img class="image_fade" src="{{canvasImagesPath}}blog/small/17.jpg" alt="Special Offer Image"></a>
+		          </div>
+		          <div class="entry-c">
+	              <div class="entry-title">
+	                <h2><a href="#">Special Offer Title</a></h2>
+	                <h4 class="hd-sub">Optional special offer sub title</h4>
+	              </div>
+	              <div class="entry-content">
+	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in. Eligendi, deserunt, blanditiis est quisquam doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque vitae voluptatem libero at eveniet veritatis ab facere.</p>
+	                <a href="#" class="button button-small">Contact Us</a>
+	              </div>
+		          </div>
+			      </div>
+		      </div>
+					{% endfor %}
+		    </div>
+
+		    {% include '_molecules/promo-xlarge.html' %}
+				
+			</div>
+		</div>
+	</div>
+
+	{% include '_organisms/home-testimonials.html' %}
+	
+{% endblock %}
+
+{% block bottom %}
+	{% include '_organisms/service-area-gmap.html' %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}

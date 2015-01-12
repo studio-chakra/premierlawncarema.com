@@ -2,13 +2,10 @@
 // Typography
 // --------------------------------------------------
 
+.hd-sub {
+	margin-bottom: 0;
 
-.text-small {
-	font-size: rem-calc(14);
-	line-height: 1.6;
-}
-
-
-.text-italic {
+	font-family: 'Crete Round', serif;
 	font-style: italic;
+	color: #ccc;
 }

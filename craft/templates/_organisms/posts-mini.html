@@ -1,0 +1,35 @@
+<div class="section nobg">
+    <div class="container">
+        <div class="heading-block center">
+            <h3>Learn more about Lawn Care w/ the Learn Blog</h3>
+            <span>Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</span>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="related-posts bottommargin clearfix">
+                    {% for i in 0..3 %}
+                    <div class="mpost clearfix">
+                        <div class="entry-image">
+                            <a href="{{siteUrl}}learn/post.html"><img src="{{canvasImagesPath}}blog/small/10.jpg" alt="Blog Single"></a>
+                        </div>
+                        <div class="entry-c">
+                            <div class="entry-title">
+                                <h4><a href="{{siteUrl}}learn/post.html">This is an Image Post</a></h4>
+                            </div>
+                            <ul class="entry-meta clearfix">
+                                <li><i class="icon-calendar3"></i> 10th July 2014</li>
+                                <li><a href="#"><i class="icon-comments"></i> 12</a></li>
+                            </ul>
+                            <div class="entry-content">Eligendi, deserunt, blanditiis est quisquam doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque vitae voluptatem libero at eveniet veritatis ab facere.</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+            <a href="{{siteUrl}}learn" class="button button-wrap">View more articles</a>
+        </div>
+    </div>
+</div>
+

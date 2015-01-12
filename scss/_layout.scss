@@ -2,10 +2,9 @@
 // Layout
 // --------------------------------------------------
 
-.main-pad-top {
-	padding-top: vs(6);
-}
-
-.main-pad-bot {
-	padding-bottom: vs(6);
+.sidebar-blog,
+.sidebar-contact {
+	@media (max-width: 991px) {
+		margin-top: 50px;
+	}
 }

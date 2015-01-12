@@ -2,7 +2,27 @@
 // Buttons
 // --------------------------------------------------
 
-button,
-.button {
-	text-transform: uppercase;
+.button-wrap {
+	white-space: normal;
+	padding: 10px 22px;
+	line-height: 20px;
+	height: auto;
+
+  &.button-mini {
+      // padding: 0 14px;
+  }
+  &.button-small {
+      // padding: 0 17px;
+  }
+  &.button-large {
+      // padding: 0 26px;
+  }
+  &.button-xlarge {
+      // padding: 0 32px;
+  }
+  &.button-desc {
+		white-space: wrap;
+  }
 }
+
+

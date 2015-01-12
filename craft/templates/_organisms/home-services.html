@@ -1,0 +1,24 @@
+<div class="section notopmargin nobottommargin pt-lg pb-lg">
+    <div class="container clearfix">
+
+        <div class="row">
+
+            <div class="heading-block center">
+                <h3>We provide the BEST services in Massachusetts</h3>
+                <span>Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</span>
+            </div>
+            
+            {% for i in 0..7 %}
+            <div class="col-md-3 col-sm-6 bottommargin">
+                {% include '_molecules/service.html' %}
+            </div> 
+            {% endfor %}                      
+
+        </div>
+
+        <div class="row center">
+            <a href="{{siteUrl}}services/our-services" class="button button-wrap">Learn more about our services</a>
+        </div>
+
+    </div>
+</div>

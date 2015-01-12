@@ -1,0 +1,60 @@
+<div class="sidebar-blog nobottommargin clearfix">
+  <div class="sidebar-widgets-wrap">
+
+  	<div class="widget widget_button clearfix">
+        <a href="#" class="button button-large button-rounded"><i class="icon-rss"></i> RSS Feed</a>
+    </div>
+
+  	<div class="widget widget_categories clearfix">
+        <h4>Categories</h4>
+        <ul>
+        		{% for i in 0..5 %}
+            <li><a href="#">Category Name</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget_categories clearfix">
+        <h4>Tags</h4>
+        <ul>
+        		{% for i in 0..4 %}
+            <li><a href="#">Tag Name</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget_categories clearfix">
+        <h4>Services</h4>
+        <ul>
+        		{% for i in 0..7 %}
+            <li><a href="#">Service Name</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget_promo clearfix">
+        <h4>Special Offers</h4>
+            <div class="promo promo-dark promo-mini promo-center">
+              <h3>Special Offer Title</h3>
+              <span>Special Offer Sub Title</span>
+              <a href="#" class="button button-large button-rounded">Learn more</a>
+            </div>
+    </div>
+
+    <div class="widget widget_promo clearfix">
+        <h4>Need Help?</h4>
+            <div class="promo promo-border promo-light promo-mini promo-center">
+              <h3>Can't find what you are looking for?</h3>
+              <span>We are here to help!</span>
+              <a href="{{siteUrl}}contact-us" class="button button-dark button-large button-rounded">Contact Us</a>
+            </div>
+    </div>
+
+    <div class="widget widget_social clearfix">
+        <h4>Get Social</h4>
+            <a href="#" class="button button-small button-border button-rounded"><i class="icon-facebook"></i> Follow us on Facebook</a>
+            <a href="#" class="button button-small button-border button-rounded"><i class="icon-twitter"></i> Follow us on Twitter</a>
+    </div>           
+
+  </div>
+</div>
