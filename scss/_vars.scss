@@ -13,7 +13,7 @@ $lay-lh: 12px;	// gutter height from design
 
 // Consistent baseline vertical spacing
 @function vs($value) {
-	@return rem-calc($lay-lh * $value);
+	@return ($lay-lh * $value);
 }
 
 
