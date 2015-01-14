@@ -16,8 +16,53 @@
 {% endblock %}
 
 {% block content %}
-	{% include '_matrix/block-heading-full.html' %}
-	{% include '_placeholders/grid.html' %}
+<div class="section nobg notopmargin notoppadding nobottompadding">
+  <div class="container clearfix">
+
+    <div class="row">
+        <div class="heading-block center">
+            <h2>Featured Projects</h2>
+            <span>Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</span>
+        </div>         
+    </div>
+
+    <div id="portfolio" class="portfolio-2 clearfix">
+			{% for i in 0..1 %}
+			{% include '_molecules/project-item.html' %}
+			{% endfor %}
+    </div> 
+
+  </div>
+</div>
+
+<div class="section nobg notopmargin notoppadding nobottommargin nobottompadding">
+  <div class="container clearfix">
+
+    <div class="fancy-title title-dotted-border title-center bottommargin">
+      <h3>More <span>Amazing Customer Projects</span></h3>
+    </div>
+
+    <div id="portfolio" class="portfolio-3 bottommargin-sm clearfix">
+			{% for i in 0..8 %}
+			{% include '_molecules/project-item.html' %}
+			{% endfor %}
+    </div>    
+
+  </div>
+</div>
+
+<div class="section nobg notopmargin notoppadding nobottompadding">
+  <div class="container clearfix">
+		<div class="row center">
+      <div class="col-md-8 col-md-offset-2">
+    		<div class="promo promo-border promo-center topmargin-sm">
+	          <h3>Itching to see more photos?</h3>
+	          <a href="{{siteUrl}}work/galleries.html" class="button button-xlarge button-rounded button-wrap">View one of our Photo Galleries</a>
+	      </div>
+    	</div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block bottom %}

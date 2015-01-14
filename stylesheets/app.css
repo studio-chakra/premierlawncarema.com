@@ -15,11 +15,20 @@
 
 .button-wrap {
   white-space: normal;
-  padding: 10px 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: 20px;
   height: auto; }
+  .button-wrap.button-xlarge {
+    height: auto;
+    line-height: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
   .button-wrap.button-desc {
     white-space: wrap; }
+
+.button-desc {
+  white-space: normal; }
 
 .field {
   margin-bottom: 25px; }
@@ -509,6 +518,16 @@ footer {
 
 .contact-social {
   margin-top: 20px; }
+
+.portfolio-2 .portfolio-item {
+  margin-bottom: 50px; }
+
+.portfolio-3 .portfolio-item {
+  margin-bottom: 50px; }
+
+@media (max-width: 991px) {
+  #portfolio:not(.portfolio-1) .portfolio-item {
+    margin-bottom: 50px; } }
 
 .pt-lg {
   padding-top: 80px; }

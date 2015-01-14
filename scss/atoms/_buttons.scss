@@ -4,7 +4,8 @@
 
 .button-wrap {
 	white-space: normal;
-	padding: 10px 22px;
+	padding-top:10px;
+  padding-bottom: 10px;
 	line-height: 20px;
 	height: auto;
 
@@ -18,7 +19,10 @@
       // padding: 0 26px;
   }
   &.button-xlarge {
-      // padding: 0 32px;
+      height: auto;
+      line-height: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
   }
   &.button-desc {
 		white-space: wrap;
@@ -26,3 +30,6 @@
 }
 
 
+.button-desc {
+  white-space: normal;
+}
