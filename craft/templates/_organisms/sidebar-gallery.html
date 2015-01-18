@@ -1,0 +1,30 @@
+<div class="sidebar-gallery nobottommargin clearfix">
+  <div class="sidebar-widgets-wrap">
+
+    <div class="widget widget_meta clearfix">
+        <h4>Date</h4>
+        <ul>
+            <li>Month, YYYY</li>
+        </ul>
+    </div>
+
+    <div class="widget widget_categories clearfix">
+        <h4>Tags</h4>
+        <ul>
+        		{% for i in 0..4 %}
+            <li><a href="#">Tag Name</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="widget widget_categories clearfix">
+        <h4>Services Provided</h4>
+        <ul>
+        		{% for i in 0..7 %}
+            <li><a href="#">Service Name</a></li>
+            {% endfor %}
+        </ul>
+    </div>          
+
+  </div>
+</div>

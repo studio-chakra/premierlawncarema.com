@@ -6243,7 +6243,7 @@ body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .co
   border: none;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-.button :hover {
+.button:hover {
   background-color: #444;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);

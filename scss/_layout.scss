@@ -3,7 +3,9 @@
 // --------------------------------------------------
 
 .sidebar-blog,
-.sidebar-contact {
+.sidebar-contact,
+.sidebar-gallery,
+.sidebar-project {
 	@media (max-width: 991px) {
 		margin-top: 50px;
 	}

@@ -1,0 +1,36 @@
+//
+// Page Title
+// --------------------------------------------------
+
+
+#page-title .si-share {
+	position: absolute;
+	right: 15px; 
+	bottom: -120px;
+
+	padding: 5px 10px 0 20px;
+	margin-bottom: 0 !important;
+
+	background-color: #fff;
+
+	> span {
+		display: inline-block;;
+		margin-top: 0;
+		color: #777;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+
+	> div {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	@media (max-width: 767px) {
+		width: 100%;
+		right: 0;
+		position: relative;
+	}
+
+}

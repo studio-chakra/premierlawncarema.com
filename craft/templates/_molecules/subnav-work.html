@@ -9,8 +9,8 @@
             <nav>
                 <ul>
                     <li {{ activeClass('featured-work',2,'current') }}><a href="{{siteUrl}}work/featured-work"><div>Featured Work</div></a></li>
-                    <li {{ activeClass('projects',2,'current') }}><a href="{{siteUrl}}work/projects"><div>Customer Projects</div></a></li>
-                    <li {{ activeClass('galleries',2,'current') }}><a href="{{siteUrl}}work/galleries"><div>Galleries</div></a></li>
+                    <li {{ activeClass('projects|project-customer',2,'current') }}><a href="{{siteUrl}}work/projects"><div>Customer Projects</div></a></li>
+                    <li {{ activeClass('galleries|project-gallery',2,'current') }}><a href="{{siteUrl}}work/galleries"><div>Galleries</div></a></li>
                 </ul>
             </nav>
 

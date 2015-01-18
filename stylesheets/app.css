@@ -10,7 +10,9 @@
 
 @media (max-width: 991px) {
   .sidebar-blog,
-  .sidebar-contact {
+  .sidebar-contact,
+  .sidebar-gallery,
+  .sidebar-project {
     margin-top: 50px; } }
 
 .button-wrap {
@@ -468,6 +470,29 @@ footer {
     .footer-devnav {
       text-align: left; } }
 
+#page-title .si-share {
+  position: absolute;
+  right: 15px;
+  bottom: -120px;
+  padding: 5px 10px 0 20px;
+  margin-bottom: 0 !important;
+  background-color: #fff; }
+  #page-title .si-share > span {
+    display: inline-block;
+    margin-top: 0;
+    color: #777;
+    font-size: 14px;
+    vertical-align: middle; }
+  #page-title .si-share > div {
+    float: none;
+    display: inline-block;
+    vertical-align: middle; }
+  @media (max-width: 767px) {
+    #page-title .si-share {
+      width: 100%;
+      right: 0;
+      position: relative; } }
+
 .google-map {
   position: relative;
   height: 450px;
@@ -528,6 +553,9 @@ footer {
 @media (max-width: 991px) {
   #portfolio:not(.portfolio-1) .portfolio-item {
     margin-bottom: 50px; } }
+
+.portfolio-3-gallery .portfolio-item {
+  margin-bottom: 15px !important; }
 
 .pt-lg {
   padding-top: 80px; }
