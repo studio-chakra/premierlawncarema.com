@@ -1,8 +1,25 @@
 {
-  "name": "foundation-compass-app",
+  "name": "premierlawncarema",
   "version": "0.0.1",
-  "private": "true",
+  "homepage": "https://github.com/studiochakra/premierlawncarema.com",
+  "authors": [
+    "Ryan Belisle <ryan@ryanbelisle.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "modernizr": "^2.8.3"
+    
+  },
+  "devDependencies": {
+   "fontawesome": "^4.2.0",
+   "bootstrap-sass-official": "^3.3.1"
   }
 }
