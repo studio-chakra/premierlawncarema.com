@@ -15,30 +15,46 @@
 // --------------------------------------------------
 
 .contact__img {
-	margin-bottom: 15px;
+	@include border-radius(4px);
 }
 
 
 .contact__name {
-	margin-bottom: 0;
+	margin-top: vs(3);
+
+	font-family: $font-akagi;
+	font-weight: $font-akagi-bold;
+	font-size: 32px;
+	color: $birch;
+	line-height: 38px;
+	letter-spacing: -.5px;
+
+	small {		
+		font-family: $font-akagi;
+		font-weight: $font-akagi-light;
+		font-style: italic;
+		font-size: 32px;
+		color: #AEACA5;
+	}
 }
 
 
 .contact__bio {
-	margin-bottom: 0;
+	margin-top: vs(1);
 }
 
 
 .contact-info__hd {
-	margin-top: 50px;
+	margin-top: vs(6);
 }
 
 
 .contact-info__addy {
-	margin-bottom: 10px;
+	margin-bottom: vs(2);
 }
 
 
 .contact-social {
-	margin-top: 20px;
+	@include clearfix();
+	margin-top: vs(3);
 }

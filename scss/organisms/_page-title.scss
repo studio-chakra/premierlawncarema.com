@@ -2,6 +2,75 @@
 // Page Title
 // --------------------------------------------------
 
+#page-title {
+
+	h1 {
+		max-width: 780px;
+		margin: 0 auto;
+
+		font-family: $font-akagi;
+		font-weight: $font-akagi-bold;
+		font-size: 62px;
+		color: $white;
+		line-height: 1.1;
+		text-transform: none;
+		letter-spacing: -1px;
+		text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
+
+		@include breakpoint($bp-sm) {
+			font-size: 82px;
+		}
+
+	}
+
+	span {
+		display: block;
+		margin-top: vs(2);
+		font-size: 32px;
+		font-weight: $font-magneta-thin;
+		font-style: italic;
+		color: $white;
+		letter-spacing: 2px;
+		line-height: 1.1;
+	}
+
+	&.page-title-dark {
+		background-color: $forest-green;
+
+		span {
+			color: $white;
+		}
+	}
+
+	&.page-title-parallax {
+		margin-top: vs(-2);
+		padding-top: vs(10);
+		padding-bottom: vs(9);
+
+		background-position: top center !important;
+
+		@include breakpoint($bp-sm) {
+			padding-top: vs(15);
+			padding-bottom: vs(14);
+		}
+
+		h1 {
+			font-size: 62px;
+			font-weight: $font-akagi-bold;
+			letter-spacing: -1px;
+
+			@include breakpoint($bp-sm) {
+				font-size: 82px;
+			}
+		}
+
+		span {
+			font-size: 32px;
+		}
+	}
+}
+
+
 
 #page-title .si-share {
 	position: absolute;

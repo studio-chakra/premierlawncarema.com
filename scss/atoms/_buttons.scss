@@ -29,7 +29,91 @@
   }
 }
 
-
 .button-desc {
   white-space: normal;
 }
+
+
+
+.button {
+  font-family: $font-akagi;
+  font-weight: $font-akagi-md;
+  font-size: 15px;
+  text-shadow: none;
+  text-transform: uppercase;
+  border-bottom: none;
+
+  &:hover {
+    text-shadow: none;
+  }
+
+  &.button-xlarge {
+    padding: vs(3) 60px;
+    height: auto;
+    line-height: vs(2);
+    font-size: 24px;
+    letter-spacing: 1px;
+    white-space: normal;
+    @include border-radius(48px);
+  }
+
+}
+
+
+
+.button-orange {
+  color: $white;
+  background-color: $brand-orange;
+  &:hover {
+    color: $white;
+    background-color: saturate($brand-orange, 50%);
+  }
+}
+
+.not-dark .button.button-border:not(.button-light), 
+.button.button-border {
+  font-weight: $font-akagi-md;
+
+  &:hover {
+    text-shadow: none;
+  }
+
+  &.button-orange {
+    color: $brand-orange;
+    border-color: lighten($brand-orange,20%);
+    &:hover {
+      color: $white;
+      background-color: $brand-orange;
+    }
+  }
+}
+
+
+
+
+
+// Social Icons
+// --------------------------------------------------
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+
+  font-size: 20px;
+  line-height: 44px !important;
+  color: $brand-accent;
+  border: 2px solid lighten($brand-accent,20%);
+
+  @include border-radius(4px);
+
+  &:hover {
+    i:first-child {
+      margin-top: -44px;
+    }
+  }
+
+  &.si-twitter {
+    font-size: 15px;
+  }
+}
+

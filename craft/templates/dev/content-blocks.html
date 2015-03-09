@@ -1,46 +1,91 @@
 {% extends "_layout" %}
 {% set pageClass = "tmpl-blocks" %}
+{% set title = "Content Blocks" %}
+{% set titleTagline = "Cras mattis consectetur purus sit amet fermentum" %}
+
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
+{% endblock %}
 
 {% block content %}
-	{% include '_organisms/page-header.html' %}
-	<article class="main-pad-top main-pad-bot">
+<div class="container clearfix">
+
+			<article>
 		
-		{% include '_matrix/block-text-centered.html' %}
-		{% include '_matrix/block-2col-img-text.html' %}
-		{% include '_matrix/block-text.html' %}		
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-2col-text-img.html' %}
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-heading.html' %}
-		{% include '_matrix/block-2col-text.html' %}
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-img.html' %}
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-3col-featuredbox.html' %}
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-blockquote.html' %}
-		{% include '_matrix/block-divider.html' %}
-		{% include '_matrix/block-4col-featuredbox.html' %}
-		{% include '_matrix/block-divider.html' %}
+				<div class="row row-block row-b-title">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/title.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-intro">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/intro.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-text">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-split">
+					<div class="col-md-5">
+						{% include 'dev/matrix/img-470x312.html' %}
+					</div>
+					<div class="col-md-7">
+						{% include 'dev/matrix/h3-h6-p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-text">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/p-sm-x2.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-text">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/h4-p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-img row-b-mrg">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/img-770x516.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-heading">
+					<div class="col-md-10 col-md-offset-1">
+						{% include 'dev/matrix/heading.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-split row-b-split-2 row-b-split-even">
+					<div class="col-md-6 b-col-left b-col-x-pad">
+						{% include 'dev/matrix/img-h5-p.html' %}
+					</div>
+					<div class="col-md-6 b-col-right b-col-x-pad">
+						{% include 'dev/matrix/img-h5-p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-testimonial row-b-mrg-xl">
+					<div class="col-md-10 col-md-offset-1">
+						{% include 'dev/matrix/testimonial.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-text row-b-mrg-xl">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/h3-p-img-pull-right-p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-text">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						{% include 'dev/matrix/h4-h6-img-pull-left-p.html' %}
+					</div>
+				</div>
+				<div class="row row-block row-b-img row-b-mrg-xl">
+					<div class="col-md-12">
+						{% include 'dev/matrix/img-1170x804.html' %}
+					</div>
+				</div>
 
-		<div class="row">
-			<div class="large-8 large-offset-2 columns">
-				<h3 class="hd-mrg-bot-sm">Heading</h3>
-				<h4>Optional Sub Heading</h4>
-				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>
-				<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-				<section class="section-block section-block--mrg-remove clearfix">
-					<img class="img-left-medium img-mrg-bot" src="http://placehold.it/270x180" alt="Placeholder Image" />
-					<h3>Heading</h3>
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.</p>
-				</section>
-				<section class="section-block section-block--mrg-remove clearfix">
-					<h3>Heading</h3>
-					<img class="img-right-medium img-mrg-bot" src="http://placehold.it/270x180" alt="Placeholder Image" />
-					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-				</section>
-			</div>
+			</article>
+			
 		</div>
-
-	</article>
+</div>
 {% endblock %}

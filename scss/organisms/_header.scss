@@ -3,35 +3,6 @@
 // --------------------------------------------------
 
 
-// Get Started Button
-// --------------------------------------------------
-
-#top-cta {
-	float: right;
-	margin: 0 0 0 15px;
-
-	@media (max-width: 991px) {
-		position: absolute;
-		top: 0;
-		left: auto;
-		right: 15px;
-	}
-}
-
-
-.top-cta-button {
-	height: 44px;
-	line-height: 44px;
-	margin: 28px 0;
-}
-
-
-.sticky-header .top-cta-button {
-	height: 38px;
-	line-height: 38px;
-	margin: 10px 0;
-}
-
 
 
 
@@ -39,71 +10,328 @@
 // --------------------------------------------------
 
 #primary-menu-trigger {
-	top: 20px;
+	top: 16px;
+	right: -4px;
+	left: auto;
 	width: 125px;
-	font-size: 16px;
-
+	font-size: 18px;
+	font-family: $font-akagi;
+	font-weight: $font-akagi-semibold;
+	letter-spacing: 1px;
 	vertical-align: middle;
+	color: $soya-bean;
 
 	> span {
 		display: inline-block;
-		margin-right: 8px;
+		margin-right: 4px;
 		vertical-align: middle;
 	}
 
 	> i {
+		margin-top: -4px;
 		font-size: 36px;
 		vertical-align: middle;
 	}
 
-	@media (max-width: 991px) {
-		right: 0;
-		left: auto;
+	@include breakpoint($bp-xs) {
+		right: 150px;
 	}
+	@include breakpoint($bp-sm) {
+		right: 170px;
+	}
+
 }
 
 
 #primary-menu {
-	@media (max-width: 991px) {
-		padding-bottom: 20px;
+	ul {
+		li {
+			a {
+				height: $full-hd-height;
+				line-height: $full-hd-height;
+				padding: 0 12px;
+
+				font-family: $font-magneta;
+				font-weight: $font-magneta-thin;
+				font-size: 18px;
+				letter-spacing: 1px;
+				text-transform: none;
+				color: $soya-bean;
+				
+				@include breakpoint($bp-max-md) {
+					&:after {
+						position: absolute;
+						right: 5px;
+						top: 0;
+						font-family: $font-awesome;
+						content: "\f105";
+						font-size: 18px;
+					}
+				}
+
+				@include breakpoint($bp-lg) {
+			    font-size: 20px;
+			    padding: 0 18px;
+			  }
+			}
+			&:hover a {
+				color: $mantis;
+			}
+			&.current a {
+				color: $forest-green;
+			}
+		}
+	}
+
+	ul ul {
+		a {
+			font-size: 16px !important;
+			color: $soya-bean !important;
+
+			@include breakpoint($bp-max-md) {
+				&:after {
+					font-size: 14px;
+				}
+			}
+		}
+
+		li:hover > a {
+			color: $mantis !important;
+			background-color: lighten($mantis, 45%);
+		}
+
+		li.current > a {
+			color: $forest-green !important;
+		}
+
+		@include breakpoint($bp-md) {
+			top: $full-hd-height - vs(2);
+			width: 260px;
+			border: 1px solid $main-border-color;
+			border-top-color: $mantis;
+			@include border-radius(4px);
+			box-shadow: 0px 12px 42px 10px rgba(0, 0, 0, 0.05);
+		}
 	}
 }
 
-// Force 2nd level active item color
-#primary-menu > ul ul > li:hover a, 
-#primary-menu > ul ul > li.current a {
-	color: #1ABC9C !important;
+#header.sticky-header #primary-menu > ul > li > a {
+	line-height: $sticky-hd-height;
 }
-
 
 #header.full-header #primary-menu > ul {
 	padding-right: 0;
 	margin-right: 0;
 	border-right: none;
+
+	@include breakpoint($bp-max-md) {
+		margin-top: vs(-1) !important;
+		padding-bottom: vs(3) !important;
+	}
+
+}
+
+@include breakpoint($bp-max-md) {
+
+	#primary-menu > ul > li.sub-menu > a, 
+	#primary-menu > .container > ul > li.sub-menu > a {
+		background-image: none;
+	}
+
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul li,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content ul ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content.col-2 > ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content.col-3 > ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content.col-4 > ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content.col-5 > ul,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul li .mega-menu-content.style-2 li { 
+  	border-top-color: $main-border-color !important; 
+  }
+
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a {
+  	color: $mantis !important; 
+  }
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a { 
+  	color: $forest-green !important; 
+  }
+
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover ul a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover ul a { 
+  	color: $soya-bean !important; 
+  	font-weight: normal !important;
+  }
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current ul li.current a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current ul li.current a {
+  	color: $forest-green !important; 
+  }
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul a:hover,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li ul li:hover a,
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li ul li:hover a { 
+  	color: $mantis !important; 
+  }
 }
 
 
-#header.full-header #logo {
-	margin-right: 0;
+
+
+// Get Started Button
+// --------------------------------------------------
+
+#top-cta {
+	display: none;
+
+	@include breakpoint($bp-xs) {
+		display: inline-block;
+		position: absolute;
+		top: 20px;
+		right: 15px;
+	}
+
+	@include breakpoint($bp-sm) {
+		top: 16px;
+	}
+	
+	@include breakpoint($bp-md) {
+		position: static;
+  	float: right;
+		margin: 0 0 0 16px;
+  }
+	
+	@include breakpoint($bp-lg) {
+    margin-left: 28px;
+  }
 }
 
+
+.button.top-cta-button {
+	margin: 0;
+	height: vs(3.5);
+	line-height: vs(3.5);
+	padding: 0 20px;
+	@include border-radius(42px);
+
+	@include breakpoint($bp-sm) {
+		height: vs(4);
+		line-height: vs(4);
+		padding: 0 28px;
+		font-size: 15px;	
+		@include border-radius(48px);
+	}
+
+	@include breakpoint($bp-md) {
+		margin: 32px 0;
+	}
+}
+
+
+
+// Full Header
+// --------------------------------------------------
+
+#header {
+	z-index: 199;
+
+	&.full-header {
+		background-color: transparent;
+		background-image: url(../images/header-bg.png);
+		background-repeat: repeat-x;
+		background-position: bottom center;
+		border-bottom: none;
+
+		#logo {
+			margin-right: 0;
+			padding-right: 0;
+			border-right: 0;
+		}
+	}
+}
+
+#header, 
+#header-wrap, 
+#logo img, 
+#primary-menu:not(.style-2), 
+#primary-menu:not(.style-2) > ul {
+	height: $full-hd-height + vs(1);
+}
 
 #logo {
+
+	height: $mobile-hd-height;
+
+	img {
+		height: 50px;
+		margin-top: 14px;
+		margin-bottom: 0;
+
+		@include breakpoint($bp-md) {
+			height: 62px;
+			margin-top: 24px;
+			margin-bottom: 22px;
+		}
+
+		@include breakpoint($bp-lg) {
+      height: 77px;
+			margin-top: 16px;
+			margin-bottom: 22px;
+		}
+	}
+
 	@media (max-width: 991px) {
 		text-align: left;
 	}
 }
 
 
-#logo img {
-	height: 60px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+
+// Sticky Header
+// --------------------------------------------------
+
+#header.sticky-header, 
+#header.sticky-header 
+#header-wrap, 
+#header.sticky-header:not(.sticky-style-2) #logo img, 
+#header.sticky-header #primary-menu, 
+#header.sticky-header #primary-menu > ul, 
+#header.sticky-header #primary-menu > ul > li > a {
+	height: $sticky-hd-height + vs(1);
 }
 
+#header.sticky-header #header-wrap {
+	background-color: transparent;
+	background-image: url(../images/header-bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+	border-bottom: none;
+	box-shadow: none;
+}
 
 #header.sticky-header:not(.sticky-style-2) #logo img {
-	height: 40px;
+	height: 50px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
+#header.sticky-header {
+	.top-cta-button {
+		height: 42px;
+		line-height: 42px;
+		margin: 14px 0;
+		padding: 0 22px;
+	}
+}
+
+#header.sticky-header #primary-menu > ul > li > ul, 
+#header.sticky-header #primary-menu > ul > li > .mega-menu-content, 
+#header.sticky-header #primary-menu > ul > li.mega-menu > .mega-menu-content {
+	top: $sticky-hd-height - vs(1);
+}
+
+
+
+

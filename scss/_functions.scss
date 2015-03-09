@@ -1,0 +1,8 @@
+//
+// Functions
+// --------------------------------------------------
+
+// Consistent baseline vertical spacing
+@function vs($value) {
+	@return ($lay-lh * $value);
+}

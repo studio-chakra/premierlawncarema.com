@@ -1,15 +1,24 @@
 {% extends "_layout" %}
 {% set pageClass = "tmpl-patternlab" %}
+{% set title = "Section / Page Title" %}
+{% set titleTagline = "Cras mattis consectetur purus sit amet fermentum" %}
 
-{% block content %}
-	{% include '_organisms/hero-home.html' %}
-	{% include '_organisms/page-header.html' %}
-	{% include '_organisms/why-choose.html' %}
-	{% include '_atoms/divider-mrg-none.html' %}
-	{% include '_organisms/services-grid-6x.html' %}
-	{% include '_atoms/divider-mrg-none.html' %}
-	{% include '_organisms/testimonials-grid-3x.html' %}
-	{% include '_organisms/contact-gmap.html' %}
-	{% include '_organisms/services-area-gmap.html' %}
-	{% include '_organisms/cta-home.html' %}
+{% block pageTitle %}
+	{% include '_organisms/page-title-parallax.html' %}
 {% endblock %}
+
+{% block bottom %}
+{# 	{% include '_organisms/home-hero.html' %}
+	
+	{% include '_organisms/home-intro.html' %}
+	{% include '_atoms/divider-mrg-none.html' %}
+	{% include '_organisms/home-services.html' %}
+	{% include '_atoms/divider-mrg-none.html' %}
+	{% include '_organisms/home-testimonials.html' %}	
+	{% include '_organisms/service-area-gmap.html' %} #}
+	{% include '_organisms/contact-gmap.html' %}
+	{% include '_atoms/space.html' %}
+	{% include '_organisms/home-cta.html' %}
+{% endblock %}
+
+

@@ -6,7 +6,8 @@
 .sidebar-contact,
 .sidebar-gallery,
 .sidebar-project {
-	@media (max-width: 991px) {
-		margin-top: 50px;
+	margin-top: vs(6);
+	@include breakpoint($bp-sm) {
+		margin-top: 0;
 	}
 }

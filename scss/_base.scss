@@ -1,0 +1,69 @@
+//
+// Base
+// --------------------------------------------------
+
+body {
+	color: $base-font-color;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
+	line-height: $base-font-lh;
+	letter-spacing: $base-letter-spacing;
+	background-color: $body-bg-color;
+}
+
+
+#wrapper {
+	background-color: $body-bg-color;
+}
+
+
+#content {
+	overflow: visible;
+	width: 100%;
+	background-color: $body-bg-color;
+
+	.content-wrap {
+		padding: vs(8) 0 vs(14) 0;
+	}
+
+	p {
+		line-height: $base-font-lh;
+	}
+}
+
+
+
+.main-content {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '';
+		pointer-events: none;
+
+		right: 0;
+		left: 0;
+		z-index: 10;
+		display: block;
+		height: vs(1);
+
+		top: vs(-1);
+		background-image: url(../images/main-bg-grunge.svg);
+		background-position: top center;
+	}
+}
+
+
+::selection {
+	background: $brand-green;
+	color: inherit;
+}
+
+
+
+#gotoTop {
+	&:hover {
+		background-color: $brand-accent;
+	}
+}

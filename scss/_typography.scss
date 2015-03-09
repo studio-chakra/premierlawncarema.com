@@ -2,6 +2,108 @@
 // Typography
 // --------------------------------------------------
 
+.main-content {
+	p, 
+	pre, 
+	ul, 
+	ol, 
+	dl, 
+	dd, 
+	blockquote, 
+	address, 
+	table, 
+	fieldset, 
+	form {
+		margin-top: $base-mrg;
+		margin-bottom: 0;
+	}
+
+
+	a {
+		color: $brand-accent;
+		&:hover {
+			color: saturate($brand-accent, 10%);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+// Headings
+// --------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+	margin-top: $base-mrg-lg;
+
+	font-family: $font-akagi;
+	font-weight: $font-akagi-bold;
+	line-height: 1.1;
+	letter-spacing: 0;
+	color: $forest-green;
+
+	+ p {
+		margin-top: $base-mrg - vs(1);
+	}
+}
+
+h3 {
+	font-size: $fs-xxl;
+	line-height: 1.1;
+	letter-spacing: -.5px;
+}
+
+h4 {
+	font-size: $fs-xl;
+	line-height: 1.1;
+	letter-spacing: -.5px;
+}
+
+h5 {
+	font-size: $fs-lg;
+	line-height: 1.1;
+	letter-spacing: -.5px;
+}
+
+h6 {
+	font-size: 24px;
+	font-family: $font-magneta;
+	font-weight: $font-magneta-thin;
+	font-style: italic;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	color: $soya-bean;
+}
+
+
+h3 + h6,
+h4 + h6 {
+	margin-top: $base-mrg-sliver;
+}
+
+
+.hd-thankyou {
+	font-family: $font-akagi;
+	font-weight: $font-akagi-bold;
+	font-size: 51px;
+	color: $forest-green;
+	line-height: 1.1;
+	letter-spacing: -2px;
+}
+
 .hd-sub {
 	margin-bottom: 0;
 
@@ -14,4 +116,260 @@
 .hd-alt {
 	font-family: 'Crete Round', serif;
 	font-style: italic;
+}
+
+
+
+
+
+// Type
+// --------------------------------------------------
+
+.main-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		+ p {
+			margin-top: $base-mrg - vs(1);
+		}
+	}
+}
+
+
+
+
+// Images
+// --------------------------------------------------
+
+.img-rounded {
+	@include border-radius(4px);
+}
+
+
+
+
+// Lines
+// --------------------------------------------------
+
+.line,
+.double-line {
+	margin: vs(6) 0;
+	border-color: $main-border-color;
+}
+
+
+
+
+
+
+// Blocks, can be used outside of row-blocks
+// These are base styles, without being in the matrix
+// --------------------------------------------------
+
+.b-title {
+	margin-top: 0;
+
+	font-family: $font-akagi;
+	font-weight: $font-akagi-bold;
+	font-size: 62px;
+	color: $forest-green;
+	line-height: 1;
+	letter-spacing: -2px;
+
+	@include breakpoint($bp-sm) {
+		font-size: 82px;
+	}
+}
+
+
+.b-intro {
+	margin-top: $b-mrg;
+	font-size: 24px;
+	line-height: 1.4;
+
+	p {
+		line-height: 1.4;
+	}
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+}
+
+
+.b-heading {
+
+	margin-bottom: 0;
+
+	&:after {
+		margin: 0 !important;
+		border-top: none;
+	}
+
+	h2 {
+		margin-bottom: vs(2);
+
+		font-family: $font-magneta;
+		font-weight: $font-magneta-semibold;
+		font-size: 62px;
+		color: $forest-green;
+		line-height: 1;
+		letter-spacing: .5px;
+		text-transform: none;
+	}
+
+	h2 + span {
+		font-size: 24px;
+	}
+
+	> span {
+		font-family: $font-magneta;
+		font-weight: $font-magneta-book;
+		font-size: 24px;
+		color: $soya-bean !important;
+		line-height: 1.6;
+		letter-spacing: 1px;
+
+		&:not(.before-heading) {
+			margin-top: vs(2);
+		}
+	}
+
+	&.center > span {
+		max-width: none;
+	}
+}
+
+
+.b-testimonial {
+	p {
+		margin-top: $b-mrg - vs(1);
+	}
+}
+
+
+.b-text {
+	img {
+		margin-top: $b-mrg;
+	}
+
+	.pull-right {
+		margin-left: 60px;
+		margin-bottom: vs(2);
+	}
+	.pull-right--more {
+		@include breakpoint($bp-md) {
+			margin-right: -100px;
+		}
+		@include breakpoint($bp-lg) {
+			margin-right: -200px;
+		}
+	}
+
+	.pull-left {
+		margin-right: 30px;
+		margin-bottom: vs(2);
+	}
+	.pull-left--more {
+		@include breakpoint($bp-md) {
+			margin-left: -100px;
+		}
+		@include breakpoint($bp-lg) {
+			margin-left: -200px;
+		}
+		
+	}
+
+	img.pull-left,
+	img.pull-right {
+		+ h1,
+		+ h2,
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6 {
+			margin-top: 0;
+			padding-top: vs(1.5);
+		}
+	}
+}
+
+
+
+.row-block {
+	margin-top: $b-mrg-lg;
+}
+
+.row-b-split-2 {
+	.b-col-left.b-col-x-pad .b {
+		padding-left: 70px;
+		padding-right: 30px;
+	}
+	.b-col-right.b-col-x-pad .b {
+		padding-left: 30px;
+		padding-right: 70px;
+	}
+}
+
+.row-b-mrg			{ margin-top: $b-mrg; }
+.row-b-mrg-xl		{ margin-top: $b-mrg-xl; }
+
+.row-b-title {
+	margin-top: 0;
+}
+
+.row-b-title + .row-b-intro {
+	margin-top: $b-mrg;
+}
+
+.row-b-heading {
+	margin-top: $b-mrg-xl;
+}
+
+.row-block {
+	.b-intro {
+		margin-top: 0;
+	}
+
+	.b-text {
+		p:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	img {
+		+ h1,
+		+ h2,
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6 {
+			margin-top: $b-mrg - vs(1);
+			+ p {
+				margin-top: $b-mrg - vs(2.5);
+			}
+		}
+	}
+}
+
+.row-b-split {
+	.b {
+		h3:first-of-type {
+			margin-top: vs(1.5);
+		}
+	}
 }

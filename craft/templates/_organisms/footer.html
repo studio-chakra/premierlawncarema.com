@@ -2,30 +2,25 @@
 <footer class="footer">
     <div class="container">
         <div class="row footer-top">
-            <div class="col-sm-4 col-md-3 col-lg-3 footer-info-col">
-                <a href="{{ siteUrl }}" class="footer-logo"><img src="http://placehold.it/240x120" alt="Premier Lawn Care MA"></a>
-                {# <h6 class="footer-hd"><a href="{{ siteUrl }}">Premier Lawn Care</a></h6>
-                <p>PO Box 9 <br>Charlton, MA 01507</p> #}
-            </div>
-            <div class="col-sm-8 col-md-7 col-lg-7 footer-questions-col">
+            <div class="col-sm-12 col-md-7 footer-questions-col">
                 <div class="footer-questions">
                     <h6 class="footer-hd">Have Questions? Call us @</h6>
-                    <div class="footer-callus">                             
-                        <h5 class="footer-callus__hd">(508) 446-7504</h5>
-                        <span class="footer-callus__to">to</span>
-                        <a href="#" class="button button-large footer-callus__gs">Get Started</a>
-                    </div>
-                    <em class="footer-tagline">We are the Lawn Care experts of Massachusetts</em>
+                    <h5 class="footer-phone"><a href="tel:+15084467504">(508) 446-7504</a></h5>
+                    <em class="footer-tagline">Your lawn care experts of Massachusetts</em>
                 </div>
-
             </div>
-            <div class="col-sm-12 col-md-2 footer-navsocial-col">
-              <ul class="footer-nav" role="navigation">
+            <div class="col-sm-12 col-md-5 footer-navsocial-col">
+              <ul class="footer-nav foot-nav-main" role="navigation">
                 <li><a href="{{ siteUrl }}why-premier/">Why Premier?</a></li>
-                <li><a href="{{ siteUrl }}">Services</a></li>
-                <li><a href="{{ siteUrl }}">Our Work</a></li>
-                <li><a href="{{ siteUrl }}">Learn</a></li>
-                <li><a href="{{ siteUrl }}">Contact Us</a></li>
+                <li><a href="{{ siteUrl }}services/our-services">Services</a></li>
+                <li><a href="{{ siteUrl }}work/featured-work">Our Work</a></li>
+                <li><a href="{{ siteUrl }}learn">Learn</a></li>
+                <li><a href="{{ siteUrl }}contact-us">Contact Us</a></li>
+              </ul>
+              <ul class="footer-nav foot-nav-sub" role="navigation">
+                <li><a href="{{ siteUrl }}services/special-offers">Special Offers</a></li>
+                <li><a href="{{ siteUrl }}why-premier/testimonials">Testimonials</a></li>
+                <li><a href="{{ siteUrl }}why-premier/faqs">FAQ's</a></li>
               </ul>
               <ul class="footer-social">
                 <li><a href="{{ siteUrl }}"><i class="fa fa-facebook"></i></a></li>
@@ -36,8 +31,8 @@
         </div>
         <div class="row footer-bot">
             <div class="footer-line"></div>
-            <p class="col-sm-6 footer-copy">Premier Lawn Care &copy; 2015. All rights reserved.</p>
-            <p class="col-sm-6 footer-by">Website designed & built by <a href="http://ryanbelisle.com">Ryan Belisle</a></p>
+            <p class="col-sm-6 footer-copy"><a href="{{ siteUrl }}">Premier Lawn Care</a> &copy; 2015. <br>All rights reserved.</p>
+            <p class="col-sm-6 footer-by">Website designed & built <br>by <a href="http://ryanbelisle.com">Ryan Belisle</a></p>
             <p class="col-sm-12 footer-devnav"><a href="{{siteUrl}}">Home</a> / <a href="{{siteUrl}}contact-us.html">Contact</a> / <a href="{{siteUrl}}dev/patternlab.html">Patterns</a> / <a href="{{siteUrl}}dev/content-blocks.html">Content Blocks</a> / <a href="{{siteUrl}}dev/head-foot.html">Header & Footer</a> /</p>
         </div>
     </div>

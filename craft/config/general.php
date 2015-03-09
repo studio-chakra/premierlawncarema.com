@@ -26,6 +26,7 @@ return array(
 
     // Staging site config
     'premierlawncarema-staging.studiochakra.com' => array(
+        'devMode' => true,
         'cooldownDuration' => 0,
 
         'environmentVariables' => array(

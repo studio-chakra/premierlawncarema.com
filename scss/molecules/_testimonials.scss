@@ -2,7 +2,52 @@
 // Testimonial
 // --------------------------------------------------
 
+.testimonial {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	@include border-radius(0);
+	box-shadow: none;
+
+	p {
+		font-family: $font-magneta;
+		font-weight: $font-magneta-thin;
+		font-size: 38px;
+		letter-spacing: 2px;
+		line-height: 1.4 !important;
+	}
+}
+
+.testi-meta {
+	margin-top: vs(4);
+
+	font-family: $font-magneta;
+	font-weight: $font-magneta-thin;
+	font-size: 20px;
+	letter-spacing: 1px;
+	line-height: 1.1;
+	color: $cloud;
+	text-transform: none;
+
+	em,
+	span {
+		display: inline-block;
+		color: $dawn;
+		font-weight: $font-magneta-thin;
+		padding-left: 0;
+		font-size: inherit;
+		font-style: italic;
+	}
+
+	em {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+}
 
 .testi-rating {
-	padding-left: 10px;
+	margin-top: vs(1);
+
+	color: $brand-orange;
+	font-size: 24px;
 }

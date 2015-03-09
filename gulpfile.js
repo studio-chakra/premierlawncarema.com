@@ -112,7 +112,14 @@ gulp.task('browser-sync', function() {
 });
 
 
+// Task: Reload all Browsers
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
+
 // WATCH
 gulp.task('default', ['css', 'bootstrap', 'sass', 'browser-sync', 'copy', 'copyfonts'], function () {
     gulp.watch("scss/**/*.scss", ['sass']);
+    gulp.watch("*.html").on("change", browserSync.reload);
 });

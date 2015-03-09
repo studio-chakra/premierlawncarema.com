@@ -7,26 +7,42 @@
 // Base
 // --------------------------------------------------
 
-footer {
-	padding-top: vs(7); 
-	padding-bottom: vs(7);
+.footer {
+	position: relative;
+	padding-top: vs(12); 
+	padding-bottom: vs(12);
 
 	text-align: center;
-	font-size: 14px;
-	line-height: 1.3;	
-	color: #ccc;
 
-	background: #333;
+	background-color: #15130C; 
+	background-image: url(../images/footer-bg.jpg);
+	background-position: top center;
+	background-size: cover;
 
 	p {
 		margin-bottom: 0;
-
 		font-size: inherit;
 		line-height: inherit;
 	}
 
-	@media (min-width: 768px) {
+	@include breakpoint($bp-md) {
 		text-align: left;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		pointer-events: none;
+
+		right: 0;
+		left: 0;
+		z-index: 10;
+		display: block;
+		height: vs(1);
+
+		top: vs(-1);
+		background-image: url(../images/footer-bg-grunge.svg);
+		background-position: top center;
 	}
 }
 
@@ -37,9 +53,9 @@ footer {
 	line-height: 0;
 	margin-right: 15px;
 	margin-left: 15px;
-	margin-bottom: vs(2); 
+	margin-bottom: vs(3); 
 
-	border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid #2B2619;
 }
 
 
@@ -48,29 +64,15 @@ footer {
 .footer-navsocial-col {
 	margin-bottom: vs(4);
 
-	@media (min-width: 768px) {
-		margin-bottom: vs(3);
+	@include breakpoint($bp-sm) {
+		margin-bottom: vs(6);
+	}
+
+	@include breakpoint($bp-md) {
+		margin-bottom: vs(9);
 	}
 }
 
-
-
-
-
-// Info
-// --------------------------------------------------
-
-.footer-logo {
-	display: inline-block;
-	margin-bottom: 0;
-
-	// margin-bottom: vs(1);
-
-	// @media #{$xxlarge-up} {
-	// 	float: left;
-	// 	margin-right: 18px;
-	// }
-}
 
 
 
@@ -78,128 +80,66 @@ footer {
 // Call Us
 // --------------------------------------------------
 
-.footer-questions-col {
-	@media (min-width: 992px) {
-		text-align: center;
-	}
-}
-
-.footer-questions {
-	@media (min-width: 992px) {
-		height: 106px;
-
-		text-align: left;
-		display: inline-block;
-		margin-left: auto;
-		margin-right: auto;
-
-		padding-left: 35px;
-		padding-right: 35px;
-
-		border-left: 1px solid rgba(255,255,255,0.1);
-		border-right: 1px solid rgba(255,255,255,0.1);
-	}
-
-	@media (min-width: 1200px) {
-		height: 120px;
-		margin-left: -10px;
-
-		padding-left: 70px;
-		padding-right: 70px;
-	}
-}
-
-
 .footer-hd {
 	margin-top: 0;
-	margin-bottom: vs(.5);
+	margin-bottom: vs(2);
+	padding-right: 40px;
+	padding-left: 40px;
 
-	font-size: 14px;
+	font-family: $font-akagi;
+	font-size: 20px;
 	line-height: 1;
-	font-weight: 400;
-	color: #ccc;
+	font-weight: $font-akagi-light;
+	color: $mantis;
 	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	line-height: 1.2;
 
-	@media (min-width: 768px) {
-		margin-bottom: 0;
-		margin-top: vs(.5);
+	@include breakpoint($bp-xs) {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
 
-.footer-callus {
-	margin-bottom: vs(1.5);
-
-	@media (min-width: 768px) {
-		margin-bottom: vs(1);
-	}
-}
-
-
-.footer-callus__hd {
+.footer-phone {
 	margin-top: 0;
-	margin-bottom: vs(.5);
+	margin-bottom: vs(1);
 
-	font-size: 36px;
+	font-family: $font-akagi;
+	font-size: 62px;
+	color: $white;
 	line-height: 1;
-	font-weight: 300;
-	color: #fff;
+	font-weight: $font-akagi-bold;
+	letter-spacing: -1.8px;
+	text-shadow: 2px 2px 0px #0A0906;
 
-	@media (min-width: 768px) {
-		display: inline-block;
-		margin-bottom: 0;
+	a {
+		color: $white;
+		&:hover {
+			color: $white;
+		}
 	}
-}
 
-
-.footer-callus__to {
-	display: block;
-	margin-bottom: vs(.5);
-
-	font-size: 18px;
-	line-height: 1;
-	font-weight: 300;
-	font-style: italic;
-	color: #ccc;
-
-	@media (min-width: 768px) {
-		display: inline-block;
-		margin-bottom: 0;
-		margin-right: 12px;
-		margin-left: 12px;
+	@include breakpoint($bp-sm) {
+		font-size: 82px;
 	}
-}
-
-
-.button.footer-callus__gs {
-	margin: 0;
-
-
-	// padding: vs(.8) 24px;
-	// margin-bottom: 0;
-
-	font-size: 14px;
-	// font-weight: 400;
-	// color: #fff;
-}
-
-
-.footer-callus__hd,
-.footer_callus__to,
-.button_footer_callus__gs {
-	@media (min-width: 768px) {
-		vertical-align: middle;
+	@include breakpoint($bp-md) {
+		font-size: 74px;
+	}
+	@include breakpoint($bp-lg) {
+		font-size: 82px;
 	}
 }
 
 
 .footer-tagline {
-	font-size: 20px;
-	line-height: 1.3;
-	font-weight: 300;
-	font-family: 'Crete Round', serif;
+	font-size: 24px;
+	font-weight: $font-magneta-thin;
 	font-style: italic;
-	color: #ccc;
+	color: $friar-gray;
+	letter-spacing: 1px;
+	line-height: 1.1;
 }
 
 
@@ -219,40 +159,55 @@ footer {
 	> li {
 		display: inline-block;
 		margin-bottom: 0;
-
-		font-size: 16px;
 		line-height: 1;
 	}
 
 	> li > a {
 		display: block;
-		padding: vs(.5) 10px;
+		padding: vs(1) 10px;
 
-		color: #ccc;
+		font-size: 20px;
+		font-weight: $font-magneta-thin;
+		color: $white;
+		line-height: 1.1;
+		letter-spacing: .5px;
 
 		&:hover,
 		&:focus {
-			color: #fff;
+			color: $mantis;
 		}
-	}
+	}	
 
-	@media (min-width: 768px) {
+	@include breakpoint($bp-md) {
 		float: left;
-		margin-left: -6px;
 		margin-bottom: 0;
-	}
+		margin-left: 30px;
 
-	@media (min-width: 992px) {
-		margin-left: 0;
+		&:first-child {
+			margin-left: 20px;
+		}
 
 		> li {
 			display: block;
-
-			font-size: 14px;
+			margin-left: -10px;
 		}
 
 		> li > a {
-			padding: vs(.3) 0;
+			padding-top: vs(.55);
+			padding-bottom: vs(.55);
+
+			font-size: 18px;
+		}
+	}
+
+	@include breakpoint($bp-lg) {
+		margin-left: 54px;
+		&:first-child {
+			margin-left: 0;
+		}
+
+		> li > a {
+			font-size: 20px;
 		}
 	}
 }
@@ -260,23 +215,27 @@ footer {
 
 .footer-social {
 	display: block;
-	margin: 0;
+	margin: vs(3) 0 0 0;
 
 	list-style-type: none;
 	list-style-position: outside;
 
 	> li {
 		display: inline-block;
-		margin-bottom: 0;
+		margin-bottom: vs(.3);
+		margin-left: 5px;
+		margin-right: 5px;
 
-		font-size: 24px;
+		font-size: 36px;
 		line-height: 1;
 
-		@media (min-width: 992px) {
+		@include breakpoint($bp-md) {
 			display: block;
-			text-align: center;
+			margin-left: 0;
+			margin-right: 0;
 
-			font-size: 20px;
+			font-size: 24px;
+			text-align: center;
 		}
 	}
  
@@ -284,21 +243,25 @@ footer {
 		display: block;
 		padding: vs(.5) 6px;
 
-		color: #ccc;
+		color: $white;
 
 		&:hover,
 		&:focus {
-			color: #fff;
+			color: $mantis;
 		}
 
-		@media (min-width: 992px) {
-			padding-top: vs(.2);
-			padding-bottom: vs(.2);
+		@include breakpoint($bp-md) {
+
 		}
 	}
 
-	@media (min-width: 768px) {
+	@include breakpoint($bp-sm) {
+		margin-top: vs(4)
+	}
+
+	@include breakpoint($bp-md) {
 		float: right;
+		margin-top: 0;
 		margin-right: -6px;
 	}
 }
@@ -310,20 +273,39 @@ footer {
 // Copy + By
 // --------------------------------------------------
 
+.footer-bot {
+	font-size: 16px;
+	letter-spacing: .4px;
+	color: #5E594C;
+
+	p {
+		margin-bottom: vs(1);
+	}
+
+	a {
+		color: #5E594C;
+		&:hover {
+			color: #868279;
+		}
+	}
+}
+
 .footer-copy {
-	margin-bottom: vs(1);
+	@include breakpoint($bp-xs) {
+		br {
+			display: none;
+		}
+	}
 }
 
 
 .footer-by {
-	a {
-		color: #ccc;
-		&:hover {
-			color: #fff;
+	@include breakpoint($bp-xs) {
+		br {
+			display: none;
 		}
 	}
-
-	@media (min-width: 768px) {
+	@include breakpoint($bp-sm) {
 		text-align: right;
 	}
 }
@@ -332,14 +314,7 @@ footer {
 .footer-devnav {
 	margin-top: vs(1);
 
-	a {
-		color: #ccc;
-		&:hover {
-			color: #fff;
-		}
-	}
-
-	@media (min-width: 992px) {
+	@include breakpoint($bp-md) {
 		text-align: left;
 	}
 }

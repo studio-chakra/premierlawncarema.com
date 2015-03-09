@@ -4,28 +4,107 @@
 
 $lay-lh: 12px;	// gutter height from design
 
+$full-hd-height: vs(9.5);
+$sticky-hd-height: vs(6);
+$mobile-hd-height: vs(7.5);
 
 
 
-
-// Functions
+// Colors
 // --------------------------------------------------
 
-// Consistent baseline vertical spacing
-@function vs($value) {
-	@return ($lay-lh * $value);
-}
+$white: #fff;
+$birch: #363020;
+
+$soya-bean: #686357;
+$friar-gray: #868279;
+$quill-gray: #D6D5D2;
+$cloud: #C4C1BB;
+$dawn: #AEACA5;
+
+$web-orange: #FFA900;
+
+$forest-green: #2A7221;
+$mantis: #81C14B;
+$hippie-green: #548E4D;
+
+$brand-orange: $web-orange;
+$brand-green: $forest-green;
+$brand-accent: $mantis;
+
+$invalid: #b70f00;
+
+$body-bg-color: #FCFCFB;
+$main-border-color: lighten($birch, 75%);
+
+
+// Type
+// --------------------------------------------------
+
+$font-awesome: "FontAwesome";
+
+$font-magneta: "magneta", sans-serif;
+$font-magneta-thin: 200;
+$font-magneta-book: 400;
+$font-magneta-md: 500;
+$font-magneta-semibold: 600;
+
+$font-akagi: "akagi-pro", sans-serif;
+$font-akagi-extralight: 200;
+$font-akagi-light: 300; 
+$font-akagi-book: 400;
+$font-akagi-md: 500;
+$font-akagi-semibold: 600;
+$font-akagi-bold: 700;
+
+$base-lh: 12px;
+$base-font-size: 20px;
+$base-font-family: $font-magneta;
+$base-font-weight: $font-magneta-book;
+$base-font-lh: 1.7;
+$base-letter-spacing: .8px;
+$base-font-color: $birch;
+
+
+$fs-xs: 		13px;
+$fs-sm: 		15px;
+$fs-base: 	20px;
+$fs-md:			24px;
+$fs-lg:			32px;
+$fs-xl:			38px;
+$fs-xxl:		51px;
+$fs-super:	62px;
+$fs-mega:		82px;
+
 
 
 
 // MQ
 // --------------------------------------------------
 
+$bp-xs: 480px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+$bp-max-md: max-width 991px;
 
 
 
 // Spacing
 // --------------------------------------------------
+
+$base-mrg-sliver: vs(.5);
+$base-mrg-sm: vs(2);
+$base-mrg: vs(4);
+$base-mrg-lg: vs(7);
+$base-mrg-xl: vs(10);
+
+$b-mrg-sliver: vs(.5);
+$b-mrg-sm: vs(2);
+$b-mrg: vs(4);
+$b-mrg-lg: vs(7);
+$b-mrg-xl: vs(10);
 
 %type-mrg-bot {
 	margin-bottom: vs(4);

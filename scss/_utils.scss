@@ -2,6 +2,55 @@
 // Utils
 // --------------------------------------------------
 
+
+
+.t-hippie-green			{ color: $hippie-green; }
+
+
+// Font Sizes
+// --------------------------------------------------
+
+.fs-xs			{ font-size: $fs-xs; }
+.fs-sm			{ font-size: $fs-sm; }
+.fs-base		{ font-size: $fs-md; }
+.fs-md			{ font-size: $fs-md; }
+.fs-lg			{ font-size: $fs-lg; }
+.fs-xl			{ font-size: $fs-xl; }
+.fs-xxl			{ font-size: $fs-xxl; }
+.fs-super		{ font-size: $fs-super; }
+.fs-mega		{ font-size: $fs-mega; }
+
+
+#content {
+	p.fs-xs {
+		line-height: 2;
+	}
+}
+
+
+.fs-italic {
+	font-style: italic;
+}
+
+
+
+// Spacing
+// --------------------------------------------------
+
+.b-mrg-sliver		{ margin-bottom: $b-mrg-sliver; }
+.b-mrg-sm				{ margin-bottom: $b-mrg-sm; }
+.b-mrg					{ margin-bottom: $b-mrg; }
+.b-mrg-lg				{ margin-bottom: $b-mrg-lg; }
+
+
+.mb-remove	{ margin-bottom: 0 !important; }
+.mt-remove	{ margin-top: 0 !important; }
+
+.mt-img-push		{ margin-top: $b-mrg-sm; }
+
+.mb-sliver	{ margin-bottom: $base-mrg-sliver; }
+
+
 .pt-lg {
 	padding-top: 80px;
 }
@@ -26,3 +75,4 @@
 		margin: 0;
 	}
 }
+

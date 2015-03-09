@@ -5,7 +5,7 @@
 .google-map {
   position: relative;
   //padding-bottom: 30%; // This is the aspect ratio
-  height: 450px;
+  height: 480px;
   overflow: hidden;
   max-width: 100%;
 
@@ -29,8 +29,8 @@
 
 .section-gmap {
 	overflow: hidden;
-	height: 450px;
-	background-color: #E9E9E9;
+	height: 480px;
+	background-color: $brand-orange;
 }
 
 
@@ -47,7 +47,7 @@
 
 		text-align: center;
 
-		@media (min-width: 991px) {
+		@include breakpoint($bp-md) {
 			text-align: left; 
 		}
 	}
