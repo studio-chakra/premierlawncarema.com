@@ -1,24 +1,23 @@
-<div class="section nobg notopmargin nobottommargin pt-lg pb-lg">
+<section class="section section-blog bg-seed">
     <div class="container clearfix">
-
         <div class="row">
-
-            <div class="heading-block center">
-                <h3>Latest from the Learn Blog</h3>
-                <span>Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</span>
+            <div class="b b-heading heading-block center">
+                <h2>Latest from the Learn Blog</h2>
+                <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
+                <span>Maecenas faucibus mollis interdum porta felis euismod semper. 
+        Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</span>
             </div>
 
-           {% for i in 0..2 %}
-            <div class="col-md-4 col-sm-6 bottommargin">
-                {% include '_molecules/post.html' %}   
+            <div class="grid post-grid">
+            {% for i in 0..2 %}
+                <div class="col-md-4 col-sm-6">
+                    {% include '_molecules/post.html' %}   
+                </div>
+           {% endfor %}   
             </div>
-           {% endfor %}                
-
-        </div> 
-
-        <div class="row center">
-            <a href="{{siteUrl}}learn" class="button">View more articles</a>
         </div>
-
+        <div class="row action-row center">
+            <a href="{{siteUrl}}learn" class="button button-rounded button-accent">View more articles</a>
+        </div>
     </div>
-</div>
+</section>

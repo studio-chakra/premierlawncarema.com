@@ -1,2 +1,3 @@
-bower_components/breakpoint-sass
-bower_components/sassy-maps
+/bower_components
+/node_modules
+/.sass-cache

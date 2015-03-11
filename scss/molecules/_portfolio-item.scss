@@ -1,0 +1,48 @@
+//
+// Portfolio Item
+// --------------------------------------------------
+
+.iportfolio {
+	a.portfolio-overlay {
+		height: 100%;
+	}
+}
+
+
+.portfolio-overlay {
+	opacity: 1;
+	@include border-radius(4px);
+	background-color: transparent;
+
+	.portfolio-desc {
+		h3 {
+			@include font-style(akagi, bold, normal, $white);
+			font-size: 38px;
+			line-height: 1;
+			letter-spacing: 0;
+			text-shadow: 1px 1px 0px $birch;
+		}
+
+		span {
+			margin-top: vs(1.5);
+
+			@include font-style(magneta, thin, italic, $white !important);
+			font-size: 20px;
+			letter-spacing: 1.5px;
+			line-height: 1;
+			text-shadow: 1px 1px 0px $birch;
+		}
+	}
+	&:hover {
+		background-color: rgba($birch, 0.5);
+	}
+}
+
+
+body:not(.device-touch):not(.device-xs):not(.device-xxs) .portfolio-overlay {
+  -webkit-transition: background-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+
+

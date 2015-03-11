@@ -10,8 +10,7 @@
 	box-shadow: none;
 
 	p {
-		font-family: $font-magneta;
-		font-weight: $font-magneta-thin;
+		@include font-style(magneta, thin, normal);
 		font-size: 38px;
 		letter-spacing: 2px;
 		line-height: 1.4 !important;
@@ -21,22 +20,18 @@
 .testi-meta {
 	margin-top: vs(4);
 
-	font-family: $font-magneta;
-	font-weight: $font-magneta-thin;
+	@include font-style(magneta, thin, normal, $cloud, none);
 	font-size: 20px;
 	letter-spacing: 1px;
 	line-height: 1.1;
-	color: $cloud;
-	text-transform: none;
 
 	em,
 	span {
 		display: inline-block;
-		color: $dawn;
-		font-weight: $font-magneta-thin;
 		padding-left: 0;
+
+		@include font-style(magneta, thin, italic, $dawn);		
 		font-size: inherit;
-		font-style: italic;
 	}
 
 	em {
@@ -46,8 +41,9 @@
 }
 
 .testi-rating {
-	margin-top: vs(1);
+	margin-top: vs(1.5);
 
 	color: $brand-orange;
 	font-size: 24px;
+	line-height: 1;
 }

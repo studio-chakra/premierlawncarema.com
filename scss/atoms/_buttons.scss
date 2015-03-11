@@ -36,15 +36,23 @@
 
 
 .button {
-  font-family: $font-akagi;
-  font-weight: $font-akagi-md;
+  @include font-style(akagi, md, normal, false, uppercase);
   font-size: 15px;
   text-shadow: none;
-  text-transform: uppercase;
   border-bottom: none;
+
+  padding: 20px 48px;
+  height: auto;
+  line-height: 20px;
+  letter-spacing: 1px;
+  white-space: normal;
 
   &:hover {
     text-shadow: none;
+  }
+
+  &.button-rounded {
+    @include border-radius(30px);
   }
 
   &.button-xlarge {
@@ -66,13 +74,22 @@
   background-color: $brand-orange;
   &:hover {
     color: $white;
-    background-color: saturate($brand-orange, 50%);
+    background-color: #ffc600;
+  }
+}
+
+.button-accent {
+  color: $white;
+  background-color: $brand-accent;
+  &:hover {
+    color: $white;
+    background-color: saturate($brand-accent, 10%);
   }
 }
 
 .not-dark .button.button-border:not(.button-light), 
 .button.button-border {
-  font-weight: $font-akagi-md;
+  @include font-weight(akagi, md);
 
   &:hover {
     text-shadow: none;

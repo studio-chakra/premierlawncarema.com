@@ -5,6 +5,7 @@ var gulp            = require('gulp');
 
 // Include Our Plugins
 var sass            = require('gulp-sass');
+var compass         = require('gulp-compass');
 var minifycss       = require('gulp-minify-css');
 var concat          = require('gulp-concat');
 var uglify          = require('gulp-uglify');
@@ -32,6 +33,7 @@ gulp.task('css', function() {
 });
 
 
+
 // Task: Bootstrap
 gulp.task('bootstrap', function () {
     return gulp.src('scss/bootstrap.scss')
@@ -53,6 +55,26 @@ gulp.task('bootstrap', function () {
 gulp.task('sass', function () {
     return gulp.src('scss/app.scss')
         .pipe(sass({includePaths: ['scss']}))
+        // Catch any SCSS errors and prevent them from crashing gulp
+        .on('error', function (error) {
+            console.error(error);
+            this.emit('end');
+        })
+        .pipe(gulp.dest('css'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest('css'))
+        .pipe(reload({stream:true}));
+});
+
+gulp.task('compass', function () {
+    return gulp.src('scss/app.scss')
+        .pipe(compass({
+          config_file: './config.rb',
+          css: './css',
+          sass: './scss',
+          image: './images'
+        }))
         // Catch any SCSS errors and prevent them from crashing gulp
         .on('error', function (error) {
             console.error(error);
@@ -119,7 +141,7 @@ gulp.task('bs-reload', function () {
 
 
 // WATCH
-gulp.task('default', ['css', 'bootstrap', 'sass', 'browser-sync', 'copy', 'copyfonts'], function () {
-    gulp.watch("scss/**/*.scss", ['sass']);
+gulp.task('default', ['css', 'bootstrap', 'compass', 'browser-sync', 'copy', 'copyfonts'], function () {
+    gulp.watch("scss/**/*.scss", ['compass']);
     gulp.watch("*.html").on("change", browserSync.reload);
 });

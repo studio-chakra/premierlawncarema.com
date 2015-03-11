@@ -1,0 +1,61 @@
+//
+// Feature Boxes
+// --------------------------------------------------
+
+.feature-box {
+	position: relative;
+
+	h3 {
+		margin: 0;
+
+		@include font-style(akagi, bold, normal, $birch, none);
+		font-size: 32px;
+		line-height: 1.1;
+		letter-spacing: .5px;
+
+		.pretitle {
+			display: block;
+			@include font-style(magneta, thin, italic, $birch);
+		}
+	}
+}
+
+
+.feature-box.media-box-overlay {
+	h3,
+	.pretitle {
+		color: $white;
+	}
+
+	.fbox-media {
+		margin-bottom: 0;
+	}
+
+	.fbox-overlay {
+		position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  opacity: 1;
+	  z-index: 2;
+	  text-align: center;
+	  &:hover {
+			background-color: rgba($birch, 0.5);
+	  }
+	}
+
+	.fbox-desc {
+		position: relative;
+		padding-right: 20px;
+		padding-left: 20px;
+		@include vertical-align;
+	}
+}
+
+
+body:not(.device-touch):not(.device-xs):not(.device-xxs) .feature-box.media-box-overlay .fbox-overlay {
+  -webkit-transition: background-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}

@@ -50,6 +50,9 @@
 
 .mb-sliver	{ margin-bottom: $base-mrg-sliver; }
 
+.p-button {
+	margin-top: $b-mrg - vs(2);
+}
 
 .pt-lg {
 	padding-top: 80px;
@@ -76,3 +79,17 @@
 	}
 }
 
+
+
+// Images
+// --------------------------------------------------
+
+.img-full {
+	width: 100%;
+}
+
+.img-md-medium {
+	@include breakpoint($bp-md) {
+		width: 470px;
+	}
+}

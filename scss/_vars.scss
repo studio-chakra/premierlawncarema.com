@@ -15,6 +15,7 @@ $mobile-hd-height: vs(7.5);
 
 $white: #fff;
 $birch: #363020;
+$eternity: #1F180E;
 
 $soya-bean: #686357;
 $friar-gray: #868279;
@@ -36,6 +37,31 @@ $invalid: #b70f00;
 
 $body-bg-color: #FCFCFB;
 $main-border-color: lighten($birch, 75%);
+
+
+
+
+
+%link-accent {
+	color: $brand-accent;
+  &:hover {
+    color: saturate($brand-accent, 10%);
+  }
+}
+
+%link-orange {
+	color: $brand-orange;
+  &:hover {
+    color: saturate($brand-orange, 50%);
+  }
+}
+
+@mixin set-link-color($color) {
+	@extend %link-#{$color};
+}
+
+
+
 
 
 // Type
@@ -64,6 +90,22 @@ $base-font-weight: $font-magneta-book;
 $base-font-lh: 1.7;
 $base-letter-spacing: .8px;
 $base-font-color: $birch;
+
+$ff-magneta-weights: (
+	thin: 200,
+	book: 400,
+	md: 500,
+	semibold: 600
+);
+
+$ff-akagi-weights: (
+	extralight: 200,
+	light: 300,
+	book: 400,
+	md: 500,
+	semibold: 600,
+	bold: 700
+);
 
 
 $fs-xs: 		13px;

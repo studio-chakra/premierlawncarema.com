@@ -1,0 +1,16 @@
+//
+// Template: Home
+// --------------------------------------------------
+
+.tmpl-home {
+	#content {
+		display: none;
+	}
+
+	.section-blog {
+		padding-bottom: $section-trailing + vs(2);
+	}
+}
+
+
+

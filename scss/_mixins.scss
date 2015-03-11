@@ -44,3 +44,45 @@
 }
 
 
+
+
+
+@function get-font-weight($weight, $font) {
+  @if $font == "magneta" {
+    @if map-has-key($ff-magneta-weights, $weight) {
+      @return map-get($ff-magneta-weights, $weight);
+    } 
+  } @elseif $font == "akagi" {
+    @if map-has-key($ff-akagi-weights, $weight) {
+      @return map-get($ff-akagi-weights, $weight);
+    } 
+  }
+  @warn "Unknown `#{$weight}` in $weights.";
+  @return null;
+}
+
+@mixin font-style ($family, $weight: null, $style: null, $color: null, $transform: null) {
+  @if $family {
+    @if $family == "magneta" {
+      font-family: $font-magneta;
+    } @elseif $family == "akagi" {
+      font-family: $font-akagi;
+    }
+  }  
+  @if $weight {
+    font-weight: get-font-weight($weight, $family);
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $transform {
+    text-transform: $transform;
+  }
+}
+
+@mixin font-weight ($family, $weight) {
+  font-weight: get-font-weight($weight, $family);
+}

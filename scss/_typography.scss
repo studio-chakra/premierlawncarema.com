@@ -2,38 +2,42 @@
 // Typography
 // --------------------------------------------------
 
-.main-content {
-	p, 
-	pre, 
-	ul, 
-	ol, 
-	dl, 
-	dd, 
-	blockquote, 
-	address, 
-	table, 
-	fieldset, 
-	form {
+p, 
+pre, 
+ul, 
+ol, 
+dl, 
+dd, 
+blockquote, 
+address, 
+table, 
+fieldset, 
+form {	
+	margin-bottom: 0;
+
+	.main-content & {
 		margin-top: $base-mrg;
-		margin-bottom: 0;
-	}
-
-
-	a {
-		color: $brand-accent;
-		&:hover {
-			color: saturate($brand-accent, 10%);
-		}
 	}
 }
 
+a {
+	@include set-link-color("accent");
+}
 
-
-
-
-
-
-
+.more-link {
+	padding: 0;
+	@include font-style(magneta, thin, italic);
+	border-bottom: none;
+	&:after {
+		margin-left: 6px;
+		display: inline-block;
+		content: ' ';
+		background-image: url(../images/icon-more.svg);
+		background-size: 14px 8px;
+		width: 14px;
+		height: 8px;
+	}
+}
 
 
 
@@ -49,15 +53,19 @@ h6 {
 	margin-bottom: 0;
 	margin-top: $base-mrg-lg;
 
-	font-family: $font-akagi;
-	font-weight: $font-akagi-bold;
+	@include font-style(akagi, bold, normal, $forest-green);
 	line-height: 1.1;
 	letter-spacing: 0;
-	color: $forest-green;
 
 	+ p {
 		margin-top: $base-mrg - vs(1);
 	}
+}
+
+h3 {
+	font-size: $fs-super;
+	line-height: 1.1;
+	letter-spacing: -.5px;
 }
 
 h3 {
@@ -79,13 +87,10 @@ h5 {
 }
 
 h6 {
+	@include font-style(magneta, thin, italic, $soya-bean);
 	font-size: 24px;
-	font-family: $font-magneta;
-	font-weight: $font-magneta-thin;
-	font-style: italic;
 	line-height: 1.1;
 	letter-spacing: 1px;
-	color: $soya-bean;
 }
 
 
@@ -96,10 +101,8 @@ h4 + h6 {
 
 
 .hd-thankyou {
-	font-family: $font-akagi;
-	font-weight: $font-akagi-bold;
+	@include font-style(akagi, bold, normal, $forest-green);
 	font-size: 51px;
-	color: $forest-green;
 	line-height: 1.1;
 	letter-spacing: -2px;
 }
@@ -172,10 +175,8 @@ h4 + h6 {
 .b-title {
 	margin-top: 0;
 
-	font-family: $font-akagi;
-	font-weight: $font-akagi-bold;
+	@include font-style(akagi, bold, normal, $forest-green);
 	font-size: 62px;
-	color: $forest-green;
 	line-height: 1;
 	letter-spacing: -2px;
 
@@ -212,11 +213,9 @@ h4 + h6 {
 	h2 {
 		margin-bottom: vs(2);
 
-		font-family: $font-magneta;
-		font-weight: $font-magneta-semibold;
+		@include font-style(magneta, semibold, normal, $forest-green);
 		font-size: 62px;
-		color: $forest-green;
-		line-height: 1;
+		line-height: 1.2;
 		letter-spacing: .5px;
 		text-transform: none;
 	}
@@ -226,16 +225,25 @@ h4 + h6 {
 	}
 
 	> span {
-		font-family: $font-magneta;
-		font-weight: $font-magneta-book;
+		@include font-style(magneta, book, normal, $soya-bean !important);
 		font-size: 24px;
-		color: $soya-bean !important;
 		line-height: 1.6;
 		letter-spacing: 1px;
 
 		&:not(.before-heading) {
 			margin-top: vs(2);
 		}
+
+		&.before-heading {
+			@include font-style(akagi, light, normal, $brand-accent !important);
+			font-size: 20px;
+			letter-spacing: 1.5px;
+			line-height: 1;
+		}
+	}
+
+	span + h2 {
+		margin-top: 0;
 	}
 
 	&.center > span {
@@ -301,16 +309,39 @@ h4 + h6 {
 
 .row-block {
 	margin-top: $b-mrg-lg;
+
+	&.row-b-split-2 .b-col {
+		margin-top: $b-mrg-lg;
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include breakpoint($bp-md) {
+			margin-top: 0;
+		}
+	}
 }
 
 .row-b-split-2 {
 	.b-col-left.b-col-x-pad .b {
-		padding-left: 70px;
-		padding-right: 30px;
+		@include breakpoint($bp-sm) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@include breakpoint($bp-md) {
+			padding-left: 70px;
+			padding-right: 30px;
+		}
 	}
 	.b-col-right.b-col-x-pad .b {
-		padding-left: 30px;
-		padding-right: 70px;
+		@include breakpoint($bp-sm) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@include breakpoint($bp-md) {
+			padding-left: 30px;
+			padding-right: 70px;
+		}
 	}
 }
 

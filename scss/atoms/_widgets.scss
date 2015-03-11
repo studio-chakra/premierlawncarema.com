@@ -18,10 +18,8 @@
 		margin-top: vs(6);
 		margin-bottom: vs(2);
 
-		font-family: $font-akagi;
-		font-weight: $font-akagi-bold;
+		@include font-style(akagi, bold, normal, $birch);
 		font-size: 16px;
-		color: $birch;
 		letter-spacing: 0px;
 		line-height: 1;
 	}

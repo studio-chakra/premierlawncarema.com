@@ -86,12 +86,9 @@
 	padding-right: 40px;
 	padding-left: 40px;
 
-	font-family: $font-akagi;
+	@include font-style(akagi, light, normal, $mantis, uppercase);
 	font-size: 20px;
 	line-height: 1;
-	font-weight: $font-akagi-light;
-	color: $mantis;
-	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	line-height: 1.2;
 
@@ -106,11 +103,9 @@
 	margin-top: 0;
 	margin-bottom: vs(1);
 
-	font-family: $font-akagi;
+	@include font-style(akagi, bold, normal, $white);
 	font-size: 62px;
-	color: $white;
 	line-height: 1;
-	font-weight: $font-akagi-bold;
 	letter-spacing: -1.8px;
 	text-shadow: 2px 2px 0px #0A0906;
 
@@ -134,10 +129,8 @@
 
 
 .footer-tagline {
+	@include font-style(magneta, thin, italic, $friar-gray);
 	font-size: 24px;
-	font-weight: $font-magneta-thin;
-	font-style: italic;
-	color: $friar-gray;
 	letter-spacing: 1px;
 	line-height: 1.1;
 }
@@ -166,9 +159,8 @@
 		display: block;
 		padding: vs(1) 10px;
 
+		@include font-style(magneta, thin, normal, $white);
 		font-size: 20px;
-		font-weight: $font-magneta-thin;
-		color: $white;
 		line-height: 1.1;
 		letter-spacing: .5px;
 

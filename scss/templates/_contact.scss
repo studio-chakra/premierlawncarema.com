@@ -22,19 +22,14 @@
 .contact__name {
 	margin-top: vs(3);
 
-	font-family: $font-akagi;
-	font-weight: $font-akagi-bold;
+	@include font-style(akagi, bold, normal, $birch);
 	font-size: 32px;
-	color: $birch;
 	line-height: 38px;
 	letter-spacing: -.5px;
 
 	small {		
-		font-family: $font-akagi;
-		font-weight: $font-akagi-light;
-		font-style: italic;
+		@include font-style(akagi, light, italic, $dawn);
 		font-size: 32px;
-		color: #AEACA5;
 	}
 }
 

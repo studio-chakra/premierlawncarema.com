@@ -14,12 +14,11 @@
 	right: -4px;
 	left: auto;
 	width: 125px;
+
+	@include font-style(akagi, semibold, normal, $soya-bean);
 	font-size: 18px;
-	font-family: $font-akagi;
-	font-weight: $font-akagi-semibold;
 	letter-spacing: 1px;
 	vertical-align: middle;
-	color: $soya-bean;
 
 	> span {
 		display: inline-block;
@@ -51,12 +50,9 @@
 				line-height: $full-hd-height;
 				padding: 0 12px;
 
-				font-family: $font-magneta;
-				font-weight: $font-magneta-thin;
+				@include font-style(magneta, thin, normal, $soya-bean, none);
 				font-size: 18px;
 				letter-spacing: 1px;
-				text-transform: none;
-				color: $soya-bean;
 				
 				@include breakpoint($bp-max-md) {
 					&:after {

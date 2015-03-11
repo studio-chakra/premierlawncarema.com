@@ -1,0 +1,49 @@
+//
+// Section: Slider
+// --------------------------------------------------
+
+.slider-parallax {
+	margin-top: vs(-4);
+	background-color: $forest-green;
+	background-position: center top;
+
+	.heading-block {
+		margin: 0 0 0 70px;
+		max-width: 830px;
+
+		h1 {
+			margin: 0;
+
+			@include font-style(akagi, bold, normal, $white, none);
+			font-size: 62px;
+			line-height: 1.05;
+			letter-spacing: -1px;
+			text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
+
+			@include breakpoint($bp-sm) {
+				font-size: 82px;
+			}
+		}
+
+		h3 {
+			display: block;
+			margin-top: vs(2);
+
+			@include font-style(magneta, thin, italic, $white, none);
+			font-size: 32px;
+			letter-spacing: 2px;
+			line-height: 1.1;
+		}
+
+		.button {
+			margin-top: vs(6);
+		}
+
+		&:after {
+			margin: 0;
+			border-top: none;
+		}
+
+	}
+}
+

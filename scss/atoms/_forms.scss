@@ -68,14 +68,11 @@
 label {
 	margin-bottom: vs(.5);
 
-	font-family: $font-akagi;
-	font-weight: $font-akagi-bold;
+	@include font-style(akagi, bold, normal, $birch, none);
 	font-size: 20px;
 	line-height: 1;
-	color: $birch;
 	letter-spacing: 0;
 	cursor: pointer;
-	text-transform: none;
 }
 
 
@@ -94,11 +91,9 @@ label {
 	    height: 60px;
 	    padding: vs(1.5) 14px;
 
-	    font-family: $font-akagi;
-			font-weight: $font-akagi-md;
+			@include font-style(akagi, md, normal, $forest-green);
 	    font-size: 24px;
 	    line-height: vs(2);
-	    color: $forest-green;
 	    background-color: $white;
 	    background-image: none;
 	    border: 2px solid $quill-gray;
@@ -149,11 +144,8 @@ label {
 			padding-left: 20px;
 			margin-bottom: 0;
 
+			@include font-style(magneta, thin, italic, $soya-bean);
 			font-size: 18px;
-			font-family: $font-magneta;
-			font-weight: $font-magneta-thin;
-			font-style: italic;
-			color: $soya-bean;
 		}
 
 		input[type=radio], 
@@ -176,12 +168,8 @@ label {
 		padding-left: 0;
 		margin-bottom: 0;	
 
-		font-family: $font-akagi;
+		@include font-style(akagi, md, normal, $invalid, uppercase);
 		font-size: 14px;
-		font-weight: $font-akagi-md;
-		font-style: normal;
-		color: $invalid;
-		text-transform: uppercase;
 
 		> li {
 			padding: 6px 0 0 0;
@@ -213,11 +201,9 @@ label {
     outline: none;
     border: none;
 
-    font-family: $font-akagi;
-	  font-weight: $font-akagi-md;
+		@include font-style(akagi, md, normal, false, uppercase);
 	  font-size: 15px;
 	  text-shadow: none;
-	  text-transform: uppercase;
 	  border-bottom: none;
 
 	  padding: vs(3) 60px;

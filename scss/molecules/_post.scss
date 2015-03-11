@@ -1,0 +1,76 @@
+//
+// Post
+// --------------------------------------------------
+
+.entry-meta {
+	li {
+		margin-bottom: 0;
+		@include font-style(akagi, book, normal, $dawn);
+		font-size: 13px;
+		letter-spacing: 0.2px;
+		line-height: 1;
+	}
+}
+
+
+
+.post-grid .ipost .entry-image,
+.post-grid .ipost .entry-image img {
+	height: auto;
+}
+
+
+.ipost {
+	background-color: $white;
+	@include border-radius(4px);
+
+	.entry-image {
+		margin-bottom: 0;
+		img {
+			@include border-radius(4px 4px 0 0);
+		}
+	}
+
+	.entry-title,
+	.entry-meta,
+	.entry-content {
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-bottom: 0;
+	}
+
+	.entry-title {
+		h3 {
+			margin-top: vs(4);
+
+			@include font-style(akagi, extralight, normal, $birch);
+			letter-spacing: .2px;
+			font-size: 32px;			
+			line-height: 38px;		
+
+			a {
+				@include set-link-color("accent");
+			}
+		}
+	}
+
+	.entry-meta {
+		margin-top: vs(1.5);
+		margin-bottom: 0;
+		li {
+			font-size: 13px;
+		}
+	}
+
+	.entry-content {
+		margin-top: vs(3);
+		margin-bottom: vs(4);
+
+		font-size: 16px;
+		line-height: 1.8;
+	}
+
+	.more-link {
+		margin-top: vs(3);
+	}
+}

@@ -8,12 +8,9 @@
 		max-width: 780px;
 		margin: 0 auto;
 
-		font-family: $font-akagi;
-		font-weight: $font-akagi-bold;
+		@include font-style(akagi, bold, normal, $white, none);
 		font-size: 62px;
-		color: $white;
 		line-height: 1.1;
-		text-transform: none;
 		letter-spacing: -1px;
 		text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
 
@@ -26,10 +23,9 @@
 	span {
 		display: block;
 		margin-top: vs(2);
+
+		@include font-style(magneta, thin, italic, $white);
 		font-size: 32px;
-		font-weight: $font-magneta-thin;
-		font-style: italic;
-		color: $white;
 		letter-spacing: 2px;
 		line-height: 1.1;
 	}
@@ -55,8 +51,8 @@
 		}
 
 		h1 {
+			@include font-weight(akagi, bold);
 			font-size: 62px;
-			font-weight: $font-akagi-bold;
 			letter-spacing: -1px;
 
 			@include breakpoint($bp-sm) {
