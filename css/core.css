@@ -3196,9 +3196,9 @@ body.stretched .container-fullwidth .breadcrumb {
   overflow: hidden;
   background-color: #FFF;
 }
-#content p {
+/*#content p {
   line-height: 1.8;
-}
+}*/
 #content .content-wrap {
   position: relative;
   padding: 80px 0;

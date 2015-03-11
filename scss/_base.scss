@@ -2,15 +2,24 @@
 // Base
 // --------------------------------------------------
 
+@include establish-baseline;
+
+html {
+	@include adjust-leading-to(5.5);
+}
+
 body {
-	color: $base-font-color;
+	@extend %t-base;	
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
-	font-size: $base-font-size;
-	line-height: $base-font-lh;
 	letter-spacing: $base-letter-spacing;
+	color: $base-font-color;
 	background-color: $body-bg-color;
 }
+
+// #content p {
+// 	@extend %t-base;
+// }
 
 
 #wrapper {
@@ -25,10 +34,7 @@ body {
 
 	.content-wrap {
 		padding: vs(8) 0 vs(14) 0;
-	}
-
-	p {
-		line-height: $base-font-lh;
+		
 	}
 }
 
@@ -46,9 +52,9 @@ body {
 		left: 0;
 		z-index: 10;
 		display: block;
-		height: vs(1);
+		height: rhythm(2);
 
-		top: vs(-1);
+		top: rhythm(-2);
 		background-image: url(../images/main-bg-grunge.svg);
 		background-position: top center;
 	}

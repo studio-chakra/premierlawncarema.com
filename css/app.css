@@ -6,12 +6,83 @@ a:hover, .ipost .entry-title h3 a:hover {
 }
 
 body {
-  color: #363020;
+  font-size: 20px;
+  font-size: 1rem;
+  line-height: 24px;
+  line-height: 1.2rem;
+  line-height: 33px;
+  line-height: 1.65rem;
+}
+
+h6 {
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  line-height: 36px;
+  line-height: 1.8rem;
+}
+
+h5 {
+  font-size: 32px;
+  font-size: 1.6rem;
+  line-height: 36px;
+  line-height: 1.8rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 38px;
+  font-size: 1.9rem;
+  line-height: 42px;
+  line-height: 2.1rem;
+  line-height: 42px;
+  line-height: 2.1rem;
+}
+
+h3 {
+  font-size: 51px;
+  font-size: 2.55rem;
+  line-height: 60px;
+  line-height: 3rem;
+  line-height: 48px;
+  line-height: 2.4rem;
+}
+
+h2 {
+  font-size: 62px;
+  font-size: 3.1rem;
+  line-height: 66px;
+  line-height: 3.3rem;
+  line-height: 60px;
+  line-height: 3rem;
+}
+
+h1 {
+  font-size: 82px;
+  font-size: 4.1rem;
+  line-height: 90px;
+  line-height: 4.5rem;
+  line-height: 72px;
+  line-height: 3.6rem;
+}
+
+html {
+  font-size: 125%;
+  line-height: 0.3em;
+}
+
+html {
+  line-height: 33px;
+  line-height: 1.65rem;
+}
+
+body {
   font-family: "magneta", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.7;
   letter-spacing: 0.8px;
+  color: #363020;
   background-color: #FCFCFB;
 }
 
@@ -27,9 +98,6 @@ body {
 #content .content-wrap {
   padding: 96px 0 168px 0;
 }
-#content p {
-  line-height: 1.7;
-}
 
 .main-content {
   position: relative;
@@ -42,8 +110,8 @@ body {
   left: 0;
   z-index: 10;
   display: block;
-  height: 12px;
-  top: -12px;
+  height: 0.6rem;
+  top: -0.6rem;
   background-image: url(../images/main-bg-grunge.svg);
   background-position: top center;
 }
@@ -82,6 +150,7 @@ table, .main-content
 fieldset, .main-content
 form {
   margin-top: 48px;
+  margin-top: 2.4rem;
 }
 
 .more-link {
@@ -109,11 +178,11 @@ h5,
 h6 {
   margin-bottom: 0;
   margin-top: 84px;
+  margin-top: 4.2rem;
   font-family: "akagi-pro", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #2A7221;
-  line-height: 1.1;
   letter-spacing: 0;
 }
 h1 + p,
@@ -123,29 +192,22 @@ h4 + p,
 h5 + p,
 h6 + p {
   margin-top: 36px;
+  margin-top: 1.8rem;
 }
 
-h3 {
-  font-size: 62px;
-  line-height: 1.1;
+h2 {
   letter-spacing: -.5px;
 }
 
 h3 {
-  font-size: 51px;
-  line-height: 1.1;
   letter-spacing: -.5px;
 }
 
 h4 {
-  font-size: 38px;
-  line-height: 1.1;
   letter-spacing: -.5px;
 }
 
 h5 {
-  font-size: 32px;
-  line-height: 1.1;
   letter-spacing: -.5px;
 }
 
@@ -154,14 +216,13 @@ h6 {
   font-weight: 200;
   font-style: italic;
   color: #686357;
-  font-size: 24px;
-  line-height: 1.1;
   letter-spacing: 1px;
 }
 
 h3 + h6,
 h4 + h6 {
   margin-top: 6px;
+  margin-top: 0.3rem;
 }
 
 .hd-thankyou {
@@ -193,6 +254,7 @@ h4 + h6 {
 .main-content h5 + p,
 .main-content h6 + p {
   margin-top: 36px;
+  margin-top: 1.8rem;
 }
 
 .img-rounded {
@@ -202,7 +264,10 @@ h4 + h6 {
 
 .line,
 .double-line {
-  margin: 72px 0;
+  margin-top: 72px;
+  margin-top: 3.6rem;
+  margin-bottom: 72px;
+  margin-bottom: 3.6rem;
   border-color: #f0ede5;
 }
 
@@ -213,22 +278,37 @@ h4 + h6 {
   font-style: normal;
   color: #2A7221;
   font-size: 62px;
-  line-height: 1;
+  font-size: 3.1rem;
+  line-height: 66px;
+  line-height: 3.3rem;
+  line-height: 60px;
+  line-height: 3rem;
   letter-spacing: -2px;
 }
 @media (min-width: 768px) {
   .b-title {
     font-size: 82px;
+    font-size: 4.1rem;
+    line-height: 90px;
+    line-height: 4.5rem;
+    line-height: 72px;
+    line-height: 3.6rem;
   }
 }
 
 .b-intro {
   margin-top: 48px;
+  margin-top: 2.4rem;
   font-size: 24px;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  line-height: 36px;
+  line-height: 1.8rem;
 }
 .b-intro p {
-  line-height: 1.4;
+  line-height: 36px;
+  line-height: 1.8rem;
 }
 .b-intro p:first-of-type {
   margin-top: 0;
@@ -243,17 +323,27 @@ h4 + h6 {
 }
 .b-heading h2 {
   margin-bottom: 24px;
+  margin-bottom: 1.2rem;
   font-family: "magneta", sans-serif;
   font-weight: 600;
   font-style: normal;
   color: #2A7221;
-  font-size: 62px;
-  line-height: 1.2;
-  letter-spacing: .5px;
   text-transform: none;
+  font-size: 62px;
+  font-size: 3.1rem;
+  line-height: 66px;
+  line-height: 3.3rem;
+  line-height: 60px;
+  line-height: 3rem;
+  letter-spacing: .5px;
 }
 .b-heading h2 + span {
   font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  line-height: 36px;
+  line-height: 1.8rem;
 }
 .b-heading > span {
   font-family: "magneta", sans-serif;
@@ -261,20 +351,29 @@ h4 + h6 {
   font-style: normal;
   color: #686357 !important;
   font-size: 24px;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  line-height: 36px;
+  line-height: 1.8rem;
   letter-spacing: 1px;
 }
 .b-heading > span:not(.before-heading) {
   margin-top: 24px;
+  margin-top: 1.2rem;
 }
 .b-heading > span.before-heading {
   font-family: "akagi-pro", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #81C14B !important;
-  font-size: 20px;
+  font-size: 24px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  line-height: 1.5rem;
+  line-height: 36px;
+  line-height: 1.8rem;
   letter-spacing: 1.5px;
-  line-height: 1;
 }
 .b-heading span + h2 {
   margin-top: 0;
@@ -285,14 +384,17 @@ h4 + h6 {
 
 .b-testimonial p {
   margin-top: 36px;
+  margin-top: 1.8rem;
 }
 
 .b-text img {
   margin-top: 48px;
+  margin-top: 2.4rem;
 }
 .b-text .pull-right {
   margin-left: 60px;
   margin-bottom: 24px;
+  margin-bottom: 1.2rem;
 }
 @media (min-width: 992px) {
   .b-text .pull-right--more {
@@ -307,6 +409,7 @@ h4 + h6 {
 .b-text .pull-left {
   margin-right: 30px;
   margin-bottom: 24px;
+  margin-bottom: 1.2rem;
 }
 @media (min-width: 992px) {
   .b-text .pull-left--more {
@@ -332,13 +435,16 @@ h4 + h6 {
 .b-text img.pull-right + h6 {
   margin-top: 0;
   padding-top: 18px;
+  padding-top: 0.9rem;
 }
 
 .row-block {
   margin-top: 84px;
+  margin-top: 4.2rem;
 }
 .row-block.row-b-split-2 .b-col {
   margin-top: 84px;
+  margin-top: 4.2rem;
 }
 .row-block.row-b-split-2 .b-col:first-child {
   margin-top: 0;
@@ -376,10 +482,12 @@ h4 + h6 {
 
 .row-b-mrg {
   margin-top: 48px;
+  margin-top: 2.4rem;
 }
 
 .row-b-mrg-xl {
   margin-top: 120px;
+  margin-top: 6rem;
 }
 
 .row-b-title {
@@ -388,10 +496,12 @@ h4 + h6 {
 
 .row-b-title + .row-b-intro {
   margin-top: 48px;
+  margin-top: 2.4rem;
 }
 
 .row-b-heading {
   margin-top: 120px;
+  margin-top: 6rem;
 }
 
 .row-block .b-intro {
@@ -415,6 +525,7 @@ h4 + h6 {
 .row-block img + h5,
 .row-block img + h6 {
   margin-top: 36px;
+  margin-top: 1.8rem;
 }
 .row-block img + h1 + p,
 .row-block img + h2 + p,
@@ -423,10 +534,12 @@ h4 + h6 {
 .row-block img + h5 + p,
 .row-block img + h6 + p {
   margin-top: 18px;
+  margin-top: 0.9rem;
 }
 
 .row-b-split .b h3:first-of-type {
   margin-top: 18px;
+  margin-top: 0.9rem;
 }
 
 .sidebar-blog,
@@ -863,7 +976,7 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .feature-box.media-box-
 .testimonial p {
   font-family: "magneta", sans-serif;
   font-weight: 200;
-  font-style: normal;
+  font-style: italic;
   font-size: 38px;
   letter-spacing: 2px;
   line-height: 1.4 !important;
@@ -2103,22 +2216,6 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .portfolio-overlay {
   font-style: italic;
 }
 
-.b-mrg-sliver {
-  margin-bottom: 6px;
-}
-
-.b-mrg-sm {
-  margin-bottom: 24px;
-}
-
-.b-mrg {
-  margin-bottom: 48px;
-}
-
-.b-mrg-lg {
-  margin-bottom: 84px;
-}
-
 .mb-remove {
   margin-bottom: 0 !important;
 }
@@ -2129,14 +2226,19 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .portfolio-overlay {
 
 .mt-img-push {
   margin-top: 24px;
+  margin-top: 24px;
+  margin-top: 1.2rem;
 }
 
 .mb-sliver {
   margin-bottom: 6px;
+  margin-bottom: 6px;
+  margin-bottom: 0.3rem;
 }
 
 .p-button {
   margin-top: 24px;
+  margin-top: 1.2rem;
 }
 
 .pt-lg {

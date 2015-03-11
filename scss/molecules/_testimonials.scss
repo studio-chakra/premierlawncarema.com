@@ -10,7 +10,7 @@
 	box-shadow: none;
 
 	p {
-		@include font-style(magneta, thin, normal);
+		@include font-style(magneta, thin, italic);
 		font-size: 38px;
 		letter-spacing: 2px;
 		line-height: 1.4 !important;
