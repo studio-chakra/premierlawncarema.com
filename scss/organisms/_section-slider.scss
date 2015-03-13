@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 .slider-parallax {
-	margin-top: vs(-4);
+	margin-top: rs(-8);
 	background-color: $forest-green;
 	background-position: center top;
 
@@ -15,28 +15,26 @@
 			margin: 0;
 
 			@include font-style(akagi, bold, normal, $white, none);
-			font-size: 62px;
-			line-height: 1.05;
+			@include fs(huge);
 			letter-spacing: -1px;
 			text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
 
 			@include breakpoint($bp-sm) {
-				font-size: 82px;
+				@include fs(mega);
 			}
 		}
 
 		h3 {
 			display: block;
-			margin-top: vs(2);
+			@include margin-leader(4);
 
 			@include font-style(magneta, thin, italic, $white, none);
-			font-size: 32px;
+			@include fs(xl);
 			letter-spacing: 2px;
-			line-height: 1.1;
 		}
 
 		.button {
-			margin-top: vs(6);
+			@include margin-leader(12);
 		}
 
 		&:after {

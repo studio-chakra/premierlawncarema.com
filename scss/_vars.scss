@@ -2,11 +2,6 @@
 // Vars
 // --------------------------------------------------
 
-$lay-lh: 12px;	// gutter height from design
-
-$full-hd-height: vs(9.5);
-$sticky-hd-height: vs(6);
-$mobile-hd-height: vs(7.5);
 
 
 
@@ -62,155 +57,24 @@ $base-font-color: $birch;
 
 
 
-// Font Family + Size
+
+// MQ Breakpoints
 // --------------------------------------------------
 
-$font-awesome: "FontAwesome";
-
-$font-magneta: "magneta", sans-serif;
-$font-magneta-thin: 200;
-$font-magneta-book: 400;
-$font-magneta-md: 500;
-$font-magneta-semibold: 600;
-
-$font-akagi: "akagi-pro", sans-serif;
-$font-akagi-extralight: 200;
-$font-akagi-light: 300; 
-$font-akagi-book: 400;
-$font-akagi-md: 500;
-$font-akagi-semibold: 600;
-$font-akagi-bold: 700;
-
-$ff-magneta-weights: (
-	thin: 200,
-	book: 400,
-	md: 500,
-	semibold: 600
+$breakpoints: (
+  bp-xs:    480px,
+  bp-sm:    768px,
+  bp-md:    992px,
+  bp-lg:    1200px
 );
 
-$ff-akagi-weights: (
-	extralight: 200,
-	light: 300,
-	book: 400,
-	md: 500,
-	semibold: 600,
-	bold: 700
-);
-
-
-$fs-xs: 		13px;
-$fl-xs:			2;
-$fs-sm: 		15px;
-$fl-sm:			3;
-$fs-base: 	20px;
-$fl-base:		5.5;
-$fs-md:			24px;
-$fl-md:			6;
-$fs-lg:			32px;
-$fl-lg:			5;
-$fs-xl:			38px;
-$fl-xl:			7;
-$fs-xxl:		51px;
-$fl-xxl:		8;
-$fs-super:	62px;
-$fl-super:	10;
-$fs-huge:		62px;
-$fl-huge:		10;
-$fs-mega:		82px;
-$fl-mega:		12;
-
-
-
-
-
-// Type Scale
-// --------------------------------------------------
-
-$base-lh: 12px;
-$base-font-family: $font-magneta;
-$base-font-weight: $font-magneta-book;
-$base-font-lh: 1.7;
-$base-letter-spacing: .8px;
-
-$base-font-size: 20px;
-$base-line-height: 6px;
-$rhythm-unit: "rem";
-$rem-with-px-fallback: true;
-
-
-
-@mixin fs($size) {
- @if $size == "xs" {
-  @include adjust-font-size-to($fs-xs);
-  @include adjust-leading-to($fl-xs);
- }
- @if $size == "sm" {
-  @include adjust-font-size-to($fs-sm);
-  @include adjust-leading-to($fl-sm);
- }
- @if $size == "base" {
-  @include adjust-font-size-to($fs-base);
-  @include adjust-leading-to($fl-base);
- }
- @if $size == "md" {
-  @include adjust-font-size-to($fs-md);
-  @include adjust-leading-to($fl-md);
- }
- @if $size == "lg" {
-  @include adjust-font-size-to($fs-lg);
-  @include adjust-leading-to($fl-lg);
- }
- @if $size == "xl" {
-  @include adjust-font-size-to($fs-xl);
-  @include adjust-leading-to($fl-xl);
- }
- @if $size == "xxl" {
-  @include adjust-font-size-to($fs-xxl);
-  @include adjust-leading-to($fl-xxl);
- }
- @if $size == "huge" {
-  @include adjust-font-size-to($fs-huge);
-  @include adjust-leading-to($fl-huge);
- }
- @if $size == "mega" {
-  @include adjust-font-size-to($fs-mega);
-  @include adjust-leading-to($fl-mega);
- }
-}
-
-%t-xs {
-	@include fs(xs);
-}
-%t-sm {
-	@include fs(sm);
-}
-%t-base {
-	@include fs(base);
-}
-%t-md {
-	@include fs(md);
-}
-%t-lg {
-	@include fs(lg);
-}
-%t-xl {
-	@include fs(xl);
-}
-%t-xxl {
-	@include fs(xxl);
-}
-%t-huge {
-	@include fs(huge);
-}
-%t-mega {
-	@include fs(mega);
-}
-
-
-
-
-// MQ
-// --------------------------------------------------
+// For Responsive Mixin (chained mq)
+$named-breakpoints: (
+    "xs": 480px,
+    "sm": 768px,
+    "md": 992px,
+    "lg": 1200px
+); 
 
 $bp-xs: 480px;
 $bp-sm: 768px;
@@ -219,22 +83,34 @@ $bp-lg: 1200px;
 
 $bp-max-md: max-width 991px;
 
+$full-hd-height: rs(19);
+$sticky-hd-height: rs(12);
+$mobile-hd-height: rs(15);
+
+
+
 
 
 // Spacing
 // --------------------------------------------------
 
-$base-mrg-sliver: vs(.5);
-$base-mrg-sm: vs(2);
-$base-mrg: vs(4);
-$base-mrg-lg: vs(7);
-$base-mrg-xl: vs(10);
+// $base-mrg-sliver: vs(.5);
+// $base-mrg-sm: vs(2);
+// $base-mrg: vs(4);
+// $base-mrg-lg: vs(7);
+// $base-mrg-xl: vs(10);
 
-$b-mrg-sliver: vs(.5);
-$b-mrg-sm: vs(2);
-$b-mrg: vs(4);
-$b-mrg-lg: vs(7);
-$b-mrg-xl: vs(10);
+// $b-mrg-sliver: vs(.5);
+// $b-mrg-sm: vs(2);
+// $b-mrg: vs(4);
+// $b-mrg-lg: vs(7);
+// $b-mrg-xl: vs(10);
+
+$grs-sliver:   1;
+$grs-sm:       4;
+$grs-base:     8;
+$grs-lg:       14;
+$grs-xl:       20;
 
 $ru-sliver: 	1;
 $ru-sm: 			4;
@@ -242,6 +118,42 @@ $ru-base: 		8;
 $ru-lg:				14;
 $ru-xl:				20;
 
-// %type-mrg-bot {
-// 	margin-bottom: vs(4);
-// }
+
+// Global Rhytm Space used for Global 
+@mixin grs($size, $lines: null) {
+  // $lines: allows for override of custom line rhythum unit
+
+  @if $size == "xs" {
+    @include adjust-font-size-to($fs-xs);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-xs);
+    }
+  }
+  @if $size == "sm" {
+    @include adjust-font-size-to($fs-sm);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-sm);
+    }
+  }
+  @if $size == "base" {
+    @include adjust-font-size-to($fs-base);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-base);
+    }
+  }
+  @if $size == "md" {
+    @include adjust-font-size-to($fs-md);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-md);
+    }
+  }
+}
+

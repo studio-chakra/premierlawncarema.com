@@ -1,0 +1,478 @@
+//
+// Type Config
+// --------------------------------------------------
+
+
+
+
+// Font Families
+// --------------------------------------------------
+
+$font-awesome: "FontAwesome";
+$font-magneta: "magneta", sans-serif;
+$font-akagi: "akagi-pro", sans-serif;
+
+
+
+
+
+// Font Weights
+// --------------------------------------------------
+
+// Magneta
+$font-magneta-thin: 200;
+$font-magneta-book: 400;
+$font-magneta-md: 500;
+$font-magneta-semibold: 600;
+
+$ff-magneta-weights: (
+	thin: 200,
+	book: 400,
+	md: 500,
+	semibold: 600
+);
+
+
+// Akagi
+$font-akagi-extralight: 200;
+$font-akagi-light: 300; 
+$font-akagi-book: 400;
+$font-akagi-md: 500;
+$font-akagi-semibold: 600;
+$font-akagi-bold: 700;
+
+$ff-akagi-weights: (
+	extralight: 200,
+	light: 300,
+	book: 400,
+	md: 500,
+	semibold: 600,
+	bold: 700
+);
+
+
+
+
+
+// Compass Vertical Rhythm
+// --------------------------------------------------
+
+$base-font-family: $font-magneta;
+$base-font-weight: $font-magneta-book;
+$base-letter-spacing: .8px;
+
+$base-font-size: 20px;
+$base-line-height: 6px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+$round-to-nearest-half-line: true;
+$ru-base-lh: 6px;
+$base-lh: $ru-base-lh * 2;
+
+// Rhythm Units Spacing - return px value only for simple vertical spacing
+@function rs($value) {
+  @return ($ru-base-lh * $value);
+}
+
+
+
+
+
+// Modual Scale Font Sizes w/ Vertical Rhythm
+// --------------------------------------------------
+
+$fs-xs: 		13px;
+$fl-xs:			3.5;
+$fs-sm: 		16px;
+$fl-sm:			5;
+$fs-base: 	20px;
+$fl-base:		5.5;
+$fs-md:			24px;
+$fl-md:			6;
+$fs-lg:			32px;
+$fl-lg:			6;
+$fs-xl:			38px;
+$fl-xl:			7;
+$fs-xxl:		51px;
+$fl-xxl:		9;
+$fs-huge:		62px;
+$fl-huge:		12;
+$fs-mega:		82px;
+$fl-mega:		14;
+
+
+@mixin fs($size, $lines: null) {
+  // $lines: allows for override of custom line rhythum unit
+
+  @if $size == "xs" {
+    @include adjust-font-size-to($fs-xs);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-xs);
+    }
+  }
+  @if $size == "sm" {
+    @include adjust-font-size-to($fs-sm);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-sm);
+    }
+  }
+  @if $size == "base" {
+    @include adjust-font-size-to($fs-base);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-base);
+    }
+  }
+  @if $size == "md" {
+    @include adjust-font-size-to($fs-md);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-md);
+    }
+  }
+  @if $size == "lg" {
+    @include adjust-font-size-to($fs-lg);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-lg);
+    }
+  }
+  @if $size == "xl" {
+    @include adjust-font-size-to($fs-xl);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-xl);
+    }
+  }
+  @if $size == "xxl" {
+    @include adjust-font-size-to($fs-xxl);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-xxl);
+    }
+  }
+  @if $size == "huge" {
+    @include adjust-font-size-to($fs-huge);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-huge);
+    }
+  }
+  @if $size == "mega" {
+    @include adjust-font-size-to($fs-mega);
+    @if $lines {
+      @include adjust-leading-to($lines);
+    } @else {
+      @include adjust-leading-to($fl-mega);
+    }
+  }
+}
+
+// Font Size Placeholders
+%t-xs {
+	@include fs(xs);
+}
+%t-sm {
+	@include fs(sm);
+}
+%t-base {
+	@include fs(base);
+}
+%t-md {
+	@include fs(md);
+}
+%t-lg {
+	@include fs(lg);
+}
+%t-xl {
+	@include fs(xl);
+}
+%t-xxl {
+	@include fs(xxl);
+}
+%t-huge {
+	@include fs(huge);
+}
+%t-mega {
+	@include fs(mega);
+}
+
+
+$type-prefix: "t-";
+$type-scale: (
+  xs: (
+    font-size: $fs-xs,
+    base-lines: $fl-xs
+  ),
+  sm: (
+    font-size: $fs-sm,
+    base-lines: $fl-sm
+   ),
+  base: (
+   font-size: $fs-base,
+   base-lines: $fl-base
+  ),
+  md: (
+    font-size: $fs-md,
+    base-lines: $fl-md
+  ),
+  lg: (
+    font-size: $fs-lg,
+    base-lines: $fl-lg
+  ),
+  xl: (
+    font-size: $fs-xl,
+    base-lines: $fl-xl
+  ),
+  xxl: (
+    font-size: $fs-xxl,
+    base-lines: $fl-xxl
+  ),
+  huge: (
+    font-size: $fs-huge,
+    base-lines: $fl-huge
+  ),
+  mega: (
+    font-size: $fs-mega,
+    base-lines: $fl-mega
+  )
+);
+
+
+$type-scale-resp: (
+  xs: (
+  	bp-first: (
+			font-size: $fs-xs,
+    	base-lines: $fl-xs
+    )    
+  ),
+  sm: (
+    bp-first: (
+			font-size: $fs-sm,
+    	base-lines: $fl-sm
+    ) 
+   ),
+  base: (
+   	bp-first: (
+			font-size: 18px,
+    	base-lines: 5
+    ), 
+   	bp-sm: (
+			font-size: $fs-base,
+    	base-lines: $fl-base
+    ) 
+  ),
+  md: (
+    bp-first: (
+			font-size: 22px,
+    	base-lines: $fl-md - .5
+    ), 
+    bp-sm: (
+      font-size: $fs-md,
+      base-lines: $fl-md
+    ) 
+  ),
+  lg: (
+    bp-first: (
+			font-size: $fs-md,
+    	base-lines: $fl-md
+    ),
+		bp-sm: (
+			font-size: $fs-lg,
+    	base-lines: $fl-lg
+		)
+  ),
+  xl: (
+    bp-first: (
+			font-size: $fs-lg,
+    	base-lines: $fl-lg
+    ),
+    bp-sm: (
+      font-size: $fs-xl,
+      base-lines: $fl-xl
+    ) 
+  ),
+  xxl: (
+    bp-first: (
+			font-size: $fs-xl,
+    	base-lines: $fl-xl
+    ),
+    bp-sm: (
+      font-size: $fs-xxl,
+      base-lines: $fl-xxl
+    ) 
+  ),
+  huge: (
+    bp-first: (
+			font-size: $fs-xxl,
+    	base-lines: $fl-xxl
+    ),
+		bp-sm: (
+			font-size: $fs-huge,
+    	base-lines: $fl-huge
+		)
+  ),
+  mega: (
+    bp-first: (
+			font-size: $fs-huge,
+    	base-lines: $fl-huge
+    ),
+		bp-sm: (
+			font-size: $fs-mega,
+    	base-lines: $fl-mega
+		)
+  )
+);
+
+$type-scale-testimonial: (
+  xl: (
+    bp-first: (
+      font-size: $fs-lg,
+      base-lines: 7
+    ) ,
+    bp-sm: (
+      font-size: $fs-xl,
+      base-lines: 9
+    )    
+  )
+);
+
+$type-scale-label: (
+  base: (
+    bp-first: (
+      font-size: 18px,
+      base-lines: 4
+    ) ,
+    bp-sm: (
+      font-size: $fs-base,
+      base-lines: $fl-base
+    )    
+  )
+);
+
+
+
+
+
+
+
+// Mixed Drink of couple of posts to get
+// Responsive typography using Maps, Compass and Breakpoint
+// Hacked together the code, don't know how it works, but it works~!
+// https://medium.com/@amlinarev/using-sass-compass-vertical-rhythm-to-set-up-typography-defaults-in-a-project-34fe2f1d2c02
+// http://maketea.co.uk/2014/11/05/managing-responsive-typography-with-sass.html
+
+// lines-mp allows you to add or subtrack base-lines to the ones pulled in from the map
+// this allows you to adjust the rhytm for different font-families
+
+// --------------------------------------------------
+
+@function get-breakpoint($breakpoint-name) {
+  @return map-get($breakpoints, $breakpoint-name);
+}
+
+@function respond-breakpoint($breakpoint-name) {
+  $breakpoint-value: get-breakpoint($breakpoint-name);
+  @if $breakpoint-value != null {
+    @return $breakpoint-value;
+  } @else {
+    @warn "Missing breakpoint '#{$breakpoint-name}'";
+  }
+}
+
+@function text-breakpoints-for($text-size, $map) {
+  @return map-get($map, $text-size);
+}
+
+@function text-properties-for($text-size, $map, $breakpoint-name) {
+  $text-breakpoints-map: text-breakpoints-for($text-size, $map);
+  @return map-get($text-breakpoints-map, $breakpoint-name);
+}
+
+@mixin text-size($text-size, $lines-mp, $map, $breakpoint-name: "bp-first") {
+  $text-size-properties: text-properties-for($text-size, $map, $breakpoint-name);
+
+  @if $text-size-properties != null {
+    //font-size: map-get($text-size-properties, "font-size");
+    @if $lines-mp {
+      @include adjust-font-size-to(
+        map-get($text-size-properties, "font-size"),
+        map-get($text-size-properties, "base-lines") + $lines-mp
+      );
+    } @else {
+      @include adjust-font-size-to(
+        map-get($text-size-properties, "font-size"),
+        map-get($text-size-properties, "base-lines")
+      );
+    }
+    //line-height: map-get($text-size-properties, "line-height");
+  } @else {
+    @warn "Breakpoint '#{$breakpoint-name}' for text size '#{$text-size}' is not defined";
+  }
+}
+
+@mixin type-resp($text-size, $map: $type-scale-resp, $lines-mp: null, $default-breakpoint: "bp-first") {
+  @include text-size($text-size, $lines-mp, $map, $default-breakpoint);
+
+  $text-breakpoints-map: text-breakpoints-for($text-size, $map);
+  $text-breakpoints-keys: map-keys($text-breakpoints-map);
+
+  @each $breakpoint-name in $text-breakpoints-keys {
+    @if $breakpoint-name != $default-breakpoint and breakpoint($breakpoint-name) != null {
+      //@include respond-above($breakpoint-name) {
+      //@include breakpoint(map-get($breakpoints, $breakpoint-name)) { 
+      @include breakpoint(respond-breakpoint($breakpoint-name)) {  
+        @include text-size($text-size, $lines-mp, $map, $breakpoint-name);
+      }
+    }
+  }
+}
+
+
+
+
+// Type Scale using Sass Maps & Modular Scale
+// --------------------------------------------------
+
+// A type scaling utility $type-scale map with the predefined values
+
+ // Each loop that outputs all of the type scales as placeholders with their type-prefix
+ // ex. %t-tiny, %t-small
+// @each $scale in map-keys($type-scale) {
+//     %#{$type-prefix}#{$scale} {
+//         @include adjust-font-size-to (
+//             map-fetch($type-scale, $scale font-size),   
+//             map-fetch($type-scale, $scale base-lines)
+//         );
+//     }
+// }
+
+// A mixin for using type scale
+// Parameters: 
+// $scale (tiny, small...) 
+// $extend (boolean) - true by default, if needed inside media query use false to @include the content instead of @extend
+// ex. @include type-scale(small) or @include type-scale(small, false) for use inside media queries. 
+
+@mixin type-scale($scale, $extend: false, $map: $type-scale) {
+    @if $extend {
+        @extend %#{$type-prefix}#{$scale};
+    }
+    @else {
+        @include adjust-font-size-to(
+            map-fetch($map, $scale font-size),
+            map-fetch($map, $scale base-lines)
+        );
+    }
+}
+
+

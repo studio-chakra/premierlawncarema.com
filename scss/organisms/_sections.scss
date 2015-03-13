@@ -2,18 +2,13 @@
 // Sections
 // --------------------------------------------------
 
-$section-leading: vs(10);
-$section-trailing: vs(11);
-
-
 .section {
 	position: relative;
 	overflow: visible;
 
 	margin-top: 0;
 	margin-bottom: 0;
-	padding-top: $section-leading;
-	padding-bottom: $section-trailing;
+	@include rhythm-padding(20, 22);
 
 	&.bg-white {
 		background-color: $white;
@@ -27,9 +22,9 @@ $section-trailing: vs(11);
 			left: 0;
 			z-index: 10;
 			display: block;
-			height: vs(1);
+			height: rs(2);
 
-			top: vs(-1);
+			top: rs(-2);
 			background-image: url(../images/section-white-bg.svg);
 			background-position: top center;
 		}
@@ -51,9 +46,9 @@ $section-trailing: vs(11);
 			left: 0;
 			z-index: 10;
 			display: block;
-			height: vs(3.5);
+			height: rs(7);
 
-			top: vs(-3.5);
+			top: rs(-7);
 			background-image: url(../images/section-lightgrass-blades.svg);
 			background-position: top center;
 		}
@@ -75,9 +70,9 @@ $section-trailing: vs(11);
 			left: 0;
 			z-index: 10;
 			display: block;
-			height: vs(1.2);
+			height: rs(2.4);
 
-			top: vs(-1.2);
+			top: rs(-2.4);
 			background-image: url(../images/section-seed-grunge.svg);
 			background-position: top center;
 			background-repeat: repeat-x;
@@ -100,9 +95,9 @@ $section-trailing: vs(11);
 			left: 0;
 			z-index: 10;
 			display: block;
-			height: vs(1);
+			height: rs(2);
 
-			top: vs(-1);
+			top: rs(-2);
 			background-image: url(../images/section-dirt-grunge.svg);
 			background-position: top center;
 		}
@@ -118,12 +113,12 @@ $section-trailing: vs(11);
 	}
 
 	.action-row {
-		margin-top: $b-mrg-lg;
+		@include margin-leader($ru-lg);
 	}
 }
 
 .section-space {
-	height: vs(12);
+	height: rhythm(12);
 }
 
 
@@ -134,23 +129,21 @@ $section-trailing: vs(11);
 .section {
 	#portfolio.grid,
 	.grid {
-		margin-top: $b-mrg-lg - vs(1);
-		margin-bottom: 0;
+		@include rhythm-margins($ru-lg - 2, 0);
 		margin-left: 0;
 		margin-right: 0;
 	}
 	
 	#portfolio.img-grid,
 	.img-grid {
-		margin-top: $b-mrg-lg - vs(3);
-		margin-bottom: 0;
+		@include rhythm-margins($ru-lg - 6, 0);
 		margin-left: 0;
 		margin-right: 0;
 	}
 }
 
 .img-grid .grid-col {
-	margin-top: vs(2);
+	@include margin-leader(4);
 }
 
 
@@ -171,3 +164,10 @@ $section-trailing: vs(11);
 }
 
 
+
+// Section Form
+// --------------------------------------------------
+
+.section-contactform {
+	@include margin-leader($ru-base);
+}

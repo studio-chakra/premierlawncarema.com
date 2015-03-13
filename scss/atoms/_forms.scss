@@ -2,83 +2,26 @@
 // Forms
 // --------------------------------------------------
 
-// label {
-// 	margin-bottom: vs(.7);
-// }
-
-
-// input[type="text"], 
-// input[type="password"], 
-// input[type="date"], 
-// input[type="datetime"], 
-// input[type="datetime-local"], 
-// input[type="month"], 
-// input[type="week"], 
-// input[type="email"], 
-// input[type="number"], 
-// input[type="search"], 
-// input[type="tel"], 
-// input[type="time"], 
-// input[type="url"], 
-// input[type="color"], 
-// textarea,
-// select {
-// 	margin-bottom: 0;
-// }
-
-
-// input[type="checkbox"], 
-// input[type="radio"] {
-// 	margin-bottom: 0; 
-// }
-
-
-// .alert-box {
-// 	font-size: rem-calc(14);
-// 	line-height: 1.5;
-
-// 	p {
-// 		margin-bottom: vs(1);
-// 		&:last-of-type {
-// 			margin-bottom: 0;
-// 		}
-
-// 		font-size: rem-calc(16);
-// 		line-height: 1.5;
-// 	}
-
-// 	&.alert p a {
-// 		color: $white;
-// 		text-decoration: underline;
-// 	}
-
-// }
-
-
-
-
-
-
-
-
 
 // Sprout Forms
 // --------------------------------------------------
 
 label {
-	margin-bottom: vs(.5);
+	@include margin-trailer(1);
 
 	@include font-style(akagi, bold, normal, $birch, none);
-	font-size: 20px;
-	line-height: 1;
+	//@include fs(base);
+	@include type-resp(base, $type-scale-label);
 	letter-spacing: 0;
 	cursor: pointer;
 }
 
 
 .field {
-
-	margin-bottom: vs(3);
+	@include margin-trailer(5);
+	@include breakpoint($bp-sm) {
+		@include margin-trailer(6);
+	}
 
 	.heading {
 		line-height: 1;
@@ -88,12 +31,12 @@ label {
 	.input select {
 	    display: block;
 	    width: 100%;
-	    height: 60px;
-	    padding: vs(1.5) 14px;
+	    height: 48px;
+	    padding: rhythm(2) 14px;
 
 			@include font-style(akagi, md, normal, $forest-green);
-	    font-size: 24px;
-	    line-height: vs(2);
+			//@include fs(md);
+			@include type-resp(md);
 	    background-color: $white;
 	    background-image: none;
 	    border: 2px solid $quill-gray;
@@ -107,6 +50,11 @@ label {
 	        outline: 0;
 	        -webkit-box-shadow: none;
 	        box-shadow: none;
+	    }
+
+	    @include breakpoint($bp-sm) {
+	    	height: 60px;
+	    	padding: rhythm(3) 14px;
 	    }
 	}
 
@@ -146,6 +94,8 @@ label {
 
 			@include font-style(magneta, thin, italic, $soya-bean);
 			font-size: 18px;
+			line-height: 1;
+			letter-spacing: .5px;
 		}
 
 		input[type=radio], 
@@ -169,7 +119,7 @@ label {
 		margin-bottom: 0;	
 
 		@include font-style(akagi, md, normal, $invalid, uppercase);
-		font-size: 14px;
+		@include fs(sm);
 
 		> li {
 			padding: 6px 0 0 0;
@@ -185,7 +135,7 @@ label {
 
 
 .submit {
-	margin-top: vs(5);
+	@include margin-leader(10);
 	margin-left: -20px;
 
 	@include breakpoint($bp-md) {
@@ -195,23 +145,20 @@ label {
 
 
 .submit > input {
+    padding: rhythm(6) 60px;
+    height: auto;
     display: inline-block;
     position: relative;
     cursor: pointer;
     outline: none;
     border: none;
 
-		@include font-style(akagi, md, normal, false, uppercase);
-	  font-size: 15px;
-	  text-shadow: none;
-	  border-bottom: none;
-
-	  padding: vs(3) 60px;
-    height: auto;
-    line-height: vs(2);
-    font-size: 24px;
+		@include font-style(akagi, md, normal, false, uppercase);   
+    @include fs(md);
+    line-height: rhythm(4);
     letter-spacing: 1px;
     white-space: normal;
+    text-shadow: none;
     @include border-radius(48px);
     white-space: nowrap;
 

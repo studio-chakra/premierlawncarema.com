@@ -7,33 +7,31 @@
 // --------------------------------------------------
 
 .heading-block-cta {
-	margin-bottom: vs(6);
+	@include margin-trailer(12);
 
 	h2 {
 		max-width: 780px;
-		margin: 0 auto vs(2) auto;
+		margin: 0 auto rhythm(4) auto;
 
 		@include font-style(akagi, bold, normal, $white, none);
-		font-size: 62px;
-		line-height: 1.1;
+		@include fs(huge);
 		letter-spacing: -1px;
 		text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
 
 		+ span {
-			font-size: 32px;
+			@include fs(xl);
 		}
 
 		@include breakpoint($bp-sm) {
-			font-size: 82px;
+			@include fs(mega);
 		}
 
 	}
 
 	> span:not(.before-heading) {
 		@include font-style(magneta, thin, italic, $white);
-		font-size: 32px;
+		@include fs(xl);
 		letter-spacing: 2px;
-		line-height: 1.1;
 	}
 
 	&:after {
@@ -49,8 +47,7 @@
 .section-cta {
 	overflow: visible;
 	position: relative;
-	padding-top: vs(8); 
-	padding-bottom: vs(12);
+	@include rhythm-padding(16, 24);
 
 	background-color: #15130C; 
 	background-image: url(../images/cta-bg.jpg);
@@ -66,9 +63,9 @@
 		left: 0;
 		z-index: 10;
 		display: block;
-		height: vs(3);
+		height: rs(6);
 
-		top: vs(-3);
+		top: rs(-6);
 		background-image: url(../images/grass-bg-blades.svg);
 		background-position: top center;
 	}

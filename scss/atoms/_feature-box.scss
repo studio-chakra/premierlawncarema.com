@@ -9,8 +9,7 @@
 		margin: 0;
 
 		@include font-style(akagi, bold, normal, $birch, none);
-		font-size: 32px;
-		line-height: 1.1;
+		@include fs(lg);
 		letter-spacing: .5px;
 
 		.pretitle {

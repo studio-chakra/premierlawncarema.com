@@ -15,8 +15,11 @@ fieldset,
 form {	
 	margin-bottom: 0;
 
-	.main-content & {
-		@include margin-leader($ru-base);
+	.type-main & {
+		@include margin-leader($ru-base - 2);
+		@include breakpoint($bp-sm) {
+			@include margin-leader($ru-base);
+		}
 	}
 }
 
@@ -51,43 +54,55 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0;
-	@include margin-leader($ru-lg);
+	@include margin-leader($ru-lg - 2);
+	@include breakpoint($bp-sm) {
+			@include margin-leader($ru-lg);
+		}
 
 	@include font-style(akagi, bold, normal, $forest-green);
 	letter-spacing: 0;
 
 	+ p {
 		@include margin-leader($ru-base - 2);
+		@include breakpoint($bp-sm) {
+			@include margin-leader($ru-base);
+		}
 	}
 }
 
 h1 {
-	@extend %t-mega;
+	//@extend %t-mega;
+	@include type-resp(mega);
 }
 
 h2 {
-	@extend %t-huge;
+	//@extend %t-huge;
+	@include type-resp(huge);
 	letter-spacing: -.5px;
 }
 
 h3 {
-	@extend %t-xxl;
+	//@extend %t-xxl;
+	@include type-resp(xxl);
 	letter-spacing: -.5px;
 }
 
 h4 {
-	@extend %t-xl;
+	//@extend %t-xl;
+	@include type-resp(xl);
 	letter-spacing: -.5px;
 }
 
 h5 {
-	@extend %t-lg;
+	//@extend %t-lg;
+	@include type-resp(lg);
 	letter-spacing: -.5px;
 }
 
 h6 {
-	@extend %t-md;
+	//@extend %t-md;
 	@include font-style(magneta, thin, italic, $soya-bean);
+	@include type-resp(md);
 	letter-spacing: 1px;
 }
 
@@ -100,20 +115,15 @@ h4 + h6 {
 
 .hd-thankyou {
 	@include font-style(akagi, bold, normal, $forest-green);
-	font-size: 51px;
-	line-height: 1.1;
+	@include type-resp(xxl);
 	letter-spacing: -2px;
 }
-
 .hd-sub {
 	margin-bottom: 0;
-
 	font-family: 'Crete Round', serif;
 	font-style: italic;
 	color: #ccc;
 }
-
-
 .hd-alt {
 	font-family: 'Crete Round', serif;
 	font-style: italic;
@@ -126,7 +136,7 @@ h4 + h6 {
 // Type
 // --------------------------------------------------
 
-.main-content {
+.type-main {
 	h1,
 	h2,
 	h3,
@@ -134,7 +144,10 @@ h4 + h6 {
 	h5,
 	h6 {
 		+ p {
-			@include margin-leader($ru-base - 2);
+			@include margin-leader($ru-base - 4);
+			@include breakpoint($bp-sm) {
+				@include margin-leader($ru-base - 2);
+			}
 		}
 	}
 }
@@ -174,23 +187,25 @@ h4 + h6 {
 	margin-top: 0;
 
 	@include font-style(akagi, bold, normal, $forest-green);
-	@include fs(huge);
+	//@include fs(huge);
+	@include type-resp(mega);
 	letter-spacing: -2px;
 
-	@include breakpoint($bp-sm) {
-		@include fs(mega);
-	}
+	// @include breakpoint($bp-sm) {
+	// 	@include fs(mega);
+	// }
 }
 
 
 .b-intro {
 	//margin-top: $b-mrg;
 	@include margin-leader(8);
-	@include fs(md);
+	//@include fs(md);
+	@include type-resp(md);
 
-	p {
-		@include adjust-leading-to($fl-md);
-	}
+	// p {
+	// 	@include adjust-leading-to($fl-md);
+	// }
 
 	p:first-of-type {
 		margin-top: 0;
@@ -210,17 +225,20 @@ h4 + h6 {
 		@include margin-trailer(4);
 
 		@include font-style(magneta, semibold, normal, $forest-green, none);
-		@include fs(huge);
+		//@include fs(huge);
+		@include type-resp(huge);
 		letter-spacing: .5px;
 	}
 
 	h2 + span {
-		@include fs(md);
+		//@include fs(md);
+		@include type-resp(md);
 	}
 
 	> span {
 		@include font-style(magneta, book, normal, $soya-bean !important);
-		@include fs(md);
+		//@include fs(md);
+		@include type-resp(md);
 		letter-spacing: 1px;
 
 		&:not(.before-heading) {
@@ -229,7 +247,8 @@ h4 + h6 {
 
 		&.before-heading {
 			@include font-style(akagi, light, normal, $brand-accent !important);
-			@include fs(md);
+			//@include fs(md);
+			@include type-resp(md);
 			letter-spacing: 1.5px;
 		}
 	}
@@ -253,7 +272,10 @@ h4 + h6 {
 
 .b-text {
 	img {
-		@include margin-leader($ru-base);
+		@include margin-leader($ru-base - 2);
+		@include breakpoint($bp-sm) {
+			@include margin-leader($ru-base);
+		}
 	}
 
 	.pull-right {
@@ -300,10 +322,16 @@ h4 + h6 {
 
 
 .row-block {
-	@include margin-leader($ru-lg);
+	@include margin-leader($ru-lg - 4);
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-lg);
+	}
 
 	&.row-b-split-2 .b-col {
-		@include margin-leader($ru-lg);
+		@include margin-leader($ru-lg - 4);
+		@include breakpoint($bp-sm) {
+			@include margin-leader($ru-lg);
+		}
 		&:first-child {
 			margin-top: 0;
 		}
@@ -337,8 +365,18 @@ h4 + h6 {
 	}
 }
 
-.row-b-mrg			{ @include margin-leader($ru-base); }
-.row-b-mrg-xl		{ @include margin-leader($ru-xl); }
+.row-b-mrg { 
+	@include margin-leader($ru-base); 
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-base);
+	}
+}
+.row-b-mrg-xl { 
+	@include margin-leader($ru-xl - 4); 
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-xl);
+	}
+}
 
 .row-b-title {
 	margin-top: 0;
@@ -349,7 +387,10 @@ h4 + h6 {
 }
 
 .row-b-heading {
-	@include margin-leader($ru-xl);
+	@include margin-leader($ru-xl - 4);
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-xl);
+	}
 }
 
 .row-block {
@@ -381,9 +422,15 @@ h4 + h6 {
 		+ h4,
 		+ h5,
 		+ h6 {
-			@include margin-leader($ru-base - 2);
+			@include margin-leader($ru-base - 4);
+			@include breakpoint($bp-sm) {
+				@include margin-leader($ru-base - 2);
+			}
 			+ p {
-				@include margin-leader($ru-base - 5);
+				@include margin-leader($ru-base - 7);
+				@include breakpoint($bp-sm) {
+					@include margin-leader($ru-base - 5);
+				}
 			}
 		}
 	}

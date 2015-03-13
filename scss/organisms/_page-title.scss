@@ -9,25 +9,28 @@
 		margin: 0 auto;
 
 		@include font-style(akagi, bold, normal, $white, none);
-		font-size: 62px;
-		line-height: 1.1;
+		//@include fs(huge);
+		@include type-resp(mega);
 		letter-spacing: -1px;
 		text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
 
-		@include breakpoint($bp-sm) {
-			font-size: 82px;
-		}
+		// @include breakpoint($bp-sm) {
+		// 	@include fs(mega);
+		// }
 
 	}
 
 	span {
 		display: block;
-		margin-top: vs(2);
+		@include margin-leader(2);
+		@include breakpoint($bp-sm) {
+			@include margin-leader(4);
+		}
 
 		@include font-style(magneta, thin, italic, $white);
-		font-size: 32px;
+		//@include fs(lg);
+		@include type-resp(lg);
 		letter-spacing: 2px;
-		line-height: 1.1;
 	}
 
 	&.page-title-dark {
@@ -39,29 +42,33 @@
 	}
 
 	&.page-title-parallax {
-		margin-top: vs(-2);
-		padding-top: vs(10);
-		padding-bottom: vs(9);
+		@include rhythm(-4, 16, 14, 0);
+		@include breakpoint($bp-sm) {
+			@include rhythm(-4, 20, 18, 0);
+		}
 
 		background-position: top center !important;
 
 		@include breakpoint($bp-sm) {
-			padding-top: vs(15);
-			padding-bottom: vs(14);
+			@include rhythm-padding(30, 28);
 		}
 
 		h1 {
 			@include font-weight(akagi, bold);
-			font-size: 62px;
+			//@include fs(huge);
+			//@include type-scale(small);
+			//@include type-resp(mega);
+			@include type-resp(mega);
 			letter-spacing: -1px;
 
-			@include breakpoint($bp-sm) {
-				font-size: 82px;
-			}
+			// @include breakpoint($bp-sm) {
+			// 	@include fs(mega);
+			// }
 		}
 
 		span {
-			font-size: 32px;
+			//@include fs(lg);
+			@include type-resp(lg);
 		}
 	}
 }

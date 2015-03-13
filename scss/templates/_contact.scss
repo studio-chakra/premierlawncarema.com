@@ -20,36 +20,38 @@
 
 
 .contact__name {
-	margin-top: vs(3);
+	@include margin-leader(5);
+	@include breakpoint($bp-sm) {
+		@include margin-leader(6);
+	}
 
 	@include font-style(akagi, bold, normal, $birch);
-	font-size: 32px;
-	line-height: 38px;
+	@include fs(lg);
 	letter-spacing: -.5px;
 
 	small {		
 		@include font-style(akagi, light, italic, $dawn);
-		font-size: 32px;
+		@include fs(lg);
 	}
 }
 
 
 .contact__bio {
-	margin-top: vs(1);
+	@include margin-leader(2);
 }
 
 
 .contact-info__hd {
-	margin-top: vs(6);
+	@include margin-leader(12);
 }
 
 
 .contact-info__addy {
-	margin-bottom: vs(2);
+	@include margin-trailer(4);
 }
 
 
 .contact-social {
 	@include clearfix();
-	margin-top: vs(3);
+	@include margin-leader(6);
 }

@@ -17,19 +17,16 @@
 	.portfolio-desc {
 		h3 {
 			@include font-style(akagi, bold, normal, $white);
-			font-size: 38px;
-			line-height: 1;
+			@include fs(xl);
 			letter-spacing: 0;
 			text-shadow: 1px 1px 0px $birch;
 		}
 
 		span {
-			margin-top: vs(1.5);
-
+			@include margin-leader(1);
 			@include font-style(magneta, thin, italic, $white !important);
-			font-size: 20px;
+			@include fs(base);
 			letter-spacing: 1.5px;
-			line-height: 1;
 			text-shadow: 1px 1px 0px $birch;
 		}
 	}

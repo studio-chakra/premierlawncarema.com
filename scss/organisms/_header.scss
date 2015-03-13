@@ -101,7 +101,7 @@
 		}
 
 		@include breakpoint($bp-md) {
-			top: $full-hd-height - vs(2);
+			top: $full-hd-height - rs(4);
 			width: 260px;
 			border: 1px solid $main-border-color;
 			border-top-color: $mantis;
@@ -121,8 +121,8 @@
 	border-right: none;
 
 	@include breakpoint($bp-max-md) {
-		margin-top: vs(-1) !important;
-		padding-bottom: vs(3) !important;
+		margin-top: rs(-2) !important;
+		padding-bottom: rs(6) !important;
 	}
 
 }
@@ -207,14 +207,14 @@
 
 .button.top-cta-button {
 	margin: 0;
-	height: vs(3.5);
-	line-height: vs(3.5);
+	height: rs(7);
+	line-height: rs(7);
 	padding: 0 20px;
 	@include border-radius(42px);
 
 	@include breakpoint($bp-sm) {
-		height: vs(4);
-		line-height: vs(4);
+		height: rs(8);
+		line-height: rs(8);
 		padding: 0 28px;
 		font-size: 15px;	
 		@include border-radius(48px);
@@ -253,7 +253,7 @@
 #logo img, 
 #primary-menu:not(.style-2), 
 #primary-menu:not(.style-2) > ul {
-	height: $full-hd-height + vs(1);
+	height: $full-hd-height + rs(2);
 }
 
 #logo {
@@ -295,7 +295,7 @@
 #header.sticky-header #primary-menu, 
 #header.sticky-header #primary-menu > ul, 
 #header.sticky-header #primary-menu > ul > li > a {
-	height: $sticky-hd-height + vs(1);
+	height: $sticky-hd-height + rs(2);
 }
 
 #header.sticky-header #header-wrap {
@@ -325,7 +325,7 @@
 #header.sticky-header #primary-menu > ul > li > ul, 
 #header.sticky-header #primary-menu > ul > li > .mega-menu-content, 
 #header.sticky-header #primary-menu > ul > li.mega-menu > .mega-menu-content {
-	top: $sticky-hd-height - vs(1);
+	top: $sticky-hd-height - rs(2);
 }
 
 

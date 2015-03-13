@@ -6,7 +6,7 @@
 .sidebar-contact,
 .sidebar-gallery,
 .sidebar-project {
-	margin-top: vs(6);
+	@include margin-leader(12);
 	@include breakpoint($bp-sm) {
 		margin-top: 0;
 	}

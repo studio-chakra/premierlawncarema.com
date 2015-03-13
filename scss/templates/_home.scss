@@ -8,7 +8,8 @@
 	}
 
 	.section-blog {
-		padding-bottom: $section-trailing + vs(2);
+		// extra space at bottom since CTA goes over it 2/3 units
+		@include padding-trailer(24);
 	}
 }
 

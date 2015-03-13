@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	@extend %t-base;	
+	//@extend %t-base;
+	@include type-resp(base);	
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
 	letter-spacing: $base-letter-spacing;
@@ -33,8 +34,10 @@ body {
 	background-color: $body-bg-color;
 
 	.content-wrap {
-		padding: vs(8) 0 vs(14) 0;
-		
+		padding: rhythm(10) 0 rhythm(22) 0;
+		@include breakpoint($bp-sm) {
+			padding: rhythm(16) 0 rhythm(28) 0;
+		}
 	}
 }
 
