@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 @import "compass";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 // Vendor
@@ -16,6 +17,7 @@
 @import "base";
 @import "typography";
 @import "layout";
+@import "grid";
 
 
 

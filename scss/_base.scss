@@ -9,13 +9,16 @@ html {
 }
 
 body {
-	//@extend %t-base;
 	@include type-resp(base);	
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
-	letter-spacing: $base-letter-spacing;
+	letter-spacing: .3px;
 	color: $base-font-color;
 	background-color: $body-bg-color;
+
+	@include breakpoint($bp-sm) {
+		letter-spacing: $base-letter-spacing;
+	}
 }
 
 // #content p {
@@ -25,6 +28,32 @@ body {
 
 #wrapper {
 	background-color: $body-bg-color;
+}
+
+
+.container, 
+#header.full-header .container, 
+.container-fullwidth {
+	@include breakpoint($bp-xs-sm) {
+		width: 100% !important;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	@include breakpoint($bp-xs-max) {
+		width: 100% !important;
+		//padding-left: 5%;
+		//padding-right: 5%;
+	}
+}
+
+
+.container {
+	padding-left: 25px;
+	padding-right: 25px;
+	@include breakpoint($bp-sm) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 

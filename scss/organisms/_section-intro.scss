@@ -5,14 +5,17 @@
 .section-intro {
 	.b-heading h2 {
 		line-height: 1;
+		margin-bottom: 0;
 	}
 	.b-heading h2 + span {
-		line-height: 1.3;
+		//line-height: 1.3;
 		padding-right: 80px;
 	}
 
-	p:first-child {
-		margin-top: 0;
+	p:first-child {		
+		@include breakpoint($bp-md) {
+			margin-top: 0;
+		}
 	}
 }
 

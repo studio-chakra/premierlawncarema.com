@@ -1,23 +1,26 @@
 <section class="section section-services bg-lightgrass">
     <div class="container clearfix">
         <div class="row">
-            <div class="b b-heading heading-block center">
-                <h2>We provide the BEST services in Massachusetts</h2>
-                <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
-                <span>Maecenas faucibus mollis interdum porta felis euismod semper. 
-        Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</span>
+            <div class="col-sm-12"> 
+                <div class="b b-heading heading-block center">
+                    <h2>We provide the BEST services in Massachusetts</h2>
+                    <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
+                    <span>Maecenas faucibus mollis interdum porta felis euismod semper. 
+            Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</span>
+                </div>
             </div>
-
-            <div class="grid img-grid">
+        </div>
+        <div class="row grid img-grid">
             {% for i in 0..7 %}
-                <div class="grid-col col-sm-2 col-md-3">
+                <div class="grid-col col-mi-6 col-sm-6 col-md-4 col-lg-3">
                     {% include '_molecules/service-box.html' %}
                 </div> 
             {% endfor %}   
-            </div>
         </div>
         <div class="row action-row center">
-            <a href="{{siteUrl}}services/our-services" class="button button-rounded button-accent">Learn more about our services</a>
+            <div class="col-sm-12"> 
+                <a href="{{siteUrl}}services/our-services" class="button button-rounded button-accent">Learn more about our services</a>
+            </div>
         </div>
     </div>
 </section>

@@ -61,8 +61,19 @@ $base-font-color: $birch;
 // MQ Breakpoints
 // --------------------------------------------------
 
+$bp-xs: 480px;
+$bp-mi: 640px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+$bp-max-md: max-width 991px;
+$bp-xs-sm: 480px 767px;
+$bp-xs-max: max-width 497px;
+
 $breakpoints: (
   bp-xs:    480px,
+  bp-mi:    640px,
   bp-sm:    768px,
   bp-md:    992px,
   bp-lg:    1200px
@@ -71,17 +82,13 @@ $breakpoints: (
 // For Responsive Mixin (chained mq)
 $named-breakpoints: (
     "xs": 480px,
+    "mi": 480px,
     "sm": 768px,
     "md": 992px,
     "lg": 1200px
 ); 
 
-$bp-xs: 480px;
-$bp-sm: 768px;
-$bp-md: 992px;
-$bp-lg: 1200px;
 
-$bp-max-md: max-width 991px;
 
 $full-hd-height: rs(19);
 $sticky-hd-height: rs(12);
@@ -117,6 +124,9 @@ $ru-sm: 			4;
 $ru-base: 		8;
 $ru-lg:				14;
 $ru-xl:				20;
+
+$section-ru-base: 14;
+$section-ru-lg: 20;
 
 
 // Global Rhytm Space used for Global 

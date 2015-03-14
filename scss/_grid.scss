@@ -1,0 +1,104 @@
+//
+// Grid
+// --------------------------------------------------
+
+
+
+
+
+
+
+
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+$screen-mi: $bp-mi !default;
+$screen-mi-min: $screen-mi !default;
+$screen-mi-max: ($bp-sm - 1) !default;
+ 
+$container-mi: 100% !default;
+//$container-mi: 400px + $grid-gutter-width !default;
+ 
+.container {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		width: $container-mi;
+	}
+}
+ 
+@mixin make-mi-column($columns, $gutter: $grid-gutter-width) {
+	position: relative;
+	min-height: 1px;
+	padding-left:  ($gutter / 2);
+	padding-right: ($gutter / 2);
+ 
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		float: left;
+		width: percentage(($columns / $grid-columns));
+	}
+}
+ 
+@mixin make-mi-column-offset($columns) {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		margin-left: percentage(($columns / $grid-columns));
+	}
+}
+ 
+@mixin make-mi-column-push($columns) {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		left: percentage(($columns / $grid-columns));
+	}
+}
+ 
+@mixin make-mi-column-pull($columns) {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		right: percentage(($columns / $grid-columns));
+	}
+}
+ 
+@mixin make-grid-mi-column($i: 1, $list: ".col-mi-#{$i}") {
+	@for $i from (1 + 1) through $grid-columns {
+		$list: "#{$list}, .col-mi-#{$i}";
+	}
+	#{$list} {
+		position: relative;
+		min-height: 1px;
+		padding-left:  ($grid-gutter-width / 2);
+		padding-right: ($grid-gutter-width / 2);
+	}
+}
+ 
+@include make-grid-mi-column();
+ 
+@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+	@include make-grid(mi);
+}
+ 
+.visible-mi-block,
+.visible-mi-inline,
+.visible-mi-inline-block {
+	display: none !important;
+}
+ 
+.visible-mi-block {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		display: block !important;
+	}
+}
+ 
+.visible-mi-inline {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		display: inline !important;
+	}
+}
+.visible-mi-inline-block {
+	@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+		display: inline-block !important;
+	}
+}
+ 
+@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+	@include responsive-visibility('.visible-mi');
+}
+ 
+@media (min-width: $screen-mi-min) and (max-width: $screen-mi-max) {
+	@include responsive-invisibility('.hidden-mi');
+}

@@ -56,13 +56,20 @@
   }
 
   &.button-xlarge {
-    padding: rhythm(6) 60px;
+    padding: rhythm(4) 48px;
     height: auto;
     line-height: rhythm(4);
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: 1px;
     white-space: normal;
-    @include border-radius(48px);
+    @include border-radius(36px);
+
+    @include breakpoint($bp-sm) {
+      padding: rhythm(6) 60px;
+      font-size: 24px;
+      line-height: rhythm(4);
+      @include border-radius(48px);
+    }
   }
 
 }

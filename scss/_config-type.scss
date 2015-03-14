@@ -59,7 +59,7 @@ $ff-akagi-weights: (
 
 $base-font-family: $font-magneta;
 $base-font-weight: $font-magneta-book;
-$base-letter-spacing: .8px;
+$base-letter-spacing: .6px;
 
 $base-font-size: 20px;
 $base-line-height: 6px;
@@ -84,7 +84,7 @@ $base-lh: $ru-base-lh * 2;
 $fs-xs: 		13px;
 $fl-xs:			3.5;
 $fs-sm: 		16px;
-$fl-sm:			5;
+$fl-sm:			4.5;
 $fs-base: 	20px;
 $fl-base:		5.5;
 $fs-md:			24px;
@@ -92,13 +92,16 @@ $fl-md:			6;
 $fs-lg:			32px;
 $fl-lg:			6;
 $fs-xl:			38px;
-$fl-xl:			7;
+$fl-xl:			7.5;
 $fs-xxl:		51px;
 $fl-xxl:		9;
 $fs-huge:		62px;
 $fl-huge:		12;
 $fs-mega:		82px;
 $fl-mega:		14;
+
+$fs-base-sm:  18px;
+$fl-base-sm:  4.5;
 
 
 @mixin fs($size, $lines: null) {
@@ -264,8 +267,8 @@ $type-scale-resp: (
    ),
   base: (
    	bp-first: (
-			font-size: 18px,
-    	base-lines: 5
+			font-size: $fs-base-sm,
+    	base-lines: $fl-base-sm
     ), 
    	bp-sm: (
 			font-size: $fs-base,
@@ -331,15 +334,25 @@ $type-scale-resp: (
 			font-size: $fs-mega,
     	base-lines: $fl-mega
 		)
+  ),
+  magneta-huge: (
+    bp-first: (
+      font-size: 42px,
+      base-lines: 8.5
+    ),
+    bp-sm: (
+      font-size: $fs-huge,
+      base-lines: $fl-huge
+    )  
   )
 );
 
 $type-scale-testimonial: (
   xl: (
     bp-first: (
-      font-size: $fs-lg,
-      base-lines: 7
-    ) ,
+      font-size: $fs-md,
+      base-lines: $fl-md - .5
+    ),
     bp-sm: (
       font-size: $fs-xl,
       base-lines: 9
@@ -352,11 +365,95 @@ $type-scale-label: (
     bp-first: (
       font-size: 18px,
       base-lines: 4
-    ) ,
+    ),
     bp-sm: (
       font-size: $fs-base,
       base-lines: $fl-base
     )    
+  )
+);
+
+$type-scale-imggrid: (
+  img-grid-title: (
+    bp-first: (
+      font-size: $fs-lg,
+      base-lines: $fl-lg
+    )
+  ),
+  img-grid-sub: (
+    bp-first: (
+      font-size: $fs-base-sm,
+      base-lines: $fl-base-sm
+    ),
+    bp-sm: (
+      font-size: $fs-base,
+      base-lines: $fl-base
+    )
+  ),
+  img-grid-title-lg: (
+    bp-first: (
+      font-size: $fs-lg,
+      base-lines: $fl-lg
+    ),
+    bp-sm: (
+      font-size: $fs-xl,
+      base-lines: $fl-xl
+    )
+  ),
+  img-grid-sub-lg: (
+    bp-first: (
+      font-size: $fs-base-sm,
+      base-lines: $fl-base-sm
+    ),
+    bp-sm: (
+      font-size: $fs-base,
+      base-lines: $fl-base
+    )
+  )
+);
+
+$type-scale-pagetitle: (
+  content-title: (
+    bp-first: (
+      font-size: $fs-xxl,
+      base-lines: $fl-xxl,
+    ),
+    bp-sm: (
+      font-size: $fs-huge,
+      base-lines: $fl-huge
+    ),
+    bp-md: (
+      font-size: $fs-mega,
+      base-lines: $fl-mega
+    )  
+  ),
+  title: (
+    bp-first: (
+      font-size: $fs-xxl,
+      base-lines: $fl-xxl,
+    ),
+    bp-sm: (
+      font-size: $fs-huge,
+      base-lines: $fl-huge
+    ),
+    bp-md: (
+      font-size: $fs-mega,
+      base-lines: $fl-mega
+    )  
+  ),
+  sub: (
+    bp-first: (
+      font-size: $fs-base,
+      base-lines: $fl-base - 1
+    ),
+    bp-sm: (
+      font-size: $fs-lg,
+      base-lines: $fl-lg
+    ),
+    bp-md: (
+      font-size: $fs-xl,
+      base-lines: $fl-xl
+    )  
   )
 );
 
@@ -399,7 +496,7 @@ $type-scale-label: (
   @return map-get($text-breakpoints-map, $breakpoint-name);
 }
 
-@mixin text-size($text-size, $lines-mp, $map, $breakpoint-name: "bp-first") {
+@mixin text-size($text-size, $map, $lines-mp: null, $breakpoint-name: "bp-first") {
   $text-size-properties: text-properties-for($text-size, $map, $breakpoint-name);
 
   @if $text-size-properties != null {
@@ -422,7 +519,7 @@ $type-scale-label: (
 }
 
 @mixin type-resp($text-size, $map: $type-scale-resp, $lines-mp: null, $default-breakpoint: "bp-first") {
-  @include text-size($text-size, $lines-mp, $map, $default-breakpoint);
+  @include text-size($text-size, $map, $lines-mp, $default-breakpoint);
 
   $text-breakpoints-map: text-breakpoints-for($text-size, $map);
   $text-breakpoints-keys: map-keys($text-breakpoints-map);
@@ -432,7 +529,7 @@ $type-scale-label: (
       //@include respond-above($breakpoint-name) {
       //@include breakpoint(map-get($breakpoints, $breakpoint-name)) { 
       @include breakpoint(respond-breakpoint($breakpoint-name)) {  
-        @include text-size($text-size, $lines-mp, $map, $breakpoint-name);
+        @include text-size($text-size, $map, $lines-mp, $breakpoint-name);
       }
     }
   }

@@ -1,21 +1,24 @@
 <section class="section section-work bg-white">
     <div class="container clearfix">
         <div class="row">
-            <div class="b b-heading heading-block center">
-                <h2>The proof is in the Lawn!</h2>
-                <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
-            </div>
-
-            <div id="portfolio" class="grid img-grid clearfix">
-            {% for i in 0..1 %}
-                <div class="grid-col col-sm-6">
-                    {% include '_molecules/iproject.html' %}   
+            <div class="col-sm-12"> 
+                <div class="b b-heading heading-block center">
+                    <h2>The proof is in the Lawn!</h2>
+                    <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
                 </div>
-            {% endfor %}      
             </div>
         </div>
+        <div id="portfolio" class="grid img-grid clearfix">
+        {% for i in 0..1 %}
+            <div class="grid-col col-mi-6 col-sm-6">
+                {% include '_molecules/iproject.html' %}   
+            </div>
+        {% endfor %}     
+        </div>
         <div class="row action-row center">
-            <a href="{{siteUrl}}work/projects" class="button button-rounded button-accent">View all of our work</a>
+            <div class="col-sm-12">
+                <a href="{{siteUrl}}work/projects" class="button button-rounded button-accent">View all of our work</a>
+            </div>
         </div>
     </div>
 </section>

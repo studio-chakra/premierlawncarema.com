@@ -44,7 +44,11 @@
 
 .mt-img-push		{ @include margin-leader($ru-sm); }
 
-.mb-sliver			{ @include margin-trailer($ru-sliver); }
+.mb-sliver { 	
+	@include breakpoint($bp-sm) {
+		@include margin-trailer($ru-sliver); 
+	}
+}
 
 .p-button {
 	@include margin-leader(4);

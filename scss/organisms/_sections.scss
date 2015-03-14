@@ -2,16 +2,23 @@
 // Sections
 // --------------------------------------------------
 
+
+
+
 .section {
 	position: relative;
 	overflow: visible;
 
 	margin-top: 0;
 	margin-bottom: 0;
-	@include rhythm-padding(20, 22);
+	@include rhythm-padding($section-ru-base, $section-ru-base + 2);
 
 	&.bg-white {
 		background-color: $white;
+
+		> .container {
+			margin-top: rs(-4);
+		}
 
 		&::before {
 			position: absolute;
@@ -37,6 +44,10 @@
 		background-position: top center;
 		background-size: cover;
 
+		> .container {
+			margin-top: rs(-2);
+		}
+
 		&::before {
 			position: absolute;
 			content: '';
@@ -60,6 +71,10 @@
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: cover;
+
+		> .container {
+			margin-top: rs(-2);
+		}
 
 		&::before {
 			position: absolute;
@@ -85,6 +100,10 @@
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: cover;
+
+		> .container {
+			margin-top: rs(-2);
+		}
 
 		&::before {
 			position: absolute;
@@ -112,9 +131,19 @@
 
 	}
 
+
+
 	.action-row {
-		@include margin-leader($ru-lg);
+		@include margin-leader($ru-base);
+		@include breakpoint($bp-sm) {
+			@include margin-leader($ru-lg);
+		}
 	}
+
+	@include breakpoint($bp-sm) {
+		@include rhythm-padding($section-ru-lg, $section-ru-lg + 2);
+	}
+
 }
 
 .section-space {
@@ -127,22 +156,27 @@
 // --------------------------------------------------
 
 .section {
-	#portfolio.grid,
+	#portfolio:not(.portfolio-1).grid,
 	.grid {
-		@include rhythm-margins($ru-lg - 2, 0);
-		margin-left: 0;
-		margin-right: 0;
+		margin-top: rhythm($ru-base - 2) !important;		// need do to core.css
+		margin-bottom: 0 !important;		// need to do core.css
+		//margin-left: 0;
+		//margin-right: 0;
+		@include breakpoint($bp-sm) {
+			@include rhythm-margins($ru-lg - 2, 0);
+		}
 	}
 	
 	#portfolio.img-grid,
 	.img-grid {
-		@include rhythm-margins($ru-lg - 6, 0);
-		margin-left: 0;
-		margin-right: 0;
+		//@include rhythm-margins($ru-lg - 6, 0);
+		//margin-left: 0;
+		//margin-right: 0;
 	}
 }
 
-.img-grid .grid-col {
+.img-grid .grid-col,
+.post-grid .grid-col {
 	@include margin-leader(4);
 }
 
@@ -156,9 +190,13 @@
 		h2 {
 			margin-top: 0;
 		}
+		&.center {
+			padding-left: 8%;
+			padding-right: 8%;
+		}
 		&.center > span {
-			padding-left: 170px;
-			padding-right: 170px;
+			padding-left: 2%;
+			padding-right: 2%;
 		}
 	}
 }

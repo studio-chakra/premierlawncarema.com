@@ -9,7 +9,7 @@
 		margin: 0;
 
 		@include font-style(akagi, bold, normal, $birch, none);
-		@include fs(lg);
+		@include type-resp(img-grid-title, $type-scale-imggrid);
 		letter-spacing: .5px;
 
 		.pretitle {

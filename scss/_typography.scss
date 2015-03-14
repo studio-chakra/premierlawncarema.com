@@ -15,8 +15,9 @@ fieldset,
 form {	
 	margin-bottom: 0;
 
-	.type-main & {
-		@include margin-leader($ru-base - 2);
+	.type-main &,
+	.section & {
+		@include margin-leader($ru-base - 3);
 		@include breakpoint($bp-sm) {
 			@include margin-leader($ru-base);
 		}
@@ -109,7 +110,10 @@ h6 {
 
 h3 + h6,
 h4 + h6 {
-	@include margin-leader($ru-sliver);
+	margin-top: 0;
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-sliver);
+	}
 }
 
 
@@ -187,28 +191,21 @@ h4 + h6 {
 	margin-top: 0;
 
 	@include font-style(akagi, bold, normal, $forest-green);
-	//@include fs(huge);
-	@include type-resp(mega);
+	@include type-resp(content-title, $type-scale-pagetitle);
 	letter-spacing: -2px;
-
-	// @include breakpoint($bp-sm) {
-	// 	@include fs(mega);
-	// }
 }
 
 
 .b-intro {
-	//margin-top: $b-mrg;
-	@include margin-leader(8);
-	//@include fs(md);
+	@include margin-leader(3);
 	@include type-resp(md);
-
-	// p {
-	// 	@include adjust-leading-to($fl-md);
-	// }
 
 	p:first-of-type {
 		margin-top: 0;
+	}
+
+	@include breakpoint($bp-sm) {
+		@include margin-leader(8);
 	}
 }
 
@@ -225,29 +222,29 @@ h4 + h6 {
 		@include margin-trailer(4);
 
 		@include font-style(magneta, semibold, normal, $forest-green, none);
-		//@include fs(huge);
-		@include type-resp(huge);
-		letter-spacing: .5px;
+		@include type-resp(magneta-huge);
+		letter-spacing: 0;
 	}
 
 	h2 + span {
-		//@include fs(md);
-		@include type-resp(md);
+		@include type-resp(md, $type-scale-resp, -.5);
 	}
 
 	> span {
 		@include font-style(magneta, book, normal, $soya-bean !important);
-		//@include fs(md);
-		@include type-resp(md);
+		@include type-resp(md, $type-scale-resp);
 		letter-spacing: 1px;
 
 		&:not(.before-heading) {
-			@include margin-leader($ru-sm);
+			@include margin-leader($ru-sm - .5);
+			@include breakpoint($bp-sm) {
+				@include margin-leader($ru-sm);
+			}
 		}
 
 		&.before-heading {
+			margin-bottom: 0;
 			@include font-style(akagi, light, normal, $brand-accent !important);
-			//@include fs(md);
 			@include type-resp(md);
 			letter-spacing: 1.5px;
 		}
@@ -264,6 +261,9 @@ h4 + h6 {
 
 
 .b-testimonial {
+	padding-left: 10%;
+	padding-right: 10%;
+
 	p {
 		@include margin-leader($ru-base - 2);
 	}
@@ -383,11 +383,14 @@ h4 + h6 {
 }
 
 .row-b-title + .row-b-intro {
-	@include margin-leader($ru-base);
+	@include margin-leader($ru-base - 3);
+	@include breakpoint($bp-sm) {
+		@include margin-leader($ru-base);
+	}
 }
 
 .row-b-heading {
-	@include margin-leader($ru-xl - 4);
+	@include margin-leader($ru-xl - 6);
 	@include breakpoint($bp-sm) {
 		@include margin-leader($ru-xl);
 	}

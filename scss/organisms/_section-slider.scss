@@ -3,45 +3,72 @@
 // --------------------------------------------------
 
 .slider-parallax {
-	margin-top: rs(-8);
+	margin-top: rs(-2);
 	background-color: $forest-green;
-	background-position: center top;
+	background-position: center top;	
+
+	.vertical-middle {
+		width: 90% !important;
+	}
 
 	.heading-block {
-		margin: 0 0 0 70px;
-		max-width: 830px;
+		margin: rs(-8) 0 0 0;
+		max-width: 600px;
 
 		h1 {
 			margin: 0;
 
 			@include font-style(akagi, bold, normal, $white, none);
-			@include fs(huge);
+			@include type-resp(title, $type-scale-pagetitle);
 			letter-spacing: -1px;
 			text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
-
-			@include breakpoint($bp-sm) {
-				@include fs(mega);
-			}
 		}
 
 		h3 {
 			display: block;
-			@include margin-leader(4);
-
+			@include margin-leader(2);
 			@include font-style(magneta, thin, italic, $white, none);
-			@include fs(xl);
-			letter-spacing: 2px;
+			@include type-resp(sub, $type-scale-pagetitle);
+			letter-spacing: 1px;
 		}
 
 		.button {
-			@include margin-leader(12);
+			@include margin-leader(6);
 		}
 
 		&:after {
 			margin: 0;
 			border-top: none;
 		}
-
 	}
+
+
+	@include breakpoint($bp-sm){
+		margin-top: rs(-4);
+		.heading-block {
+			margin-top: 0;
+			margin-left: 40px;
+			h3 {
+				@include margin-leader(3);
+			}
+			.button {
+				@include margin-leader(9);
+			}
+		}
+	}
+
+	@include breakpoint($bp-md){
+		margin-top: rs(-8);
+		.heading-block {
+			margin-left: 70px;
+			max-width: 830px;
+
+			.button {
+				@include margin-leader(12);
+			}
+		}
+	}
+
+
 }
 

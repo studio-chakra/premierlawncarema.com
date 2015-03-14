@@ -10,8 +10,13 @@
 	.section-blog {
 		// extra space at bottom since CTA goes over it 2/3 units
 		@include padding-trailer(24);
+
+		.post-grid > .grid-col:last-child {
+			display: none;
+
+			@include breakpoint($bp-md) {
+				display: block;
+			}
+		}
 	}
 }
-
-
-

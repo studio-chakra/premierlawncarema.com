@@ -17,7 +17,7 @@
 	.portfolio-desc {
 		h3 {
 			@include font-style(akagi, bold, normal, $white);
-			@include fs(xl);
+			@include type-resp(img-grid-title-lg, $type-scale-imggrid);
 			letter-spacing: 0;
 			text-shadow: 1px 1px 0px $birch;
 		}
@@ -25,7 +25,7 @@
 		span {
 			@include margin-leader(1);
 			@include font-style(magneta, thin, italic, $white !important);
-			@include fs(base);
+			@include type-resp(img-grid-sub-lg, $type-scale-imggrid);
 			letter-spacing: 1.5px;
 			text-shadow: 1px 1px 0px $birch;
 		}
@@ -33,6 +33,15 @@
 	&:hover {
 		background-color: rgba($birch, 0.5);
 	}
+}
+
+
+// Overrides for core.css
+#portfolio:not(.portfolio-1) .portfolio-desc h3 {
+	@include type-resp(img-grid-title, $type-scale-imggrid);
+}
+#portfolio:not(.portfolio-1) .portfolio-desc span {
+	@include type-resp(img-grid-sub, $type-scale-imggrid);
 }
 
 

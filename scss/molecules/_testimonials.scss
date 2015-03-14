@@ -11,16 +11,14 @@
 
 	p {
 		@include font-style(magneta, thin, italic);
-		//@include fs(xl, 9);
 		@include type-resp(xl, $type-scale-testimonial);
-		letter-spacing: 2px;
+		letter-spacing: 1.5px;
 	}
 }
 
 .testi-meta {
 	@include margin-leader(8);
 	@include font-style(magneta, thin, normal, $cloud, none);
-	//@include fs(base);
 	@include type-resp(base);
 	letter-spacing: 1px;
 
@@ -41,8 +39,6 @@
 
 .testi-rating {
 	@include margin-leader(2);
-
 	color: $brand-orange;
-	//@include fs(md);
 	@include type-resp(md);
 }

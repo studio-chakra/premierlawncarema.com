@@ -9,15 +9,9 @@
 		margin: 0 auto;
 
 		@include font-style(akagi, bold, normal, $white, none);
-		//@include fs(huge);
-		@include type-resp(mega);
+		@include type-resp(title, $type-scale-pagetitle);
 		letter-spacing: -1px;
 		text-shadow: 2px 1px 0px rgba(0,0,0,0.20);
-
-		// @include breakpoint($bp-sm) {
-		// 	@include fs(mega);
-		// }
-
 	}
 
 	span {
@@ -28,9 +22,8 @@
 		}
 
 		@include font-style(magneta, thin, italic, $white);
-		//@include fs(lg);
-		@include type-resp(lg);
-		letter-spacing: 2px;
+		@include type-resp(sub, $type-scale-pagetitle);
+		letter-spacing: 1px;
 	}
 
 	&.page-title-dark {
@@ -55,20 +48,12 @@
 
 		h1 {
 			@include font-weight(akagi, bold);
-			//@include fs(huge);
-			//@include type-scale(small);
-			//@include type-resp(mega);
-			@include type-resp(mega);
+			@include type-resp(title, $type-scale-pagetitle);
 			letter-spacing: -1px;
-
-			// @include breakpoint($bp-sm) {
-			// 	@include fs(mega);
-			// }
 		}
 
 		span {
-			//@include fs(lg);
-			@include type-resp(lg);
+			@include type-resp(sub, $type-scale-pagetitle);
 		}
 	}
 }

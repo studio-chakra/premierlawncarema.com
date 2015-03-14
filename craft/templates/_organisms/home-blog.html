@@ -1,23 +1,26 @@
 <section class="section section-blog bg-seed">
     <div class="container clearfix">
         <div class="row">
-            <div class="b b-heading heading-block center">
-                <h2>Latest from the Learn Blog</h2>
-                <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
-                <span>Maecenas faucibus mollis interdum porta felis euismod semper. 
-        Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</span>
-            </div>
-
-            <div class="grid post-grid">
-            {% for i in 0..2 %}
-                <div class="col-md-4 col-sm-6">
-                    {% include '_molecules/post.html' %}   
+            <div class="col-sm-12">
+                <div class="b b-heading heading-block center">
+                    <h2>Latest from the Learn Blog</h2>
+                    <img class="b-heading-div" src="/images/icon-weed.svg" alt="Weed" width="30" height="31">
+                    <span>Maecenas faucibus mollis interdum porta felis euismod semper. 
+            Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.</span>
                 </div>
-           {% endfor %}   
+            </div>            
+        </div>
+        <div class="row grid post-grid">
+        {% for i in 0..2 %}
+            <div class="grid-col col-mi-6 col-sm-6 col-md-4">
+                {% include '_molecules/post.html' %}   
             </div>
+       {% endfor %}   
         </div>
         <div class="row action-row center">
-            <a href="{{siteUrl}}learn" class="button button-rounded button-accent">View more articles</a>
+            <div class="col-sm-12">
+                <a href="{{siteUrl}}learn" class="button button-rounded button-accent">View more articles</a>
+            </div>            
         </div>
     </div>
 </section>
